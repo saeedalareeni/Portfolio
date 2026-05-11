@@ -1,1932 +1,3715 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+
+
     <!-- ===== SEO Primary ===== -->
-    <title>Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ | Full-Stack Web Developer</title>
-    <meta name="description" content="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ù† ÙÙ„Ø³Ø·ÙŠÙ†ØŒ ØºØ²Ø©. Ø®Ø¨Ø±Ø© +3 Ø³Ù†ÙˆØ§Øª ÙÙŠ LaravelØŒ React.jsØŒ WordPress. Ø£Ø¨Ù†ÙŠ Ù…ÙˆØ§Ù‚Ø¹ ÙˆØªØ·Ø¨ÙŠÙ‚Ø§Øª ÙˆÙŠØ¨ Ø§Ø­ØªØ±Ø§ÙÙŠØ© ØªÙØ­Ø¯Ø« ÙØ±Ù‚Ø§Ù‹ Ø­Ù‚ÙŠÙ‚ÙŠØ§Ù‹. Saeed Al-Areeni â€” Full-Stack Web Developer specializing in Laravel, React, WordPress.">
-    <meta name="keywords" content="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ, Ù…Ø·ÙˆØ± ÙˆÙŠØ¨, Laravel, React, WordPress, Ù…Ø·ÙˆØ± ÙˆÙŠØ¨ ÙÙ„Ø³Ø·ÙŠÙ†, web developer Palestine, Gaza developer, full-stack developer, ØªØ·ÙˆÙŠØ± Ù…ÙˆØ§Ù‚Ø¹, Ø¨Ø±Ù…Ø¬Ø© Ù…ÙˆØ§Ù‚Ø¹">
-    <meta name="author" content="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Saeed Al-Areeni">
+
+    <title>سعيد العريني — مطوّر ويب متكامل | Full-Stack Web Developer</title>
+
+    <meta name="description" content="سعيد العريني — مطوّر ويب متكامل من فلسطين، غزة. خبرة +3 سنوات في Laravel، React.js، WordPress. أبني مواقع وتطبيقات ويب احترافية تُحدث فرقاً حقيقياً. Saeed Al-Areeni — Full-Stack Web Developer specializing in Laravel, React, WordPress.">
+
+    <meta name="keywords" content="سعيد العريني, مطور ويب, Laravel, React, WordPress, مطور ويب فلسطين, web developer Palestine, Gaza developer, full-stack developer, تطوير مواقع, برمجة مواقع">
+
+    <meta name="author" content="سعيد العريني — Saeed Al-Areeni">
+
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
     <meta name="theme-color" content="#0D7C66">
+
     <link rel="canonical" href="https://saeed-ps.netlify.app/">
 
+
+
     <!-- ===== hreflang (multilingual SEO) ===== -->
+
     <link rel="alternate" hreflang="ar" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="en" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="zh" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="es" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="fr" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="tr" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="hr" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="de" href="https://saeed-ps.netlify.app/">
+
     <link rel="alternate" hreflang="x-default" href="https://saeed-ps.netlify.app/">
 
+
+
     <!-- ===== Open Graph (Facebook / LinkedIn) ===== -->
+
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨">
-    <meta property="og:title" content="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ | Full-Stack Developer">
-    <meta property="og:description" content="Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ù† ÙÙ„Ø³Ø·ÙŠÙ†ØŒ Ø®Ø¨Ø±Ø© +3 Ø³Ù†ÙˆØ§Øª ÙÙŠ Ø¨Ù†Ø§Ø¡ Ù…ÙˆØ§Ù‚Ø¹ ÙˆØªØ·Ø¨ÙŠÙ‚Ø§Øª ÙˆÙŠØ¨ Ø§Ø­ØªØ±Ø§ÙÙŠØ© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… LaravelØŒ React.jsØŒ WordPress.">
+
+    <meta property="og:site_name" content="سعيد العريني — مطوّر ويب">
+
+    <meta property="og:title" content="سعيد العريني — مطوّر ويب متكامل | Full-Stack Developer">
+
+    <meta property="og:description" content="مطوّر ويب متكامل من فلسطين، خبرة +3 سنوات في بناء مواقع وتطبيقات ويب احترافية باستخدام Laravel، React.js، WordPress.">
+
     <meta property="og:url" content="https://saeed-ps.netlify.app/">
+
     <meta property="og:image" content="https://saeed-ps.netlify.app/og-image.png">
+
     <meta property="og:image:width" content="1200">
+
     <meta property="og:image:height" content="630">
+
     <meta property="og:locale" content="ar_AR">
+
     <meta property="og:locale:alternate" content="en_US">
 
+
+
     <!-- ===== Twitter Card ===== -->
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Full-Stack Web Developer">
-    <meta name="twitter:description" content="Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ù† ÙÙ„Ø³Ø·ÙŠÙ† | Laravel Â· React Â· WordPress | +3 Ø³Ù†ÙˆØ§Øª Ø®Ø¨Ø±Ø©">
+
+    <meta name="twitter:title" content="سعيد العريني — Full-Stack Web Developer">
+
+    <meta name="twitter:description" content="مطوّر ويب متكامل من فلسطين | Laravel · React · WordPress | +3 سنوات خبرة">
+
     <meta name="twitter:image" content="https://saeed-ps.netlify.app/og-image.png">
+
     <meta name="twitter:creator" content="@saeedalareeni">
 
+
+
     <!-- ===== JSON-LD Structured Data ===== -->
+
     <script type="application/ld+json">
+
     {
+
       "@context": "https://schema.org",
+
       "@type": "Person",
-      "name": "Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ",
+
+      "name": "سعيد العريني",
+
       "alternateName": "Saeed Al-Areeni",
+
       "url": "https://saeed-ps.netlify.app/",
+
       "image": "https://saeed-ps.netlify.app/og-image.png",
+
       "jobTitle": "Full-Stack Web Developer",
-      "description": "Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ù† ÙÙ„Ø³Ø·ÙŠÙ†ØŒ ØºØ²Ø©. Ø®Ø¨Ø±Ø© +3 Ø³Ù†ÙˆØ§Øª ÙÙŠ LaravelØŒ React.jsØŒ WordPress.",
+
+      "description": "مطوّر ويب متكامل من فلسطين، غزة. خبرة +3 سنوات في Laravel، React.js، WordPress.",
+
       "email": "saeedalareeni@gmail.com",
+
       "telephone": "+970597551656",
-      "address": { "@type": "PostalAddress", "addressLocality": "ØºØ²Ø©", "addressCountry": "PS" },
+
+      "address": { "@type": "PostalAddress", "addressLocality": "غزة", "addressCountry": "PS" },
+
       "sameAs": [
+
         "https://github.com/saeedalareeni",
+
         "https://www.linkedin.com/in/saeed-al-areeni-043547261/"
+
       ],
+
       "knowsAbout": ["Laravel", "React.js", "WordPress", "PHP", "MySQL", "TailwindCSS", "Full-Stack Development"],
+
       "offers": {
+
         "@type": "Offer",
-        "description": "ØªØ·ÙˆÙŠØ± Ù…ÙˆØ§Ù‚Ø¹ ÙˆØªØ·Ø¨ÙŠÙ‚Ø§Øª ÙˆÙŠØ¨ Ø§Ø­ØªØ±Ø§ÙÙŠØ©",
+
+        "description": "تطوير مواقع وتطبيقات ويب احترافية",
+
         "areaServed": "Worldwide"
+
       }
+
     }
+
     </script>
+
     <script type="application/ld+json">
+
     {
+
       "@context": "https://schema.org",
+
       "@type": "WebSite",
-      "name": "Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨",
+
+      "name": "سعيد العريني — مطوّر ويب",
+
       "url": "https://saeed-ps.netlify.app/",
-      "description": "Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø´Ø®ØµÙŠ Ù„Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠØŒ Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„",
+
+      "description": "الموقع الشخصي لسعيد العريني، مطوّر ويب متكامل",
+
       "inLanguage": ["ar", "en", "zh", "es", "fr", "tr", "hr", "de"],
-      "author": { "@type": "Person", "name": "Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ" }
+
+      "author": { "@type": "Person", "name": "سعيد العريني" }
+
     }
+
     </script>
+
+
 
     <!-- ===== Performance: Preconnect & DNS Prefetch ===== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
     <link rel="dns-prefetch" href="https://js.hcaptcha.com">
+
     <link rel="dns-prefetch" href="https://api.web3forms.com">
 
-    <!-- ===== Fonts: preload Ø£ÙˆÙ„Ø§Ù‹ Ø«Ù… stylesheet ===== -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Changa:wght@700;800&family=Tajawal:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Changa:wght@700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- ===== Font Awesome: non-blocking ===== -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-    <!-- ===== hCaptcha: async ===== -->
+    <!-- ===== Fonts ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ===== Font Awesome ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ===== Tailwind CDN ===== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config={theme:{extend:{colors:{bg:'#F8F6F1','bg-alt':'#F0EDE6',fg:'#1A1A1A',muted:'#8C8C8C',accent:'#0D7C66','accent-h':'#0A6B57',gold:'#C5985A','gold-h':'#B8884D',card:'#FFFFFF',brd:'#E8E4DC','brd-d':'#D5D0C7'},fontFamily:{display:['Changa','sans-serif'],body:['Tajawal','sans-serif']}}}}
+    </script>
+
+    <!-- ===== hCaptcha ===== -->
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <style>
+
         /* ===== Reset ===== */
+
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
         html{scroll-behavior:auto}
+
         body{font-family:'Tajawal',sans-serif;background:#F8F6F1;color:#1A1A1A;overflow-x:hidden}
 
-        /* ===== Layout utilities (Tailwind replacement) ===== */
-        .flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.block{display:block}.hidden{display:none}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.inset-0{inset:0}.inset-x-0{left:0;right:0}.top-0{top:0}.bottom-10{bottom:2.5rem}
-        .items-center{align-items:center}.items-start{align-items:flex-start}.items-baseline{align-items:baseline}
-        .justify-center{justify-content:center}.justify-between{justify-content:space-between}
-        .flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}
-        .overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.overflow-y-auto{overflow-y:auto}
-        .text-center{text-align:center}.text-right{text-align:right}.text-left{text-align:left}
-        .w-full{width:100%}.h-full{height:100%}.w-11{width:2.75rem}.h-11{height:2.75rem}.w-14{height:3.5rem;width:3.5rem}.w-24{width:6rem}
-        .min-h-screen{min-height:100vh}.min-h-0{min-height:0}
-        .max-w-xl{max-width:36rem}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}
-        .mx-auto{margin-left:auto;margin-right:auto}
-        .pt-24{padding-top:6rem}.py-4{padding:1rem 0}.py-10{padding:2.5rem 0}.py-12{padding:3rem 0}.py-28{padding:7rem 0}
-        .px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}
-        .mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-7{margin-bottom:1.75rem}.mb-8{margin-bottom:2rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-20{margin-bottom:5rem}
-        .mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}
-        .gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-10{gap:2.5rem}.gap-14{gap:3.5rem}.gap-20{gap:5rem}
-        .space-y-5>*+*{margin-top:1.25rem}.space-y-6>*+*{margin-top:1.5rem}.space-y-7>*+*{margin-top:1.75rem}
-        .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-        .rounded-full{border-radius:9999px}.rounded-2xl{border-radius:1rem}.rounded-xl{border-radius:.75rem}
-        .border{border-width:1px;border-style:solid}.border-t{border-top-width:1px;border-top-style:solid}.border-y{border-top-width:1px;border-top-style:solid;border-bottom-width:1px;border-bottom-style:solid}
-        .border-brd{border-color:#E8E4DC}
-        .bg-card{background:#FFFFFF}.bg-bg{background:#F8F6F1}.bg-bg-alt{background:#F0EDE6}.bg-accent{background:#0D7C66}
-        .text-muted{color:#8C8C8C}.text-fg{color:#1A1A1A}.text-accent{color:#0D7C66}.text-gold{color:#C5985A}
-        .text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-7xl{font-size:4.5rem;line-height:1}
-        .font-300{font-weight:300}.font-400{font-weight:400}.font-500{font-weight:500}.font-600{font-weight:600}.font-700{font-weight:700}.font-800{font-weight:800}
-        .font-display{font-family:'Changa',sans-serif}.font-body{font-family:'Tajawal',sans-serif}
-        .leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}.leading-none{line-height:1}
-        .tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}
-        .opacity-0{opacity:0}.pointer-events-none{pointer-events:none}
-        .z-0{z-index:0}.z-10{z-index:10}.z-\[70000\]{z-index:70000}.z-\[80000\]{z-index:80000}
-        .translate-x-1\/2{transform:translateX(50%)}.-translate-x-1\/2{transform:translateX(-50%)}
-        .object-cover{object-fit:cover}
-        .-bottom-6{bottom:-1.5rem}.-right-6{right:-1.5rem}.-translate-x-1\/2{transform:translateX(-50%)}
-        .left-1\/2{left:50%}
-        .border-red-400{border-color:#f87171}.text-red-400{color:#f87171}.text-red-500{color:#ef4444}
-        /* responsive */
-        @media(min-width:768px){
-            .md\:flex{display:flex}.md\:hidden{display:none}.md\:block{display:block}
-            .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-            .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-            .md\:px-12{padding-left:3rem;padding-right:3rem}
-            .md\:py-36{padding-top:9rem;padding-bottom:9rem}
-            .md\:p-10{padding:2.5rem}
-            .md\:text-4xl{font-size:2.25rem;line-height:2.5rem}
-            .md\:text-5xl{font-size:3rem;line-height:1}
-            .md\:text-7xl{font-size:4.5rem;line-height:1}
-            .md\:text-xl{font-size:1.25rem;line-height:1.75rem}
-            .md\:gap-20{gap:5rem}
-            .md\:flex-row{flex-direction:row}
-        }
-        @media(min-width:1024px){
-            .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-            .lg\:text-8xl{font-size:6rem;line-height:1}
-        }
-        .hidden.md\:flex,.hidden.md\:block{display:none}
-        @media(min-width:768px){.hidden.md\:flex{display:flex!important}.hidden.md\:block{display:block!important}}
-        /* gradient & misc */
-        .from-bg\/30{--tw-gradient-from:rgba(248,246,241,.3)}.to-transparent{--tw-gradient-to:transparent}
-        .from-bg\/30.to-transparent{background:linear-gradient(to top,rgba(248,246,241,.3),transparent)}
-        .select-none{user-select:none}
-        .cursor-pointer{cursor:pointer}
-        .transition-all{transition:all .3s}.transition-colors{transition:color .3s,background-color .3s,border-color .3s}
-        .duration-300{transition-duration:.3s}
-        .justify-start{justify-content:flex-start}
-        .col-span-2{grid-column:span 2/span 2}
-        .aspect-ratio-4\/5{aspect-ratio:4/5}
-        .w-full{width:100%!important}
-        /* width/height fixes for images to prevent CLS */
-        .project-card .card-img img{width:100%;height:240px;object-fit:cover}
 
-        /* ===== Ø´Ø§Ø´Ø© Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© ===== */
+
+        /* ===== شاشة البداية ===== */
+
         #intro{position:fixed;inset:0;z-index:999999;background:#F8F6F1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+
         .intro-star{position:absolute;width:3px;height:3px;border-radius:50%;opacity:0;transform:scale(0)}
 
-        /* ===== Ø§Ù„Ø§Ø³Ù…: ÙƒÙ„Ù…Ø© ÙƒØ§Ù…Ù„Ø© Ù„Ø§ Ø­Ø±Ù Ø¨Ø­Ø±Ù ===== */
+
+
+        /* ===== الاسم: كلمة كاملة لا حرف بحرف ===== */
+
         .intro-word{
+
             display:inline-block;
+
             font-family:'Changa',sans-serif;
+
             font-size:clamp(3.5rem,12vw,8rem);
+
             font-weight:800;
+
             color:#0D7C66;
+
             opacity:0;
+
             transform:translateY(-80px) scale(0.6);
+
             will-change:transform,opacity;
+
             line-height:1;
+
             white-space:nowrap;
+
         }
+
         .intro-space{display:inline-block;width:clamp(1rem,3vw,2.5rem);flex-shrink:0}
+
         .intro-line{width:0;height:3px;background:linear-gradient(to left,#0D7C66,#C5985A);border-radius:3px;opacity:0}
+
         .intro-role{font-family:'Changa',sans-serif;font-size:clamp(0.7rem,1.8vw,1rem);color:#8C8C8C;letter-spacing:8px;font-weight:500;opacity:0;clip-path:inset(0 100% 0 0)}
+
         .intro-flash{position:fixed;inset:0;background:#0D7C66;z-index:999998;opacity:0;pointer-events:none}
 
+
+
         /* ===== progress bar ===== */
+
         #progressBar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(to right,#0D7C66,#C5985A);z-index:80001;width:0%;transition:width .1s}
 
-        /* ===== ÙƒØ§Ù†ÙØ§Ø³ ===== */
+
+
+        /* ===== كانفاس ===== */
+
         #threeCanvas{position:fixed;inset:0;z-index:0}
 
-        /* ===== Ù…Ø¤Ø´Ø± ===== */
+
+
+        /* ===== مؤشر ===== */
+
         .cursor-dot{width:6px;height:6px;background:#0D7C66;border-radius:50%;position:fixed;pointer-events:none;z-index:1000000;transform:translate(-3px,-3px)}
+
         .cursor-ring{width:40px;height:40px;border:1.5px solid rgba(13,124,102,0.4);border-radius:50%;position:fixed;pointer-events:none;z-index:1000000;transform:translate(-20px,-20px);transition:width .3s,height .3s,border-color .3s,background .3s}
+
         .cursor-ring.hover{width:70px;height:70px;border-color:rgba(13,124,102,0.7);background:rgba(13,124,102,0.05)}
+
         .cursor-text{position:fixed;pointer-events:none;z-index:1000001;font-family:'Changa',sans-serif;font-size:.75rem;color:#0D7C66;font-weight:700;opacity:0;transform:translate(-50%,-50%)}
+
         .cursor-text.show{opacity:1}
+
         @media(max-width:768px){.cursor-dot,.cursor-ring,.cursor-text{display:none!important}}
+
         @media(min-width:769px){body{cursor:none}a,button,select,.form-input{cursor:none!important}}
 
-        /* ===== ØªÙ†Ù‚Ù„ ===== */
+
+
+        /* ===== تنقل ===== */
+
         .nav-glass{background:rgba(248,246,241,0);backdrop-filter:blur(0);border-bottom:1px solid transparent;opacity:0;transform:translateY(-20px)}
+
         .nav-glass.scrolled{background:rgba(248,246,241,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:#E8E4DC}
+
         .nav-link{color:#8C8C8C;font-size:.9rem;transition:color .3s;position:relative;font-weight:500}
+
         .nav-link::after{content:'';position:absolute;bottom:-4px;right:0;width:0;height:2px;background:#0D7C66;transition:width .3s}
+
         .nav-link:hover{color:#1A1A1A}.nav-link:hover::after{width:100%}
 
-        /* ===== Ø£Ø²Ø±Ø§Ø± ===== */
+
+
+        /* ===== أزرار ===== */
+
         .btn-primary{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:#0D7C66;color:#F8F6F1;border-radius:100px;font-weight:700;font-size:1rem;font-family:'Tajawal',sans-serif;border:none;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+
         .btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .3s}
+
         .btn-primary:hover{box-shadow:0 12px 35px rgba(13,124,102,.35)}.btn-primary:hover::before{opacity:1}
+
         .btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:transparent;border:1.5px solid #D5D0C7;color:#1A1A1A;border-radius:100px;font-weight:600;font-size:1rem;font-family:'Tajawal',sans-serif;transition:all .3s}
+
         .btn-secondary:hover{border-color:#0D7C66;color:#0D7C66;box-shadow:0 8px 25px rgba(13,124,102,.12)}
 
-        /* ===== Ø¨Ø·Ø§Ù‚Ø§Øª Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª ===== */
+
+
+        /* ===== بطاقات المهارات ===== */
+
         .skill-card{background:#FFF;border:1px solid #E8E4DC;border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.03);transition:border-color .3s,box-shadow .3s,transform .3s}
+
         .skill-card::after{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(circle,rgba(13,124,102,.04) 0%,transparent 70%);opacity:0;transition:opacity .5s}
+
         .skill-card:hover{border-color:rgba(13,124,102,.2);box-shadow:0 12px 40px rgba(0,0,0,.06)}.skill-card:hover::after{opacity:1}
+
         .skill-tag{display:inline-block;padding:7px 18px;background:rgba(13,124,102,.06);border:1px solid rgba(13,124,102,.1);border-radius:100px;font-size:.85rem;color:#0D7C66;transition:all .3s;font-weight:500}
+
         .skill-tag:hover{background:rgba(13,124,102,.12);transform:translateY(-2px)}
 
-        /* ===== Ù…Ø´Ø§Ø±ÙŠØ¹ ===== */
+
+
+        /* ===== مشاريع ===== */
+
         .project-card{border-radius:20px;overflow:hidden;background:#FFF;border:1px solid #E8E4DC;box-shadow:0 1px 3px rgba(0,0,0,.03);transform-style:preserve-3d;will-change:transform;transition:border-color .3s,box-shadow .3s}
+
         .project-card:hover{border-color:rgba(13,124,102,.15);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+
         .project-card .card-img{overflow:hidden;position:relative;height:240px}
+
         .project-card .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1);filter:brightness(.9) saturate(.85)}
+
         .project-card:hover .card-img img{transform:scale(1.08);filter:brightness(1) saturate(1)}
+
         .card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(255,255,255,.9) 0%,transparent 50%)}
+
         .card-hover-content{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .4s;background:rgba(13,124,102,.08)}
+
         .project-card:hover .card-hover-content{opacity:1}
+
         .card-hover-btn{width:56px;height:56px;border-radius:50%;background:#0D7C66;color:#F8F6F1;display:flex;align-items:center;justify-content:center;transform:scale(.5) rotate(-90deg);transition:transform .5s cubic-bezier(.16,1,.3,1);border:none;font-size:1.1rem}
+
         .project-card:hover .card-hover-btn{transform:scale(1) rotate(0)}
+
         .card-glow{position:absolute;width:250px;height:250px;background:radial-gradient(circle,rgba(13,124,102,.08) 0%,transparent 70%);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s}
+
         .project-card:hover .card-glow{opacity:1}
+
         .filter-btn{padding:10px 28px;border-radius:100px;border:1px solid #E8E4DC;background:#FFF;color:#8C8C8C;font-family:'Tajawal',sans-serif;font-size:.95rem;transition:all .3s}
+
         .filter-btn:hover{border-color:#D5D0C7;color:#1A1A1A}
+
         .filter-btn.active{background:#0D7C66;border-color:#0D7C66;color:#F8F6F1;font-weight:700}
+
         .project-item{transition:opacity .5s,transform .5s cubic-bezier(.16,1,.3,1)}
+
         .project-item.hide{opacity:0;transform:scale(.85);pointer-events:none;position:absolute;visibility:hidden}
 
-        /* ===== Ø¨Ø·Ø§Ù‚Ø© Ù…Ø´Ø±ÙˆØ¹ ÙˆØ§Ø³Ø¹Ø© ===== */
+
+
+        /* ===== بطاقة مشروع واسعة ===== */
+
         .project-card-wide{border-radius:20px;overflow:hidden;background:#FFF;border:1px solid #E8E4DC;box-shadow:0 1px 3px rgba(0,0,0,.03);transition:border-color .3s,box-shadow .3s}
+
         .project-card-wide:hover{border-color:rgba(13,124,102,.15);box-shadow:0 20px 60px rgba(0,0,0,.08)}
 
-        /* ===== Ù†Ù…ÙˆØ°Ø¬ ===== */
+
+
+        /* ===== نموذج ===== */
+
         .form-input{width:100%;padding:16px 20px;background:#FFF;border:1.5px solid #E8E4DC;border-radius:14px;color:#1A1A1A;font-family:'Tajawal',sans-serif;font-size:1rem;transition:border-color .3s,box-shadow .3s;outline:none}
+
         .form-input:focus{border-color:#0D7C66;box-shadow:0 0 0 4px rgba(13,124,102,.08)}
+
         .form-input::placeholder{color:#C4C0B8}
+
         .form-input.error{border-color:#EF4444}
 
-        /* ===== Ø¥Ø´Ø¹Ø§Ø± ===== */
+
+
+        /* ===== إشعار ===== */
+
         .toast{position:fixed;bottom:40px;left:50%;transform:translateX(-50%) translateY(80px);background:#FFF;border:1px solid rgba(13,124,102,.2);color:#1A1A1A;padding:18px 36px;border-radius:16px;font-family:'Tajawal',sans-serif;z-index:90000;opacity:0;display:flex;align-items:center;gap:12px;box-shadow:0 20px 60px rgba(0,0,0,.12);pointer-events:none}
+
         .toast.show{opacity:1;transform:translateX(-50%) translateY(0);transition:all .5s cubic-bezier(.16,1,.3,1)}
 
+
+
         .stat-item{position:relative}
+
         .stat-item::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:40px;background:#E8E4DC}
+
         .stat-item:last-child::after{display:none}
+
         .about-point{position:relative;padding-right:2rem}
+
         .about-point::before{content:'';position:absolute;right:0;top:8px;width:8px;height:8px;border-radius:50%;background:#C5985A;box-shadow:0 0 12px rgba(197,152,90,.4)}
 
+
+
         .mobile-menu{position:fixed;inset:0;z-index:80000;background:rgba(248,246,241,.98);backdrop-filter:blur(30px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;visibility:hidden;transition:all .4s}
+
         .mobile-menu.open{opacity:1;visibility:visible}
+
         .mobile-menu a{font-size:2rem;font-weight:800;color:#1A1A1A;font-family:'Changa',sans-serif;transition:color .3s}
+
         .mobile-menu a:hover{color:#0D7C66}
+
         .hamburger{display:none;z-index:85000;background:none;border:none}
+
         .hamburger span{display:block;width:24px;height:2px;background:#1A1A1A;transition:all .3s}
+
         .hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+
         .hamburger.active span:nth-child(2){opacity:0}
+
         .hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
         @media(max-width:768px){.hamburger{display:flex;flex-direction:column;gap:6px}}
 
+
+
         .scroll-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;background:#0D7C66;color:#F8F6F1;display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:70000;opacity:0;visibility:hidden;transform:translateY(20px);transition:all .4s;border:none;box-shadow:0 8px 25px rgba(13,124,102,.25)}
+
         .scroll-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+
         .scroll-top:hover{background:#0A6B57;transform:translateY(-4px)}
 
+
+
         .hero-word{display:inline-block;overflow:hidden;vertical-align:bottom}
+
         .hero-word-inner{display:inline-block;transform:translateY(120%)}
+
         .gold-line{width:60px;height:3px;border-radius:3px;background:linear-gradient(to left,#C5985A,#E8C87A)}
 
+
+
         /* ===== floating particles ===== */
+
         .particle{position:absolute;border-radius:50%;pointer-events:none;animation:floatParticle linear infinite}
+
         @keyframes floatParticle{0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh) translateX(var(--drift)) rotate(360deg);opacity:0}}
 
+
+
         @keyframes floatSlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
         .float-anim{animation:floatSlow 6s ease-in-out infinite}
+
         @keyframes scrollB{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(8px);opacity:.2}}
+
         @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;opacity:0}40%{transform:scaleY(1);transform-origin:top;opacity:1}60%{transform:scaleY(1);transform-origin:bottom;opacity:1}100%{transform:scaleY(0);transform-origin:bottom;opacity:0}}
 
-        /* ===== shimmer Ø¹Ù„Ù‰ Ø§Ù„ØµÙˆØ± ===== */
+
+
+        /* ===== shimmer على الصور ===== */
+
         .card-img::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.15) 50%,transparent 100%);transform:translateX(-100%);z-index:2;transition:none}
+
         .project-card:hover .card-img::before{animation:shimmer .8s ease forwards}
+
         @keyframes shimmer{to{transform:translateX(100%)}}
 
+
+
         /* ===== Modal ===== */
+
         #projectModal{position:fixed;inset:0;z-index:200000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+
         #projectModal.open{opacity:1;visibility:visible}
+
         #modalBackdrop{position:absolute;inset:0;background:rgba(15,15,15,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
         #modalBox{position:relative;z-index:1;background:#F8F6F1;border-radius:24px;width:100%;max-width:1100px;max-height:92vh;overflow:hidden;display:grid;grid-template-columns:1fr 420px;transform:scale(.9) translateY(40px);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+
         @media(max-width:900px){#modalBox{grid-template-columns:1fr;max-height:95vh;overflow-y:auto}}
+
         #projectModal.open #modalBox{transform:scale(1) translateY(0)}
 
+
+
         /* gallery */
+
         #modalGallery{background:#1A1A1A;position:relative;display:flex;flex-direction:column;min-height:0;overflow:hidden}
+
         #modalMainImg{position:relative;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;background:#111;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#333 #111}
+
         #modalMainImg::-webkit-scrollbar{width:5px}
+
         #modalMainImg::-webkit-scrollbar-track{background:#111}
+
         #modalMainImg::-webkit-scrollbar-thumb{background:#444;border-radius:3px}
+
         #modalMainImg::-webkit-scrollbar-thumb:hover{background:#666}
+
         #modalMainImg img{width:100%;height:auto;display:block;transition:opacity .35s ease;min-height:200px}
+
         #modalMainImg img.switching{opacity:0}
+
         .modal-nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(248,246,241,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);color:#fff;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s;z-index:2}
+
         .modal-nav-btn:hover{background:rgba(13,124,102,.7);transform:translateY(-50%) scale(1.1)}
+
         #modalPrev{right:14px}#modalNext{left:14px}
+
         #modalThumbs{display:flex;gap:8px;padding:12px 14px;overflow-x:auto;background:#111;scrollbar-width:thin;scrollbar-color:#333 #111}
+
         #modalThumbs::-webkit-scrollbar{height:4px}#modalThumbs::-webkit-scrollbar-track{background:#111}#modalThumbs::-webkit-scrollbar-thumb{background:#333;border-radius:2px}
+
         .modal-thumb{width:72px;height:52px;border-radius:8px;overflow:hidden;cursor:pointer;border:2px solid transparent;flex-shrink:0;transition:border-color .3s,transform .3s;opacity:.6}
+
         .modal-thumb:hover{opacity:1;transform:scale(1.05)}
+
         .modal-thumb.active{border-color:#0D7C66;opacity:1}
+
         .modal-thumb img{width:100%;height:100%;object-fit:cover}
+
         #modalImgCounter{position:absolute;bottom:14px;right:14px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-family:'Tajawal',sans-serif;font-size:.8rem;padding:5px 12px;border-radius:100px}
 
+
+
         /* details */
+
         #modalDetails{padding:36px 30px;overflow-y:auto;display:flex;flex-direction:column;gap:0;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#D5D0C7 transparent}
+
         #modalDetails::-webkit-scrollbar{width:4px}
+
         #modalDetails::-webkit-scrollbar-track{background:transparent}
+
         #modalDetails::-webkit-scrollbar-thumb{background:#D5D0C7;border-radius:2px}
+
         #modalDetails::-webkit-scrollbar-thumb:hover{background:#B8B4AC}
+
         #modalCatBadge{display:inline-block;padding:6px 16px;background:rgba(13,124,102,.08);border:1px solid rgba(13,124,102,.15);color:#0D7C66;border-radius:100px;font-size:.8rem;font-weight:700;margin-bottom:14px;font-family:'Tajawal',sans-serif}
+
         #modalTitle{font-family:'Changa',sans-serif;font-size:1.55rem;font-weight:800;color:#1A1A1A;line-height:1.3;margin-bottom:12px}
+
         #modalDesc{font-family:'Tajawal',sans-serif;font-size:.95rem;color:#8C8C8C;line-height:1.8;margin-bottom:22px}
+
         .modal-divider{height:1px;background:#E8E4DC;margin:18px 0}
+
         .modal-section-title{font-family:'Changa',sans-serif;font-size:.85rem;font-weight:700;color:#8C8C8C;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+
         #modalFeatures{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:0}
+
         #modalFeatures li{display:flex;align-items:flex-start;gap:10px;font-family:'Tajawal',sans-serif;font-size:.9rem;color:#1A1A1A}
+
         #modalFeatures li::before{content:'';width:7px;height:7px;border-radius:50%;background:#C5985A;flex-shrink:0;margin-top:6px}
+
         #modalTags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0}
+
         #modalTags span{padding:7px 16px;background:rgba(13,124,102,.06);border:1px solid rgba(13,124,102,.12);border-radius:100px;font-size:.82rem;color:#0D7C66;font-family:'Tajawal',sans-serif;font-weight:600}
+
         #modalCloseBtn{position:absolute;top:16px;left:16px;z-index:10;width:40px;height:40px;border-radius:50%;background:rgba(248,246,241,.9);backdrop-filter:blur(8px);border:1px solid #E8E4DC;color:#1A1A1A;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .3s}
+
         #modalCloseBtn:hover{background:#0D7C66;color:#fff;border-color:#0D7C66;transform:rotate(90deg)}
 
-        /* ===== Ù†Ø¨Ø¶ Ø§Ù„Ø£ÙŠÙ‚ÙˆÙ†Ø© ===== */
+
+
+        /* ===== نبض الأيقونة ===== */
+
         @keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(13,124,102,.4)}70%{box-shadow:0 0 0 12px rgba(13,124,102,0)}100%{box-shadow:0 0 0 0 rgba(13,124,102,0)}}
+
         .contact-icon-wrap{animation:pulse-ring 2.5s cubic-bezier(.455,.03,.515,.955) infinite}
 
+
+
         /* ===== typing cursor ===== */
+
         .typing-cursor{display:inline-block;width:3px;height:1em;background:#0D7C66;margin-right:4px;vertical-align:middle;animation:blink .8s step-end infinite}
+
         @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
-        /* ===== Ø®Ø· Ø§Ù„ØªÙ‚Ø¯Ù… ===== */
+
+
+        /* ===== خط التقدم ===== */
+
         .skill-bar-wrap{background:#F0EDE6;border-radius:100px;overflow:hidden;height:6px}
+
         .skill-bar{height:100%;background:linear-gradient(to left,#0D7C66,#C5985A);border-radius:100px;width:0%;transition:width 1.5s cubic-bezier(.16,1,.3,1)}
 
-        /* ===== Ù…Ø¤Ø´Ø± Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ ===== */
+
+
+        /* ===== مؤشر المشروع ===== */
+
         .project-badge{position:absolute;top:16px;right:16px;background:rgba(13,124,102,.9);backdrop-filter:blur(8px);color:#fff;font-family:'Tajawal',sans-serif;font-size:.75rem;font-weight:700;padding:6px 14px;border-radius:100px;z-index:3}
 
+
+
         @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
     </style>
+
 </head>
+
 <body>
 
+
+
 <!-- progress bar -->
+
 <div id="progressBar"></div>
 
-<!-- ===== Ø´Ø§Ø´Ø© Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© ===== -->
+
+
+<!-- ===== شاشة البداية ===== -->
+
 <div id="intro">
+
     <div id="introStars"></div>
+
     <div id="introContent" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;">
-        <!-- Ø§Ù„Ø§Ø³Ù… Ø¨ÙƒÙ„Ù…ØªÙŠÙ† ÙƒØ§Ù…Ù„ØªÙŠÙ† â€” Ù„Ø§ Ø­Ø±Ù Ø¨Ø­Ø±Ù -->
+
+        <!-- الاسم بكلمتين كاملتين — لا حرف بحرف -->
+
         <div id="introName" style="display:flex;flex-direction:row;flex-wrap:nowrap;align-items:baseline;direction:rtl;gap:clamp(1rem,3vw,2rem);"></div>
+
         <div class="intro-line" id="introLine"></div>
+
         <div class="intro-role" id="introRole">FULL-STACK WEB DEVELOPER</div>
+
     </div>
+
 </div>
+
 <div class="intro-flash" id="introFlash"></div>
+
+
 
 <canvas id="threeCanvas"></canvas>
 
+
+
 <div class="cursor-dot" id="cursorDot"></div>
+
 <div class="cursor-ring" id="cursorRing"></div>
-<div class="cursor-text" id="cursorText">Ø¹Ø±Ø¶</div>
+
+<div class="cursor-text" id="cursorText">عرض</div>
+
+
 
 <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" onclick="closeMobile()" data-i18n="nav_home">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a>
-    <a href="#about" onclick="closeMobile()" data-i18n="nav_about">Ø¹Ù†Ù‘ÙŠ</a>
-    <a href="#skills" onclick="closeMobile()" data-i18n="nav_skills">Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª</a>
-    <a href="#portfolio" onclick="closeMobile()" data-i18n="nav_portfolio">Ø§Ù„Ø£Ø¹Ù…Ø§Ù„</a>
-    <a href="#contact" onclick="closeMobile()" data-i18n="nav_contact">ØªÙˆØ§ØµÙ„</a>
+
+    <a href="#home" onclick="closeMobile()" data-i18n="nav_home">الرئيسية</a>
+
+    <a href="#about" onclick="closeMobile()" data-i18n="nav_about">عنّي</a>
+
+    <a href="#skills" onclick="closeMobile()" data-i18n="nav_skills">المهارات</a>
+
+    <a href="#portfolio" onclick="closeMobile()" data-i18n="nav_portfolio">الأعمال</a>
+
+    <a href="#contact" onclick="closeMobile()" data-i18n="nav_contact">تواصل</a>
+
 </div>
+
+
 
 <nav class="nav-glass fixed top-0 inset-x-0 z-[70000] px-6 md:px-12 py-4" id="navbar">
+
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#home" class="font-display text-xl font-800 text-accent tracking-wide">Ø³Ø¹ÙŠØ¯<span class="text-fg">.</span></a>
+
+        <a href="#home" class="font-display text-xl font-800 text-accent tracking-wide">سعيد<span class="text-fg">.</span></a>
+
         <div class="hidden md:flex items-center gap-10">
-            <a href="#home" class="nav-link" data-i18n="nav_home">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a>
-            <a href="#about" class="nav-link" data-i18n="nav_about">Ø¹Ù†Ù‘ÙŠ</a>
-            <a href="#skills" class="nav-link" data-i18n="nav_skills">Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª</a>
-            <a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Ø§Ù„Ø£Ø¹Ù…Ø§Ù„</a>
-            <a href="#contact" class="nav-link" data-i18n="nav_contact">ØªÙˆØ§ØµÙ„</a>
+
+            <a href="#home" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+
+            <a href="#about" class="nav-link" data-i18n="nav_about">عنّي</a>
+
+            <a href="#skills" class="nav-link" data-i18n="nav_skills">المهارات</a>
+
+            <a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">الأعمال</a>
+
+            <a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل</a>
+
         </div>
+
         <div class="hidden md:flex items-center gap-3">
+
             <div class="relative" id="langDropWrap">
+
                 <button id="langBtn" onclick="toggleLangDrop()" class="flex items-center gap-2 px-3 py-2 rounded-xl border border-brd text-muted text-sm hover:border-accent hover:text-accent transition-all" style="font-family:'Tajawal',sans-serif;background:transparent">
+
                     <i class="fa-solid fa-globe text-xs"></i>
-                    <span id="currentLangLabel">Ø¹Ø±Ø¨ÙŠ</span>
+
+                    <span id="currentLangLabel">عربي</span>
+
                     <i class="fa-solid fa-chevron-down text-xs" id="langChevron" style="transition:transform .3s"></i>
+
                 </button>
+
                 <div id="langDrop" style="display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid #E8E4DC;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.1);min-width:160px;overflow:hidden;z-index:99999">
-                    <button onclick="setLang('ar')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>Ø¹Ø±Ø¨ÙŠ</span><span style="opacity:.4;font-size:.7rem">AR</span></button>
+
+                    <button onclick="setLang('ar')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>عربي</span><span style="opacity:.4;font-size:.7rem">AR</span></button>
+
                     <button onclick="setLang('en')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>English</span><span style="opacity:.4;font-size:.7rem">EN</span></button>
-                    <button onclick="setLang('zh')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>ä¸­æ–‡</span><span style="opacity:.4;font-size:.7rem">ZH</span></button>
-                    <button onclick="setLang('es')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>EspaÃ±ol</span><span style="opacity:.4;font-size:.7rem">ES</span></button>
-                    <button onclick="setLang('fr')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>FranÃ§ais</span><span style="opacity:.4;font-size:.7rem">FR</span></button>
-                    <button onclick="setLang('tr')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>TÃ¼rkÃ§e</span><span style="opacity:.4;font-size:.7rem">TR</span></button>
+
+                    <button onclick="setLang('zh')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>中文</span><span style="opacity:.4;font-size:.7rem">ZH</span></button>
+
+                    <button onclick="setLang('es')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>Español</span><span style="opacity:.4;font-size:.7rem">ES</span></button>
+
+                    <button onclick="setLang('fr')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>Français</span><span style="opacity:.4;font-size:.7rem">FR</span></button>
+
+                    <button onclick="setLang('tr')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>Türkçe</span><span style="opacity:.4;font-size:.7rem">TR</span></button>
+
                     <button onclick="setLang('hr')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>Hrvatski</span><span style="opacity:.4;font-size:.7rem">HR</span></button>
+
                     <button onclick="setLang('de')" class="lang-opt w-full text-right px-4 py-3 text-sm hover:bg-bg transition-colors flex items-center justify-between gap-2" style="font-family:'Tajawal',sans-serif"><span>Deutsch</span><span style="opacity:.4;font-size:.7rem">DE</span></button>
+
                 </div>
+
             </div>
-            <a href="#contact" class="btn-primary text-sm" style="padding:10px 28px" data-i18n="nav_cta">Ø§Ø¨Ø¯Ø£ Ù…Ø´Ø±ÙˆØ¹Ùƒ</a>
+
+            <a href="#contact" class="btn-primary text-sm" style="padding:10px 28px" data-i18n="nav_cta">ابدأ مشروعك</a>
+
         </div>
-        <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©"><span></span><span></span><span></span></button>
+
+        <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="القائمة"><span></span><span></span><span></span></button>
+
     </div>
+
 </nav>
 
+
+
 <main>
+
     <!-- ===== Hero ===== -->
+
     <section id="home" class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-        <!-- Ø¬Ø²ÙŠØ¦Ø§Øª Ø¹Ø§Ø¦Ù…Ø© -->
+
+        <!-- جزيئات عائمة -->
+
         <div id="heroParticles" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1"></div>
+
         <div class="relative z-10 text-center max-w-5xl mx-auto pt-24">
-            <p class="text-muted text-lg md:text-xl font-body mb-8 tracking-wide hero-anim" style="opacity:0" data-i18n="hero_sub">Ù…Ø·ÙˆÙ‘Ø± ÙˆØ§Ø¬Ù‡Ø§Øª ÙˆØªØ¬Ø§Ø±Ø¨ ÙˆÙŠØ¨</p>
+
+            <p class="text-muted text-lg md:text-xl font-body mb-8 tracking-wide hero-anim" style="opacity:0" data-i18n="hero_sub">مطوّر واجهات وتجارب ويب</p>
+
             <h1 class="font-display leading-none mb-10">
-                <span class="hero-word"><span class="hero-word-inner text-5xl md:text-7xl lg:text-8xl font-800 text-fg" data-i18n="hero_h1">Ø£Ø¨Ù†ÙŠ Ù…ÙˆØ§Ù‚Ø¹</span></span><br>
+
+                <span class="hero-word"><span class="hero-word-inner text-5xl md:text-7xl lg:text-8xl font-800 text-fg" data-i18n="hero_h1">أبني مواقع</span></span><br>
+
                 <span class="hero-word"><span class="hero-word-inner text-5xl md:text-7xl lg:text-8xl font-800 text-accent" id="typingTarget"></span><span class="typing-cursor" id="typingCursor" style="display:none"></span></span>
+
             </h1>
-            <p class="text-muted text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed hero-anim" style="opacity:0" data-i18n="hero_desc">Ø¨Ø®Ø¨Ø±Ø© ØªØªØ¬Ø§ÙˆØ² 3 Ø³Ù†ÙˆØ§ØªØŒ Ø£Ø­ÙˆÙ‘Ù„ Ø§Ù„Ø£ÙÙƒØ§Ø± Ø¥Ù„Ù‰ ØªØ¬Ø§Ø±Ø¨ Ø±Ù‚Ù…ÙŠØ© Ø³Ø±ÙŠØ¹Ø© ÙˆØ¬Ù…ÙŠÙ„Ø© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£Ø­Ø¯Ø« Ø§Ù„ØªÙ‚Ù†ÙŠØ§Øª</p>
+
+            <p class="text-muted text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed hero-anim" style="opacity:0" data-i18n="hero_desc">بخبرة تتجاوز 3 سنوات، أحوّل الأفكار إلى تجارب رقمية سريعة وجميلة باستخدام أحدث التقنيات</p>
+
             <div class="flex flex-wrap items-center justify-center gap-5 hero-anim" style="opacity:0">
-                <a href="#portfolio" class="btn-primary" data-i18n="hero_btn1">Ø´Ø§Ù‡Ø¯ Ø£Ø¹Ù…Ø§Ù„ÙŠ <i class="fa-solid fa-arrow-left text-sm"></i></a>
-                <a href="#contact" class="btn-secondary" data-i18n="hero_btn2">ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙŠ</a>
+
+                <a href="#portfolio" class="btn-primary" data-i18n="hero_btn1">شاهد أعمالي <i class="fa-solid fa-arrow-left text-sm"></i></a>
+
+                <a href="#contact" class="btn-secondary" data-i18n="hero_btn2">تواصل معي</a>
+
             </div>
+
         </div>
+
         <!-- scroll indicator -->
+
         <div class="hero-anim" style="opacity:0;margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:2;position:relative">
+
             <span style="font-family:'Tajawal',sans-serif;font-size:.75rem;color:#B8B4AC;letter-spacing:3px;text-transform:uppercase">scroll</span>
+
             <div style="width:1.5px;height:48px;background:linear-gradient(to bottom,#C5985A,transparent);animation:scrollLine 1.8s ease-in-out infinite"></div>
+
         </div>
+
     </section>
 
-    <!-- ===== Ø¥Ø­ØµØ§Ø¡Ø§Øª ===== -->
+
+
+    <!-- ===== إحصاءات ===== -->
+
     <section class="relative z-10 border-y border-brd bg-card" id="statsSection">
+
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4">
-            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="3">0</span><span class="text-gold text-2xl">+</span></div><div class="text-muted text-sm mt-2" data-i18n="stat1">Ø³Ù†ÙˆØ§Øª Ø®Ø¨Ø±Ø©</div></div>
-            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="30">0</span><span class="text-gold text-2xl">+</span></div><div class="text-muted text-sm mt-2" data-i18n="stat2">Ù…Ø´Ø±ÙˆØ¹ Ù…ÙÙ†Ø¬Ø²</div></div>
-            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="12">0</span><span class="text-gold text-2xl">+</span></div><div class="text-muted text-sm mt-2" data-i18n="stat3">ØªÙ‚Ù†ÙŠØ© Ø£ØªÙ‚Ù†Ù‡Ø§</div></div>
-            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="100">0</span><span class="text-gold text-2xl">%</span></div><div class="text-muted text-sm mt-2" data-i18n="stat4">Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø§Ù„Ø¬ÙˆØ¯Ø©</div></div>
+
+            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="3">0</span><span class="text-gold text-2xl">+</span></div><div class="text-muted text-sm mt-2" data-i18n="stat1">سنوات خبرة</div></div>
+
+            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="30">0</span><span class="text-gold text-2xl">+</span></div><div class="text-muted text-sm mt-2" data-i18n="stat2">مشروع مُنجز</div></div>
+
+            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="12">0</span><span class="text-gold text-2xl">+</span></div><div class="text-muted text-sm mt-2" data-i18n="stat3">تقنية أتقنها</div></div>
+
+            <div class="stat-item text-center py-12 px-4"><div class="font-display text-3xl md:text-5xl font-800 text-fg"><span class="counter" data-target="100">0</span><span class="text-gold text-2xl">%</span></div><div class="text-muted text-sm mt-2" data-i18n="stat4">التزام بالجودة</div></div>
+
         </div>
+
     </section>
 
-    <!-- ===== Ø¹Ù†Ù‘ÙŠ ===== -->
+
+
+    <!-- ===== عنّي ===== -->
+
     <section id="about" class="py-28 md:py-36 px-6">
+
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+
             <div class="about-img-wrap" style="position:relative">
+
                 <div class="relative rounded-2xl overflow-hidden border border-brd float-anim" style="aspect-ratio:540/611;background:#0d5a4f">
-                    <img src="saeed_professional_portfolio.svg" alt="Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Full-Stack Developer" class="w-full h-full object-cover" width="540" height="611" fetchpriority="high" loading="eager">
+
+                    <img src="saeed_professional_portfolio.svg" alt="سعيد العريني — Full-Stack Developer" class="w-full h-full object-cover" width="540" height="611" fetchpriority="high" loading="eager">
+
                 </div>
+
                 <div class="absolute -bottom-6 -right-6 bg-accent p-6 rounded-2xl font-display font-800 text-lg leading-tight about-badge" style="color:#F8F6F1">Full-Stack<br>Developer</div>
+
             </div>
+
             <div>
-                <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 about-anim" data-i18n="about_tag">Ù…Ù† Ø£Ù†Ø§</p>
-                <h2 class="font-display text-3xl md:text-4xl font-800 text-fg leading-tight mb-7 about-anim" data-i18n="about_h2">Ù„Ø³ØªÙ Ù…Ø¬Ø±Ø¯ Ù…Ø¨Ø±Ù…Ø¬ØŒ<br>Ø¨Ù„ Ø´Ø±ÙŠÙƒ ÙÙŠ Ù†Ø¬Ø§Ø­ Ù…Ø´Ø±ÙˆØ¹Ùƒ</h2>
-                <p class="text-muted leading-relaxed text-lg mb-10 about-anim" data-i18n="about_p">Ø£Ù†Ø§ Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠØŒ Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ø£Ø¤Ù…Ù† Ø¨Ø£Ù† Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù„ÙŠØ³ Ù…Ø¬Ø±Ø¯ ØµÙØ­Ø© Ø¹Ù„Ù‰ Ø§Ù„Ø¥Ù†ØªØ±Ù†ØªØŒ Ø¨Ù„ Ù‡Ùˆ Ø§Ù†Ø¹ÙƒØ§Ø³ Ø­Ù‚ÙŠÙ‚ÙŠ Ù„Ù‡ÙˆÙŠØ© Ø§Ù„Ø¹Ù„Ø§Ù…Ø© Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© ÙˆØ£ÙˆÙ„ Ø§Ù†Ø·Ø¨Ø§Ø¹ ÙŠØªØ±ÙƒÙ‡ Ù„Ø¯Ù‰ Ø¹Ù…Ù„Ø§Ø¦Ùƒ.</p>
+
+                <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 about-anim" data-i18n="about_tag">من أنا</p>
+
+                <h2 class="font-display text-3xl md:text-4xl font-800 text-fg leading-tight mb-7 about-anim" data-i18n="about_h2">لستُ مجرد مبرمج،<br>بل شريك في نجاح مشروعك</h2>
+
+                <p class="text-muted leading-relaxed text-lg mb-10 about-anim" data-i18n="about_p">أنا سعيد العريني، مطوّر ويب متكامل أؤمن بأن الموقع الإلكتروني ليس مجرد صفحة على الإنترنت، بل هو انعكاس حقيقي لهوية العلامة التجارية وأول انطباع يتركه لدى عملائك.</p>
+
                 <div class="space-y-6 mb-10">
+
                     <div class="about-point about-anim">
-                        <h4 class="font-display font-700 text-fg mb-1" data-i18n="ap1_h">ØªØ±ÙƒÙŠØ² Ø¹Ù„Ù‰ Ø§Ù„Ø£Ø¯Ø§Ø¡</h4>
-                        <p class="text-muted text-sm" data-i18n="ap1_p">Ù…ÙˆØ§Ù‚Ø¹ Ø³Ø±ÙŠØ¹Ø© Ø§Ù„ØªØ­Ù…ÙŠÙ„ ÙˆÙ…ÙØ­Ø³Ù‘Ù†Ø© Ù„Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø«</p>
+
+                        <h4 class="font-display font-700 text-fg mb-1" data-i18n="ap1_h">تركيز على الأداء</h4>
+
+                        <p class="text-muted text-sm" data-i18n="ap1_p">مواقع سريعة التحميل ومُحسّنة لمحركات البحث</p>
+
                         <div class="skill-bar-wrap mt-3"><div class="skill-bar" data-width="92%"></div></div>
+
                     </div>
+
                     <div class="about-point about-anim">
-                        <h4 class="font-display font-700 text-fg mb-1" data-i18n="ap2_h">ØªØµÙ…ÙŠÙ… ÙŠØ®Ø¯Ù… Ø§Ù„ØªØ¬Ø±Ø¨Ø©</h4>
-                        <p class="text-muted text-sm" data-i18n="ap2_p">ÙˆØ§Ø¬Ù‡Ø§Øª Ø¨Ø¯ÙŠÙ‡ÙŠØ© ÙˆØ¬Ø°Ø§Ø¨Ø© ØªÙØ­Ø¨Ù‘Ùƒ Ø§Ù„Ø²Ø§Ø¦Ø± ÙÙŠ Ø£ÙˆÙ„ Ù†Ø¸Ø±Ø©</p>
+
+                        <h4 class="font-display font-700 text-fg mb-1" data-i18n="ap2_h">تصميم يخدم التجربة</h4>
+
+                        <p class="text-muted text-sm" data-i18n="ap2_p">واجهات بديهية وجذابة تُحبّك الزائر في أول نظرة</p>
+
                         <div class="skill-bar-wrap mt-3"><div class="skill-bar" data-width="88%"></div></div>
+
                     </div>
+
                     <div class="about-point about-anim">
-                        <h4 class="font-display font-700 text-fg mb-1" data-i18n="ap3_h">ÙƒÙˆØ¯ Ù†Ø¸ÙŠÙ ÙˆÙ‚Ø§Ø¨Ù„ Ù„Ù„ØªØ·ÙˆÙŠØ±</h4>
-                        <p class="text-muted text-sm" data-i18n="ap3_p">Ø£Ø³Ø§Ø³ Ù…ØªÙŠÙ† ÙŠØ¶Ù…Ù† Ø§Ø³ØªÙ…Ø±Ø§Ø±ÙŠØ© Ù…Ø´Ø±ÙˆØ¹Ùƒ ÙˆÙ†Ù…ÙˆÙ‡</p>
+
+                        <h4 class="font-display font-700 text-fg mb-1" data-i18n="ap3_h">كود نظيف وقابل للتطوير</h4>
+
+                        <p class="text-muted text-sm" data-i18n="ap3_p">أساس متين يضمن استمرارية مشروعك ونموه</p>
+
                         <div class="skill-bar-wrap mt-3"><div class="skill-bar" data-width="95%"></div></div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- ===== Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª ===== -->
+
+
+    <!-- ===== المهارات ===== -->
+
     <section id="skills" class="py-28 md:py-36 px-6 bg-bg-alt relative overflow-hidden">
-        <!-- Ø®Ù„ÙÙŠØ© Ø²Ø®Ø±ÙÙŠØ© -->
+
+        <!-- خلفية زخرفية -->
+
         <div style="position:absolute;top:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(13,124,102,.04) 0%,transparent 70%);border-radius:50%;pointer-events:none"></div>
+
         <div style="position:absolute;bottom:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(197,152,90,.05) 0%,transparent 70%);border-radius:50%;pointer-events:none"></div>
+
         <div class="max-w-6xl mx-auto relative z-10">
+
             <div class="text-center mb-20">
-                <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 skill-anim" data-i18n="skills_tag">Ù…Ø§ Ø£ØªÙ‚Ù†Ù‡</p>
-                <h2 class="font-display text-3xl md:text-5xl font-800 text-fg skill-anim" data-i18n="skills_h2">Ø£Ø¯ÙˆØ§ØªÙŠ ÙˆØ£Ø³Ù„ÙˆØ¨ Ø¹Ù…Ù„ÙŠ</h2>
+
+                <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 skill-anim" data-i18n="skills_tag">ما أتقنه</p>
+
+                <h2 class="font-display text-3xl md:text-5xl font-800 text-fg skill-anim" data-i18n="skills_h2">أدواتي وأسلوب عملي</h2>
+
             </div>
+
             <div class="grid md:grid-cols-3 gap-7">
-                <div class="skill-card skill-anim"><div class="text-accent/10 font-display text-7xl font-800 mb-5 leading-none">01</div><h3 class="font-display text-xl font-700 text-fg mb-2" data-i18n="sk1_h">ÙˆØ§Ø¬Ù‡Ø§Øª Ø£Ù…Ø§Ù…ÙŠØ©</h3><p class="text-muted text-sm mb-7" data-i18n="sk1_p">Ø¨Ù†Ø§Ø¡ ØªØ¬Ø§Ø±Ø¨ Ù…Ø³ØªØ®Ø¯Ù… ØªÙØ§Ø¹Ù„ÙŠØ© ÙˆØ³Ø±ÙŠØ¹Ø©</p><div class="flex flex-wrap gap-2"><span class="skill-tag">React.js</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TailwindCSS</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">jQuery</span></div></div>
-                <div class="skill-card skill-anim"><div class="text-accent/10 font-display text-7xl font-800 mb-5 leading-none">02</div><h3 class="font-display text-xl font-700 text-fg mb-2" data-i18n="sk2_h">Ø®Ù„ÙÙŠØ© ÙˆØ±Ø¨Ø·</h3><p class="text-muted text-sm mb-7" data-i18n="sk2_p">Ø£Ù†Ø¸Ù…Ø© Ù‚ÙˆÙŠØ© ÙˆØ¢Ù…Ù†Ø© ØªØªØ­Ù…Ù„ Ø§Ù„Ø¶ØºØ·</p><div class="flex flex-wrap gap-2"><span class="skill-tag">PHP</span><span class="skill-tag">Laravel 12</span><span class="skill-tag">MySQL</span><span class="skill-tag">REST APIs</span><span class="skill-tag" data-i18n="sk2_tag">Ù„ÙˆØ­Ø§Øª ØªØ­ÙƒÙ…</span></div></div>
-                <div class="skill-card skill-anim"><div class="text-accent/10 font-display text-7xl font-800 mb-5 leading-none">03</div><h3 class="font-display text-xl font-700 text-fg mb-2" data-i18n="sk3_h">ØªØ¬Ø§Ø±Ø© ÙˆØ£Ù†Ø¸Ù…Ø© Ø¥Ø¯Ø§Ø±Ø©</h3><p class="text-muted text-sm mb-7" data-i18n="sk3_p">Ø­Ù„ÙˆÙ„ Ø³Ø±ÙŠØ¹Ø© ÙˆÙ‚Ø§Ø¨Ù„Ø© Ù„Ù„ØªØ®ØµÙŠØµ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„</p><div class="flex flex-wrap gap-2"><span class="skill-tag">WordPress</span><span class="skill-tag">Elementor</span><span class="skill-tag">WooCommerce</span><span class="skill-tag" data-i18n="sk3_tag">ØªØ®ØµÙŠØµ ÙƒØ§Ù…Ù„</span></div></div>
+
+                <div class="skill-card skill-anim"><div class="text-accent/10 font-display text-7xl font-800 mb-5 leading-none">01</div><h3 class="font-display text-xl font-700 text-fg mb-2" data-i18n="sk1_h">واجهات أمامية</h3><p class="text-muted text-sm mb-7" data-i18n="sk1_p">بناء تجارب مستخدم تفاعلية وسريعة</p><div class="flex flex-wrap gap-2"><span class="skill-tag">React.js</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TailwindCSS</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">jQuery</span></div></div>
+
+                <div class="skill-card skill-anim"><div class="text-accent/10 font-display text-7xl font-800 mb-5 leading-none">02</div><h3 class="font-display text-xl font-700 text-fg mb-2" data-i18n="sk2_h">خلفية وربط</h3><p class="text-muted text-sm mb-7" data-i18n="sk2_p">أنظمة قوية وآمنة تتحمل الضغط</p><div class="flex flex-wrap gap-2"><span class="skill-tag">PHP</span><span class="skill-tag">Laravel 12</span><span class="skill-tag">MySQL</span><span class="skill-tag">REST APIs</span><span class="skill-tag" data-i18n="sk2_tag">لوحات تحكم</span></div></div>
+
+                <div class="skill-card skill-anim"><div class="text-accent/10 font-display text-7xl font-800 mb-5 leading-none">03</div><h3 class="font-display text-xl font-700 text-fg mb-2" data-i18n="sk3_h">تجارة وأنظمة إدارة</h3><p class="text-muted text-sm mb-7" data-i18n="sk3_p">حلول سريعة وقابلة للتخصيص بالكامل</p><div class="flex flex-wrap gap-2"><span class="skill-tag">WordPress</span><span class="skill-tag">Elementor</span><span class="skill-tag">WooCommerce</span><span class="skill-tag" data-i18n="sk3_tag">تخصيص كامل</span></div></div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- ===== Ø§Ù„Ø£Ø¹Ù…Ø§Ù„ ===== -->
+
+
+    <!-- ===== الأعمال ===== -->
+
     <section id="portfolio" class="py-28 md:py-36 px-6 relative overflow-hidden">
+
         <div class="max-w-7xl mx-auto">
+
             <div class="text-center mb-14">
-                <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 port-anim" data-i18n="port_tag">Ø£Ø¹Ù…Ø§Ù„ÙŠ</p>
-                <h2 class="font-display text-3xl md:text-5xl font-800 text-fg port-anim" data-i18n="port_h2">Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ø®ØªØ¨Ø±Øª ÙÙŠÙ‡Ø§ Ø£ÙÙƒØ§Ø±ÙŠ</h2>
-                <p class="text-muted mt-4 max-w-xl mx-auto port-anim" data-i18n="port_p">ÙƒÙ„ Ù…Ø´Ø±ÙˆØ¹ Ù‡Ùˆ ØªØ­Ø¯ÙÙ‘ Ø¬Ø¯ÙŠØ¯ ÙˆÙØ±ØµØ© Ù„ØªÙ‚Ø¯ÙŠÙ… Ø£ÙØ¶Ù„ Ù…Ø§ Ù„Ø¯ÙŠÙ‘</p>
+
+                <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 port-anim" data-i18n="port_tag">أعمالي</p>
+
+                <h2 class="font-display text-3xl md:text-5xl font-800 text-fg port-anim" data-i18n="port_h2">مشاريع اختبرت فيها أفكاري</h2>
+
+                <p class="text-muted mt-4 max-w-xl mx-auto port-anim" data-i18n="port_p">كل مشروع هو تحدٍّ جديد وفرصة لتقديم أفضل ما لديّ</p>
+
             </div>
 
-            <!-- ÙÙ„Ø§ØªØ± -->
+
+
+            <!-- فلاتر -->
+
             <div class="flex flex-wrap justify-center gap-3 mb-14 port-anim">
-                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Ø§Ù„ÙƒÙ„</button>
+
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">الكل</button>
+
                 <button class="filter-btn" data-filter="laravel">Laravel</button>
+
                 <button class="filter-btn" data-filter="wordpress">WordPress</button>
+
                 <button class="filter-btn" data-filter="react">React</button>
+
             </div>
 
-            <!-- Ø´Ø¨ÙƒØ© Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ -->
+
+
+            <!-- شبكة المشاريع -->
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7" id="projectsGrid">
 
-                <!-- 1. Ù…ØªØ¬Ø± Laravel -->
+
+
+                <!-- 1. متجر Laravel -->
+
                 <div class="project-item project-card" data-cat="laravel react" data-project="store-laravel">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">Laravel + React</span>
-                        <img src="Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-2025-08-05-11_35_34.png" alt="Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ" width="600" height="240" loading="eager" fetchpriority="high" decoding="async">
+
+                        <img src="Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-2025-08-05-11_35_34.png" alt="متجر إلكتروني" width="600" height="240" loading="eager" fetchpriority="high" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù…ØªÙƒØ§Ù…Ù„</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ØªØ¬Ø± Ø§Ø­ØªØ±Ø§ÙÙŠ Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… CMS ÙƒØ§Ù…Ù„Ø© â€” Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† Ø¨ÙˆØ§Ø¬Ù‡Ø© Ø³Ù„Ø³Ø©</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">متجر إلكتروني متكامل</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">متجر احترافي مع لوحة تحكم CMS كاملة — إدارة المنتجات والطلبات والمستخدمين بواجهة سلسة</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Laravel</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">React.js</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">MySQL</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 2. Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø³ÙØ± -->
+
+
+                <!-- 2. موقع السفر -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="travel">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress</span>
+
                         <img src="travel%20website/screencapture-goldeneagle-ae-2025-05-08-16_27_56.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Golden Eagle â€” Ø­Ø¬ÙˆØ²Ø§Øª Ø§Ù„Ø³ÙØ±</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…Ù†ØµØ© Ø³ÙŠØ§Ø­ÙŠØ© Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ø­Ø¬ÙˆØ²Ø§Øª Ø§Ù„Ø±Ø­Ù„Ø§Øª ÙˆØ§Ù„ÙÙ†Ø§Ø¯Ù‚ Ù…Ø¹ ØªØµÙ…ÙŠÙ… Ø±Ø§Ù‚Ù ÙˆØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªØ®Ø¯Ù… Ø³Ù„Ø³Ø©</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">Golden Eagle — حجوزات السفر</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">منصة سياحية متكاملة لحجوزات الرحلات والفنادق مع تصميم راقٍ وتجربة مستخدم سلسة</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WooCommerce</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 3. Ù…Ù†ØµØ© Ø§Ù„Ø¨ÙˆØ¯ÙƒØ§Ø³Øª -->
+
+
+                <!-- 3. منصة البودكاست -->
+
                 <div class="project-item project-card" data-cat="laravel react" data-project="podcast">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">Laravel + React</span>
+
                         <img src="Cpanel%20podcast/screencapture-localhost-3000-2025-08-05-12_21_08.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Ù…Ù†ØµØ© Ø§Ù„Ø¨ÙˆØ¯ÙƒØ§Ø³Øª</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ Ø¨ÙˆØ¯ÙƒØ§Ø³Øª Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø­Ù„Ù‚Ø§Øª ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„ØµÙˆØªÙŠ</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">منصة البودكاست</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع بودكاست مع لوحة تحكم متكاملة لإدارة الحلقات والمستخدمين والمحتوى الصوتي</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Laravel</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">React.js</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 4. ØªØ´ÙŠØ±Ù†ÙˆØ¨Ù„ -->
+
+
+                <!-- 4. تشيرنوبل -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="chernobyl">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress</span>
+
                         <img src="chernobyel%20design/screencapture-chernobylarena-2023-04-19-01_10_06.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Chernobyl Arena â€” Ø­Ø¬ÙˆØ²Ø§Øª Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ Ø­Ø¬ÙˆØ²Ø§Øª Ù„Ø­Ù„Ø¨Ø§Øª Ø³Ø¨Ø§Ù‚ Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Ø¨ØªØµÙ…ÙŠÙ… Ø¯Ø§ÙƒÙ† Ø¬Ø°Ø§Ø¨ ÙˆÙ†Ø¸Ø§Ù… Ø­Ø¬Ø² Ù…ØªÙƒØ§Ù…Ù„</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">Chernobyl Arena — حجوزات الألعاب</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع حجوزات لحلبات سباق الألعاب بتصميم داكن جذاب ونظام حجز متكامل</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WooCommerce</span>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- 5. SmartMatrix -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="smartmatrix">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress</span>
+
                         <img src="SmartMatrix%20design/screencapture-smartmatrix-sa-2025-07-24-11_20_30.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">SmartMatrix â€” Ø­Ù„ÙˆÙ„ Ø§Ù„ØªÙ‚Ù†ÙŠØ©</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ Ø´Ø±ÙƒØ© ØªÙ‚Ù†ÙŠØ© Ø³Ø¹ÙˆØ¯ÙŠØ© ÙŠØ¹Ø±Ø¶ Ø®Ø¯Ù…Ø§Øª Ø§Ù„ÙˆÙŠØ¨ ÙˆØ§Ù„Ø¨Ø±Ù…Ø¬Ø© ÙˆØ§Ù„ØªØ³ÙˆÙŠÙ‚ Ø§Ù„Ø±Ù‚Ù…ÙŠ Ø¨Ø§Ø­ØªØ±Ø§ÙÙŠØ© Ø¹Ø§Ù„ÙŠØ©</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">SmartMatrix — حلول التقنية</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع شركة تقنية سعودية يعرض خدمات الويب والبرمجة والتسويق الرقمي باحترافية عالية</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Elementor</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 6. Ù†Ø¸Ø§Ù… Ø±ÙŠØ§Ø¶Ø© -->
+
+
+                <!-- 6. نظام رياضة -->
+
                 <div class="project-item project-card" data-cat="laravel" data-project="riyadah">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">Laravel</span>
+
                         <img src="Riyadah%20project/home.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Ù†Ø¸Ø§Ù… Ø¥Ø¯Ø§Ø±Ø© Ø±ÙŠØ§Ø¶ÙŠ</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…Ù†ØµØ© Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø£Ù†Ø´Ø·Ø© ÙˆØ§Ù„Ù…Ø±Ø§ÙƒØ² Ø§Ù„Ø±ÙŠØ§Ø¶ÙŠØ© Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ø§Ù„Ù…Ø´Ø±ÙÙŠÙ† ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ†</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">نظام إدارة رياضي</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">منصة متكاملة لإدارة الأنشطة والمراكز الرياضية مع لوحة تحكم المشرفين والمستخدمين</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Laravel</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Bootstrap</span>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- 7. Itek -->
+
                 <div class="project-item project-card" data-cat="laravel" data-project="itek">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">Laravel</span>
+
                         <img src="Itek%20project/home.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Itek â€” Ù…Ù†ØµØ© ØªÙ‚Ù†ÙŠØ©</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ Ø´Ø±ÙƒØ© ØªÙ‚Ù†ÙŠØ© Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ù…Ø®ØµØµØ© Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ·Ù„Ø¨Ø§Øª Ø§Ù„Ø®Ø¯Ù…Ø©</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">Itek — منصة تقنية</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع شركة تقنية مع لوحة تحكم مخصصة لإدارة المحتوى والمستخدمين وطلبات الخدمة</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Laravel</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">TailwindCSS</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 8. WordPress Theme ÙƒÙ„ÙŠØ© -->
+
+
+                <!-- 8. WordPress Theme كلية -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="college-theme">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress Theme</span>
+
                         <img src="custom%20theme/screencapture-college-local-2023-02-23-141541.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Ù‚Ø§Ù„Ø¨ WordPress Ù…Ø®ØµØµ â€” ÙƒÙ„ÙŠØ©</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù‚Ø§Ù„Ø¨ ÙˆÙˆØ±Ø¯Ø¨Ø±ÙŠØ³ Ù…Ø¨Ù†ÙŠ Ù…Ù† Ø§Ù„ØµÙØ± Ù„Ù…ÙˆÙ‚Ø¹ ÙƒÙ„ÙŠØ© Ø£ÙƒØ§Ø¯ÙŠÙ…ÙŠØ© Ù…Ø¹ ØµÙØ­Ø§Øª Ù…Ø®ØµØµØ© ÙˆÙ†Ø¸Ø§Ù… Ø£Ø®Ø¨Ø§Ø± Ù…ØªÙƒØ§Ù…Ù„</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">قالب WordPress مخصص — كلية</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">قالب ووردبريس مبني من الصفر لموقع كلية أكاديمية مع صفحات مخصصة ونظام أخبار متكامل</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">PHP</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Custom Theme</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 9. Ø¨ÙˆØ§Ø¯Ø± Ø§Ù„ØªÙ…ÙŠØ² -->
+
+
+                <!-- 9. بوادر التميز -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="bwader">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress</span>
+
                         <img src="services%20website/screencapture-bwaderaltmyz-2025-06-01-10_56_26.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Ø¨ÙˆØ§Ø¯Ø± Ø§Ù„ØªÙ…ÙŠØ² â€” Ø®Ø¯Ù…Ø§Øª ØªØ¹Ù„ÙŠÙ…ÙŠØ©</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ ØªØ¹Ù„ÙŠÙ…ÙŠ ÙŠØ¹Ø±Ø¶ Ø®Ø¯Ù…Ø§Øª Ù…ØªÙ†ÙˆØ¹Ø© Ø¨ØªØµÙ…ÙŠÙ… Ø£Ù†ÙŠÙ‚ ÙˆØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªØ®Ø¯Ù… Ø³Ù„Ø³Ø© Ø¹Ù„Ù‰ ÙƒØ§ÙØ© Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">بوادر التميز — خدمات تعليمية</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع تعليمي يعرض خدمات متنوعة بتصميم أنيق وتجربة مستخدم سلسة على كافة الأجهزة</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Elementor</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- 10. Ù…ÙˆÙ‚Ø¹ Ø£Ù„Ø¹Ø§Ø¨ WordPress -->
+
+
+                <!-- 10. موقع ألعاب WordPress -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="gaming-wp">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress</span>
+
                         <img src="Gamming%20wordpress%20site/screencapture-localhost-wordpress-test-2025-05-22-15_44_19.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Ù…ÙˆÙ‚Ø¹ Ø£Ù„Ø¹Ø§Ø¨ â€” WordPress</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ Ø£Ù„Ø¹Ø§Ø¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ø¨Ù†ÙŠ Ø¨Ù€ WordPress Ù…Ø¹ ØªØµÙ…ÙŠÙ… Ø¬Ø°Ø§Ø¨ ÙˆØ£Ù„ÙˆØ§Ù† Ø¯Ø§ÙƒÙ†Ø© ØªÙ†Ø§Ø³Ø¨ Ø¹Ø§Ù„Ù… Ø§Ù„ØºÙŠÙ…Ù†Øº</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">موقع ألعاب — WordPress</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع ألعاب متكامل مبني بـ WordPress مع تصميم جذاب وألوان داكنة تناسب عالم الغيمنغ</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Custom Design</span>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- 11. E-mall Store -->
+
                 <div class="project-item project-card" data-cat="laravel" data-project="emall">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">Laravel</span>
+
                         <img src="E-mall%20store/Screenshot%202025-08-07%20114620.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">E-Mall â€” Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø´Ø§Ù…Ù„ Ø¨ÙˆØ§Ø¬Ù‡Ø© Ø¹ØµØ±ÙŠØ© ÙˆØªØ¬Ø±Ø¨Ø© ØªØ³ÙˆÙ‚ Ø³Ù„Ø³Ø© Ù…Ø¹ Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">E-Mall — متجر إلكتروني</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">متجر إلكتروني شامل بواجهة عصرية وتجربة تسوق سلسة مع إدارة المنتجات والطلبات</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Laravel</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">MySQL</span>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- 12. Orthounion -->
+
                 <div class="project-item project-card" data-cat="wordpress" data-project="orthounion">
+
                     <div class="card-glow"></div>
+
                     <div class="card-img">
+
                         <span class="project-badge">WordPress</span>
+
                         <img src="services%20website/screencapture-orthounion-2023-05-15-14_07_25.png"  width="600" height="240" loading="lazy" decoding="async">
+
                         <div class="card-overlay"></div>
-                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="Ø¹Ø±Ø¶"><i class="fa-solid fa-eye"></i></button></div>
+
+                        <div class="card-hover-content"><button class="card-hover-btn" aria-label="عرض"><i class="fa-solid fa-eye"></i></button></div>
+
                     </div>
+
                     <div class="p-6">
-                        <h3 class="font-display text-lg font-700 text-fg mb-2">Orthounion â€” Ø®Ø¯Ù…Ø§Øª Ø·Ø¨ÙŠØ©</h3>
-                        <p class="text-muted text-sm mb-4 leading-relaxed">Ù…ÙˆÙ‚Ø¹ Ø·Ø¨ÙŠ Ø§Ø­ØªØ±Ø§ÙÙŠ Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø®Ø¯Ù…Ø§Øª ÙˆØ§Ù„ØªØ®ØµØµØ§Øª Ø§Ù„Ø·Ø¨ÙŠØ© Ø¨ØªØµÙ…ÙŠÙ… Ù†Ø¸ÙŠÙ ÙŠØ¨Ø« Ø§Ù„Ø«Ù‚Ø© Ù„Ø¯Ù‰ Ø§Ù„Ø²ÙˆØ§Ø±</p>
+
+                        <h3 class="font-display text-lg font-700 text-fg mb-2">Orthounion — خدمات طبية</h3>
+
+                        <p class="text-muted text-sm mb-4 leading-relaxed">موقع طبي احترافي لعرض الخدمات والتخصصات الطبية بتصميم نظيف يبث الثقة لدى الزوار</p>
+
                         <div class="flex flex-wrap gap-2">
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">WordPress</span>
+
                             <span class="text-xs px-3 py-1 rounded-full bg-bg text-muted border border-brd">Elementor</span>
+
                         </div>
+
                     </div>
+
                 </div>
 
+
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- ===== ØªÙˆØ§ØµÙ„ ===== -->
+
+
+    <!-- ===== تواصل ===== -->
+
     <section id="contact" class="py-28 md:py-36 px-6 bg-bg-alt relative overflow-hidden">
+
         <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,#0D7C66,transparent)"></div>
+
         <div class="max-w-6xl mx-auto relative z-10">
+
             <div class="grid md:grid-cols-2 gap-20">
+
                 <div>
-                    <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 contact-anim" data-i18n="contact_tag">ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙŠ</p>
-                    <h2 class="font-display text-3xl md:text-4xl font-800 text-fg leading-tight mb-7 contact-anim" data-i18n="contact_h2">Ù„Ø¯ÙŠÙƒ ÙÙƒØ±Ø©ØŸ<br>Ø¯Ø¹Ù†Ø§ Ù†Ø­ÙˆÙ‘Ù„Ù‡Ø§ ÙˆØ§Ù‚Ø¹Ø§Ù‹</h2>
-                    <p class="text-muted leading-relaxed text-lg mb-12 contact-anim" data-i18n="contact_p">Ø³ÙˆØ§Ø¡ ÙƒØ§Ù†Øª ÙÙƒØ±Ø© Ù…Ø´Ø±ÙˆØ¹ Ø¬Ø¯ÙŠØ¯ Ø£Ùˆ ØªØ·ÙˆÙŠØ± Ù„Ù…ÙˆÙ‚Ø¹ Ù…ÙˆØ¬ÙˆØ¯ØŒ Ø£Ù†Ø§ Ø¬Ø§Ù‡Ø² Ù„Ù„Ø§Ø³ØªÙ…Ø§Ø¹ ÙˆÙ…Ø³Ø§Ø¹Ø¯ØªÙƒ ÙÙŠ ÙƒÙ„ Ø®Ø·ÙˆØ©.</p>
+
+                    <p class="text-muted font-display font-600 text-sm tracking-widest mb-3 contact-anim" data-i18n="contact_tag">تواصل معي</p>
+
+                    <h2 class="font-display text-3xl md:text-4xl font-800 text-fg leading-tight mb-7 contact-anim" data-i18n="contact_h2">لديك فكرة؟<br>دعنا نحوّلها واقعاً</h2>
+
+                    <p class="text-muted leading-relaxed text-lg mb-12 contact-anim" data-i18n="contact_p">سواء كانت فكرة مشروع جديد أو تطوير لموقع موجود، أنا جاهز للاستماع ومساعدتك في كل خطوة.</p>
+
                     <div class="space-y-7">
+
                         <div class="flex items-center gap-5 contact-anim">
+
                             <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border contact-icon-wrap" style="background:rgba(13,124,102,.06);border-color:rgba(13,124,102,.1)"><i class="fa-solid fa-envelope text-accent text-lg"></i></div>
-                            <div><p class="text-muted text-sm" data-i18n="ci_email">Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</p><p class="text-fg font-500 text-lg">saeedalareeni@gmail.com</p></div>
+
+                            <div><p class="text-muted text-sm" data-i18n="ci_email">البريد الإلكتروني</p><p class="text-fg font-500 text-lg">saeedalareeni@gmail.com</p></div>
+
                         </div>
+
                         <div class="flex items-center gap-5 contact-anim">
+
                             <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border" style="background:rgba(13,124,102,.06);border-color:rgba(13,124,102,.1)"><i class="fa-solid fa-phone text-accent text-lg"></i></div>
-                            <div><p class="text-muted text-sm" data-i18n="ci_phone">Ø§Ù„Ù‡Ø§ØªÙ</p><p class="text-fg font-500 text-lg" dir="ltr">+970 597 551 656</p></div>
+
+                            <div><p class="text-muted text-sm" data-i18n="ci_phone">الهاتف</p><p class="text-fg font-500 text-lg" dir="ltr">+970 597 551 656</p></div>
+
                         </div>
+
                         <div class="flex items-center gap-5 contact-anim">
+
                             <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border" style="background:rgba(13,124,102,.06);border-color:rgba(13,124,102,.1)"><i class="fa-solid fa-location-dot text-accent text-lg"></i></div>
-                            <div><p class="text-muted text-sm" data-i18n="ci_loc">Ø§Ù„Ù…ÙˆÙ‚Ø¹</p><p class="text-fg font-500 text-lg" data-i18n="ci_loc_val">ÙÙ„Ø³Ø·ÙŠÙ† â€” ØºØ²Ø©</p></div>
+
+                            <div><p class="text-muted text-sm" data-i18n="ci_loc">الموقع</p><p class="text-fg font-500 text-lg" data-i18n="ci_loc_val">فلسطين — غزة</p></div>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="contact-anim">
+
                     <form id="contactForm" class="space-y-5 bg-card p-8 md:p-10 rounded-2xl border border-brd" novalidate>
+
                         <input type="hidden" name="access_key" value="f787d90c-373e-428d-8331-58b7d3dac44c">
-                        <input type="hidden" name="subject" value="Ø±Ø³Ø§Ù„Ø© Ø¬Ø¯ÙŠØ¯Ø© Ù…Ù† Ù…ÙˆÙ‚Ø¹Ùƒ Ø§Ù„Ø´Ø®ØµÙŠ">
-                        <input type="hidden" name="from_name" value="Ù…ÙˆÙ‚Ø¹ Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ">
+
+                        <input type="hidden" name="subject" value="رسالة جديدة من موقعك الشخصي">
+
+                        <input type="hidden" name="from_name" value="موقع سعيد العريني">
+
                         <input type="checkbox" name="botcheck" style="display:none">
-                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_name">Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„</label><input type="text" name="name" class="form-input" data-i18n-ph="ph_name" placeholder="Ù…Ø«Ø§Ù„: Ø£Ø­Ù…Ø¯ Ù…Ø­Ù…Ø¯" id="nameInput" required><p class="text-red-500 text-xs mt-1 hidden" id="nameError" data-i18n="err_name">ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ø§Ø³Ù…Ùƒ</p></div>
-                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_email">Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</label><input type="email" name="email" class="form-input" placeholder="example@email.com" id="emailInput" dir="ltr" style="text-align:left" required><p class="text-red-500 text-xs mt-1 hidden" id="emailError" data-i18n="err_email">ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ø¨Ø±ÙŠØ¯ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ ØµØ­ÙŠØ­</p></div>
-                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_type">Ù†ÙˆØ¹ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹</label><select name="project_type" class="form-input" id="projectType"><option value="" class="bg-card" data-i18n="opt_select">Ø§Ø®ØªØ± Ù†ÙˆØ¹ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹</option><option value="website" class="bg-card" data-i18n="opt_web">Ù…ÙˆÙ‚Ø¹ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</option><option value="ecommerce" class="bg-card" data-i18n="opt_store">Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ</option><option value="system" class="bg-card" data-i18n="opt_sys">Ù†Ø¸Ø§Ù… Ø¥Ø¯Ø§Ø±Ø©</option><option value="other" class="bg-card" data-i18n="opt_other">Ø£Ø®Ø±Ù‰</option></select></div>
-                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_msg">ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹</label><textarea name="message" class="form-input" rows="5" data-i18n-ph="ph_msg" placeholder="Ø§Ø®Ø¨Ø±Ù†ÙŠ Ø¹Ù† ÙÙƒØ±ØªÙƒ..." id="messageInput" required></textarea><p class="text-red-500 text-xs mt-1 hidden" id="messageError" data-i18n="err_msg">ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹</p></div>
+
+                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_name">الاسم الكامل</label><input type="text" name="name" class="form-input" data-i18n-ph="ph_name" placeholder="مثال: أحمد محمد" id="nameInput" required><p class="text-red-500 text-xs mt-1 hidden" id="nameError" data-i18n="err_name">يرجى إدخال اسمك</p></div>
+
+                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_email">البريد الإلكتروني</label><input type="email" name="email" class="form-input" placeholder="example@email.com" id="emailInput" dir="ltr" style="text-align:left" required><p class="text-red-500 text-xs mt-1 hidden" id="emailError" data-i18n="err_email">يرجى إدخال بريد إلكتروني صحيح</p></div>
+
+                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_type">نوع المشروع</label><select name="project_type" class="form-input" id="projectType"><option value="" class="bg-card" data-i18n="opt_select">اختر نوع المشروع</option><option value="website" class="bg-card" data-i18n="opt_web">موقع إلكتروني</option><option value="ecommerce" class="bg-card" data-i18n="opt_store">متجر إلكتروني</option><option value="system" class="bg-card" data-i18n="opt_sys">نظام إدارة</option><option value="other" class="bg-card" data-i18n="opt_other">أخرى</option></select></div>
+
+                        <div><label class="block text-sm text-muted mb-2" data-i18n="form_msg">تفاصيل المشروع</label><textarea name="message" class="form-input" rows="5" data-i18n-ph="ph_msg" placeholder="اخبرني عن فكرتك..." id="messageInput" required></textarea><p class="text-red-500 text-xs mt-1 hidden" id="messageError" data-i18n="err_msg">يرجى إدخال تفاصيل المشروع</p></div>
+
                         <div class="h-captcha"
+
                              data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+
                              data-theme="light"
+
                              data-callback="onHCaptchaSolved"
+
                              data-expired-callback="onHCaptchaExpired"></div>
-                        <button type="submit" class="btn-primary w-full justify-center text-base" data-i18n="form_submit">Ø£Ø±Ø³Ù„ Ø±Ø³Ø§Ù„ØªÙƒ <i class="fa-solid fa-paper-plane text-sm"></i></button>
+
+                        <button type="submit" class="btn-primary w-full justify-center text-base" data-i18n="form_submit">أرسل رسالتك <i class="fa-solid fa-paper-plane text-sm"></i></button>
+
                     </form>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
 </main>
 
+
+
 <footer class="border-t border-brd py-10 px-6 relative z-10">
+
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <p class="text-muted text-sm">&copy; 2025 Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” <span data-i18n="footer_rights">Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©</span></p>
+
+        <p class="text-muted text-sm">&copy; 2025 سعيد العريني — <span data-i18n="footer_rights">جميع الحقوق محفوظة</span></p>
+
         <div class="flex items-center gap-4">
+
             <a href="https://github.com/saeedalareeni" target="_blank" rel="noopener" class="w-11 h-11 rounded-full border border-brd flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all duration-300" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+
             <a href="https://www.linkedin.com/in/saeed-al-areeni-043547261/" target="_blank" rel="noopener" class="w-11 h-11 rounded-full border border-brd flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all duration-300" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+
             <a href="https://wa.me/970597551656" target="_blank" rel="noopener" class="w-11 h-11 rounded-full border border-brd flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-all duration-300" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
         </div>
+
     </div>
+
 </footer>
 
-<!-- ===== Modal Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹ ===== -->
-<div id="projectModal" role="dialog" aria-modal="true" aria-label="ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹">
+
+
+<!-- ===== Modal المشاريع ===== -->
+
+<div id="projectModal" role="dialog" aria-modal="true" aria-label="تفاصيل المشروع">
+
     <div id="modalBackdrop" onclick="closeModal()"></div>
+
     <div id="modalBox">
+
         <!-- gallery -->
+
         <div id="modalGallery">
+
             <div id="modalMainImg">
+
                 <img id="modalImg" src="" alt="">
+
                 <div id="modalImgCounter">1 / 1</div>
-                <button class="modal-nav-btn" id="modalNext" onclick="modalNav(-1)" aria-label="Ø§Ù„Ø³Ø§Ø¨Ù‚"><i class="fa-solid fa-chevron-right"></i></button>
-                <button class="modal-nav-btn" id="modalPrev" onclick="modalNav(1)" aria-label="Ø§Ù„ØªØ§Ù„ÙŠ"><i class="fa-solid fa-chevron-left"></i></button>
+
+                <button class="modal-nav-btn" id="modalNext" onclick="modalNav(-1)" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <button class="modal-nav-btn" id="modalPrev" onclick="modalNav(1)" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+
             </div>
+
             <div id="modalThumbs"></div>
+
         </div>
+
         <!-- details -->
+
         <div id="modalDetails">
-            <button id="modalCloseBtn" onclick="closeModal()" aria-label="Ø¥ØºÙ„Ø§Ù‚"><i class="fa-solid fa-xmark"></i></button>
+
+            <button id="modalCloseBtn" onclick="closeModal()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+
             <span id="modalCatBadge"></span>
+
             <h2 id="modalTitle"></h2>
+
             <p id="modalDesc"></p>
+
             <div class="modal-divider"></div>
-            <p class="modal-section-title">Ø§Ù„Ù…Ù…ÙŠØ²Ø§Øª</p>
+
+            <p class="modal-section-title">المميزات</p>
+
             <ul id="modalFeatures"></ul>
+
             <div class="modal-divider"></div>
-            <p class="modal-section-title">Ø§Ù„ØªÙ‚Ù†ÙŠØ§Øª Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…Ø©</p>
+
+            <p class="modal-section-title">التقنيات المستخدمة</p>
+
             <div id="modalTags"></div>
+
         </div>
+
     </div>
+
 </div>
 
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Ø£Ø¹Ù„Ù‰"><i class="fa-solid fa-arrow-up"></i></button>
-<div class="toast" id="toast"><i class="fa-solid fa-circle-check text-accent text-lg"></i><span id="toastMsg">ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø±Ø³Ø§Ù„ØªÙƒ Ø¨Ù†Ø¬Ø§Ø­</span></div>
 
-<!-- ===== Scripts: ÙÙŠ Ù†Ù‡Ø§ÙŠØ© Ø§Ù„ØµÙØ­Ø© Ù„Ø¹Ø¯Ù… ØªØ£Ø®ÙŠØ± Ø§Ù„Ø±Ø³Ù… ===== -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="أعلى"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="toast" id="toast"><i class="fa-solid fa-circle-check text-accent text-lg"></i><span id="toastMsg">تم إرسال رسالتك بنجاح</span></div>
+
+
+
+
+
 
 <script>
+
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 // ================================================================
-// Ø´Ø§Ø´Ø© Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© â€” ÙƒÙ„Ù…Ø© ÙƒØ§Ù…Ù„Ø© Ø¨Ø¯Ù„Ø§Ù‹ Ù…Ù† Ø­Ø±Ù Ø¨Ø­Ø±Ù
+
+// شاشة البداية — كلمة كاملة بدلاً من حرف بحرف
+
 // ================================================================
+
 const introName = document.getElementById('introName');
-const words = ['Ø³Ø¹ÙŠØ¯', 'Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ'];
+
+const words = ['سعيد', 'العريني'];
+
 const wordEls = [];
 
+
+
 words.forEach(word => {
+
     const span = document.createElement('span');
+
     span.className = 'intro-word';
+
     span.textContent = word;
+
     introName.appendChild(span);
+
     wordEls.push(span);
+
 });
 
-// Ù†Ø¬ÙˆÙ… Ø§Ù„Ø®Ù„ÙÙŠØ©
+
+
+// نجوم الخلفية
+
 const starsContainer = document.getElementById('introStars');
+
 for (let i = 0; i < 50; i++) {
+
     const star = document.createElement('div');
+
     star.className = 'intro-star';
+
     star.style.left = Math.random() * 100 + '%';
+
     star.style.top = Math.random() * 100 + '%';
+
     const size = (Math.random() * 4 + 1) + 'px';
+
     star.style.width = size; star.style.height = size;
+
     star.style.background = Math.random() > 0.5 ? '#C5985A' : '#0D7C66';
+
     starsContainer.appendChild(star);
+
 }
+
+
 
 const introTl = gsap.timeline({
+
     onComplete: () => {
+
         gsap.to('#intro', {
+
             scale: 1.15, opacity: 0, filter: 'blur(10px)',
+
             duration: 0.5, ease: 'power3.in',
+
             onComplete: () => {
+
                 document.getElementById('intro').style.display = 'none';
+
                 startMainSite();
+
             }
+
         });
+
     }
+
 });
 
-// 1. Ù†Ø¬ÙˆÙ…
+
+
+// 1. نجوم
+
 introTl.to('.intro-star', { opacity: 0.7, scale: 1, duration: 0.3, stagger: { amount: 0.6, from: 'random' }, ease: 'back.out(3)' });
 
-// 2. Ø§Ù„ÙƒÙ„Ù…ØªØ§Ù† ØªØ³Ù‚Ø·Ø§Ù† Ù…Ø¹Ù‹Ø§ Ù…Ø¹ stagger Ø®ÙÙŠÙ
+
+
+// 2. الكلمتان تسقطان معًا مع stagger خفيف
+
 introTl.to(wordEls, {
+
     opacity: 1, y: 0, scale: 1,
+
     duration: 0.9, stagger: 0.15,
+
     ease: 'back.out(2)'
+
 }, '-=0.2');
 
-// 3. Ù†Ø¨Ø¶Ø© Ø¹Ù„Ù‰ Ø§Ù„ÙƒÙ„Ù…ØªÙŠÙ†
+
+
+// 3. نبضة على الكلمتين
+
 introTl.to(wordEls, { scale: 1.08, duration: 0.15, ease: 'power2.out' }, '+=0.1');
+
 introTl.to(wordEls, { scale: 1, duration: 0.6, ease: 'elastic.out(1, 0.4)' });
 
-// 4. Ø®Ø·
+
+
+// 4. خط
+
 introTl.to('#introLine', { width: 200, opacity: 1, duration: 0.7, ease: 'power3.out' }, '-=0.3');
 
-// 5. Ø¯ÙˆØ±
+
+
+// 5. دور
+
 introTl.to('#introRole', { clipPath: 'inset(0 0% 0 0)', duration: 0.9, ease: 'power3.inOut' }, '-=0.2');
 
-// 6. ØªØ·ÙŠÙŠØ± Ø§Ù„ÙƒÙ„Ù…ØªÙŠÙ† Ù„Ù„Ø£Ø¹Ù„Ù‰
+
+
+// 6. تطيير الكلمتين للأعلى
+
 introTl.to(wordEls, {
+
     y: -120, opacity: 0, scale: 0.5, rotation: (i) => (i === 0 ? -8 : 8),
+
     duration: 0.5, stagger: 0.07, ease: 'power3.in'
+
 }, '+=0.7');
 
-// 7. Ø§Ø®ØªÙØ§Ø¡ Ø®Ø· + Ø¯ÙˆØ±
+
+
+// 7. اختفاء خط + دور
+
 introTl.to(['#introLine', '#introRole'], { opacity: 0, scale: 0.8, duration: 0.25 }, '-=0.4');
 
-// 8. ÙÙ„Ø§Ø´
+
+
+// 8. فلاش
+
 introTl.to('#introFlash', { opacity: 0.45, duration: 0.06 }, '-=0.1');
+
 introTl.to('#introFlash', { opacity: 0, duration: 0.5, ease: 'power2.out' }, '-=0.02');
 
+
+
 // ================================================================
+
 // Three.js
+
 // ================================================================
+
 const canvas3 = document.getElementById('threeCanvas');
+
 const renderer = new THREE.WebGLRenderer({ canvas: canvas3, alpha: true, antialias: true });
+
 renderer.setSize(window.innerWidth, window.innerHeight);
+
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
 const scene = new THREE.Scene();
+
 const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 2000);
+
 camera.position.set(0, 0, 0);
 
+
+
 const sColors = [new THREE.Color(0xC5985A), new THREE.Color(0xE8D5B0), new THREE.Color(0x0D7C66), new THREE.Color(0xF0EDE6), new THREE.Color(0x8FBFAA)];
+
 const sCount = 3000;
+
 const sPos = new Float32Array(sCount * 3);
+
 const sCol = new Float32Array(sCount * 3);
+
 const sSizes = new Float32Array(sCount);
+
 for (let i = 0; i < sCount; i++) {
+
     const t = Math.random() * Math.PI * 2, p = Math.acos(2 * Math.random() - 1), r = 150 + Math.random() * 800;
+
     sPos[i*3]=r*Math.sin(p)*Math.cos(t); sPos[i*3+1]=r*Math.sin(p)*Math.sin(t); sPos[i*3+2]=r*Math.cos(p);
+
     const c = sColors[Math.floor(Math.random() * sColors.length)];
+
     sCol[i*3]=c.r; sCol[i*3+1]=c.g; sCol[i*3+2]=c.b;
+
     sSizes[i] = Math.random()*2.5+0.3;
+
 }
+
 const sGeo = new THREE.BufferGeometry();
+
 sGeo.setAttribute('position', new THREE.BufferAttribute(sPos, 3));
+
 sGeo.setAttribute('color', new THREE.BufferAttribute(sCol, 3));
+
 sGeo.setAttribute('size', new THREE.BufferAttribute(sSizes, 1));
+
 const sMat = new THREE.ShaderMaterial({
+
     vertexShader:`attribute float size;varying vec3 vColor;void main(){vColor=color;vec4 mv=modelViewMatrix*vec4(position,1.);gl_PointSize=size*(250./-mv.z);gl_Position=projectionMatrix*mv;}`,
+
     fragmentShader:`varying vec3 vColor;void main(){float d=length(gl_PointCoord-vec2(.5));if(d>.5)discard;float g=1.-smoothstep(0.,.5,d);g=pow(g,1.8);gl_FragColor=vec4(vColor,g*.9);}`,
+
     transparent:true, vertexColors:true, depthWrite:false, blending:THREE.AdditiveBlending,
+
 });
+
 scene.add(new THREE.Points(sGeo, sMat));
+
 scene.add(new THREE.Mesh(new THREE.SphereGeometry(200,32,32),new THREE.MeshBasicMaterial({color:0x0D7C66,transparent:true,opacity:0.012,side:THREE.BackSide,depthWrite:false})));
+
 scene.add(new THREE.Mesh(new THREE.SphereGeometry(300,32,32),new THREE.MeshBasicMaterial({color:0xC5985A,transparent:true,opacity:0.008,side:THREE.BackSide,depthWrite:false})));
 
+
+
 let mx3=0, my3=0, sp=0;
+
 document.addEventListener('mousemove', e => { mx3=(e.clientX/window.innerWidth-.5)*2; my3=(e.clientY/window.innerHeight-.5)*2 });
+
 ScrollTrigger.create({ trigger:'body', start:'top top', end:'bottom bottom', onUpdate: s => { sp = s.progress } });
+
 function anim3(){requestAnimationFrame(anim3);camera.rotation.x+=(sp*0.6-camera.rotation.x)*0.05;camera.rotation.y+=(-mx3*0.15-camera.rotation.y)*0.03;renderer.render(scene,camera)}
+
 anim3();
+
 ScrollTrigger.create({ trigger:'#skills', start:'top 80%', end:'top 20%', onUpdate: s => { sMat.opacity = 1 - s.progress } });
+
 window.addEventListener('resize',()=>{ camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth,window.innerHeight) });
 
+
+
 // ================================================================
-// Typing effect ÙÙŠ Ø§Ù„Ù€ hero
+
+// Typing effect في الـ hero
+
 // ================================================================
-const typingPhrases = ['ØªÙØ­Ø¯Ø« ÙØ±Ù‚Ø§Ù‹', 'ØªØ±ÙˆÙŠ Ù‚ØµØªÙƒ', 'ØªÙØ¨Ù‡Ø± Ø²ÙˆÙ‘Ø§Ø±Ùƒ', 'ØªØ­Ù‚Ù‚ Ø£Ù‡Ø¯Ø§ÙÙƒ'];
+
+const typingPhrases = ['تُحدث فرقاً', 'تروي قصتك', 'تُبهر زوّارك', 'تحقق أهدافك'];
+
 let phraseIdx = 0, charIdx = 0, deleting = false;
+
 const typingTarget = document.getElementById('typingTarget');
+
 const typingCursor = document.getElementById('typingCursor');
 
+
+
 function typeLoop() {
+
     const current = typingPhrases[phraseIdx];
+
     if (!deleting) {
+
         typingTarget.textContent = current.slice(0, charIdx + 1);
+
         charIdx++;
+
         if (charIdx === current.length) {
+
             deleting = true;
+
             setTimeout(typeLoop, 1800);
+
             return;
+
         }
+
         setTimeout(typeLoop, 80);
+
     } else {
+
         typingTarget.textContent = current.slice(0, charIdx - 1);
+
         charIdx--;
+
         if (charIdx === 0) {
+
             deleting = false;
+
             phraseIdx = (phraseIdx + 1) % typingPhrases.length;
+
             setTimeout(typeLoop, 300);
+
             return;
+
         }
+
         setTimeout(typeLoop, 45);
+
     }
+
 }
 
+
+
 // ================================================================
-// Ø¬Ø²ÙŠØ¦Ø§Øª Ø¹Ø§Ø¦Ù…Ø© ÙÙŠ Ø§Ù„Ù€ hero
+
+// جزيئات عائمة في الـ hero
+
 // ================================================================
+
 function spawnHeroParticles() {
+
     const container = document.getElementById('heroParticles');
+
     if (!container) return;
+
     for (let i = 0; i < 18; i++) {
+
         const p = document.createElement('div');
+
         p.className = 'particle';
+
         const size = Math.random() * 6 + 2;
+
         const drift = (Math.random() - 0.5) * 120;
+
         const dur = Math.random() * 12 + 8;
+
         const delay = Math.random() * dur;
+
         p.style.cssText = `
+
             width:${size}px;height:${size}px;
+
             left:${Math.random()*100}%;
+
             bottom:${-size}px;
+
             background:${Math.random()>.5?'rgba(13,124,102,.25)':'rgba(197,152,90,.25)'};
+
             --drift:${drift}px;
+
             animation-duration:${dur}s;
+
             animation-delay:-${delay}s;
+
         `;
+
         container.appendChild(p);
+
     }
+
 }
 
+
+
 // ================================================================
-// Ø¨Ø¯Ø¡ Ø§Ù„Ù…ÙˆÙ‚Ø¹
+
+// بدء الموقع
+
 // ================================================================
+
 function startMainSite() {
+
     gsap.to('#navbar', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' });
+
     gsap.to('.hero-word-inner', { y: 0, duration: 1.3, ease: 'power4.out', stagger: 0.15, onComplete: () => {
+
         typingCursor.style.display = 'inline-block';
+
         setTimeout(typeLoop, 400);
+
     }});
+
     gsap.fromTo('.hero-anim', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, delay: 0.5, ease: 'power3.out' });
+
     spawnHeroParticles();
+
     initScrollAnimations();
+
 }
 
+
+
 // ================================================================
-// Ø­Ø±ÙƒØ§Øª Ø§Ù„ØªÙ…Ø±ÙŠØ±
+
+// حركات التمرير
+
 // ================================================================
+
 function initScrollAnimations() {
-    // Ø¹Ø¯Ø§Ø¯ Ø§Ù„Ø£Ø±Ù‚Ø§Ù…
+
+    // عداد الأرقام
+
     ScrollTrigger.create({ trigger:'#statsSection', start:'top 75%', once:true, onEnter:() => {
+
         document.querySelectorAll('.counter').forEach(el => {
+
             const t = +el.dataset.target;
+
             gsap.to({ v:0 }, { v:t, duration:2, ease:'power2.out',
+
                 onUpdate: function(){ el.textContent = Math.floor(this.targets()[0].v) },
+
                 onComplete: function(){ el.textContent = t }
+
             });
+
         });
+
     }});
 
-    // Ø´Ø±ÙŠØ· Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª
+
+
+    // شريط المهارات
+
     ScrollTrigger.create({ trigger:'#about', start:'top 60%', once:true, onEnter:() => {
+
         document.querySelectorAll('.skill-bar').forEach(bar => {
+
             bar.style.width = bar.dataset.width;
+
         });
+
     }});
+
+
 
     gsap.from('.about-anim', { scrollTrigger:{ trigger:'#about', start:'top 70%' }, opacity:0, y:60, duration:.8, stagger:.12, ease:'power3.out' });
+
     gsap.from('.about-img-wrap', { scrollTrigger:{ trigger:'#about', start:'top 70%' }, opacity:0, x:-80, scale:.9, duration:1, ease:'power3.out' });
+
     gsap.from('.about-badge', { scrollTrigger:{ trigger:'#about', start:'top 60%' }, opacity:0, scale:0, duration:.6, delay:.5, ease:'back.out(2)' });
+
     gsap.from('.skill-anim', { scrollTrigger:{ trigger:'#skills', start:'top 65%' }, opacity:0, y:80, duration:.9, stagger:.2, ease:'power3.out' });
+
     gsap.from('.port-anim', { scrollTrigger:{ trigger:'#portfolio', start:'top 70%' }, opacity:0, y:50, duration:.7, stagger:.1, ease:'power3.out' });
 
+
+
     document.querySelectorAll('.project-item').forEach((c, i) => {
+
         const dirs = [{x:-100,y:80,r:-4},{x:100,y:60,r:4},{x:0,y:120,r:-2},{x:-80,y:100,r:3},{x:90,y:90,r:-3},{x:-60,y:110,r:2},{x:70,y:70,r:-2},{x:-90,y:80,r:4},{x:80,y:100,r:-3}];
+
         const d = dirs[i % dirs.length];
+
         gsap.from(c, { scrollTrigger:{ trigger:c, start:'top 88%', toggleActions:'play none none reverse' }, opacity:0, x:d.x, y:d.y, rotation:d.r, scale:.85, duration:.9, ease:'power3.out' });
+
     });
+
+
 
     gsap.from('.contact-anim', { scrollTrigger:{ trigger:'#contact', start:'top 65%' }, opacity:0, y:60, duration:.8, stagger:.12, ease:'power3.out' });
 
-    // parallax Ø®ÙÙŠÙ Ø¹Ù„Ù‰ hero title
+
+
+    // parallax خفيف على hero title
+
     gsap.to('.hero-word', { scrollTrigger:{ trigger:'#home', start:'top top', end:'bottom top', scrub:1 }, y: -60, ease:'none' });
+
 }
 
-// ================================================================
-// 3D tilt Ø¹Ù„Ù‰ Ø¨Ø·Ø§Ù‚Ø§Øª Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
-// ================================================================
-document.querySelectorAll('.project-card').forEach(c => {
-    const g = c.querySelector('.card-glow');
-    c.addEventListener('mousemove', e => {
-        const r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, cx = r.width/2, cy = r.height/2;
-        gsap.to(c, { rotateX:((y-cy)/cy)*-7, rotateY:((x-cx)/cx)*7, scale:1.03, duration:.4, ease:'power2.out', transformPerspective:800 });
-        if(g){ g.style.left = x+'px'; g.style.top = y+'px'; }
-    });
-    c.addEventListener('mouseleave', () => gsap.to(c, { rotateX:0, rotateY:0, scale:1, duration:.7, ease:'elastic.out(1,.5)' }));
-});
+
 
 // ================================================================
-// ÙÙ„Ø§ØªØ± Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
+
+// 3D tilt على بطاقات المشاريع
+
 // ================================================================
-const fBtns = document.querySelectorAll('.filter-btn'), pItems = document.querySelectorAll('.project-item');
-fBtns.forEach(b => { b.addEventListener('click', () => {
-    fBtns.forEach(x => x.classList.remove('active')); b.classList.add('active');
-    const f = b.dataset.filter;
-    pItems.forEach(it => {
-        if (f === 'all' || it.dataset.cat.includes(f)) {
-            it.classList.remove('hide'); it.style.position=''; it.style.visibility='';
-            gsap.fromTo(it, { opacity:0, scale:.85, y:30 }, { opacity:1, scale:1, y:0, duration:.6, ease:'power3.out' });
-        } else {
-            gsap.to(it, { opacity:0, scale:.85, duration:.4, ease:'power2.in', onComplete:() => { it.classList.add('hide'); it.style.position='absolute'; it.style.visibility='hidden'; } });
-        }
+
+document.querySelectorAll('.project-card').forEach(c => {
+
+    const g = c.querySelector('.card-glow');
+
+    c.addEventListener('mousemove', e => {
+
+        const r = c.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, cx = r.width/2, cy = r.height/2;
+
+        gsap.to(c, { rotateX:((y-cy)/cy)*-7, rotateY:((x-cx)/cx)*7, scale:1.03, duration:.4, ease:'power2.out', transformPerspective:800 });
+
+        if(g){ g.style.left = x+'px'; g.style.top = y+'px'; }
+
     });
+
+    c.addEventListener('mouseleave', () => gsap.to(c, { rotateX:0, rotateY:0, scale:1, duration:.7, ease:'elastic.out(1,.5)' }));
+
+});
+
+
+
+// ================================================================
+
+// فلاتر المشاريع
+
+// ================================================================
+
+const fBtns = document.querySelectorAll('.filter-btn'), pItems = document.querySelectorAll('.project-item');
+
+fBtns.forEach(b => { b.addEventListener('click', () => {
+
+    fBtns.forEach(x => x.classList.remove('active')); b.classList.add('active');
+
+    const f = b.dataset.filter;
+
+    pItems.forEach(it => {
+
+        if (f === 'all' || it.dataset.cat.includes(f)) {
+
+            it.classList.remove('hide'); it.style.position=''; it.style.visibility='';
+
+            gsap.fromTo(it, { opacity:0, scale:.85, y:30 }, { opacity:1, scale:1, y:0, duration:.6, ease:'power3.out' });
+
+        } else {
+
+            gsap.to(it, { opacity:0, scale:.85, duration:.4, ease:'power2.in', onComplete:() => { it.classList.add('hide'); it.style.position='absolute'; it.style.visibility='hidden'; } });
+
+        }
+
+    });
+
 })});
 
+
+
 // ================================================================
-// Ù…Ø¤Ø´Ø± Ù…Ø®ØµØµ
+
+// مؤشر مخصص
+
 // ================================================================
+
 const cDot = document.getElementById('cursorDot'), cRing = document.getElementById('cursorRing'), cTxt = document.getElementById('cursorText');
+
 let mx=-100, my=-100, rx=-100, ry=-100;
+
 document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cDot.style.left=mx+'px'; cDot.style.top=my+'px'; cTxt.style.left=mx+'px'; cTxt.style.top=my+'px'; });
+
 gsap.ticker.add(() => { rx+=(mx-rx)*.12; ry+=(my-ry)*.12; cRing.style.left=rx+'px'; cRing.style.top=ry+'px'; });
+
 document.querySelectorAll('a,button,.filter-btn,.form-input,select,.hamburger').forEach(el => {
+
     el.addEventListener('mouseenter', () => cRing.classList.add('hover'));
+
     el.addEventListener('mouseleave', () => cRing.classList.remove('hover'));
+
 });
+
 document.querySelectorAll('.project-card').forEach(c => {
+
     c.addEventListener('mouseenter', () => cTxt.classList.add('show'));
+
     c.addEventListener('mouseleave', () => cTxt.classList.remove('show'));
+
 });
 
+
+
 // ================================================================
-// Ø´Ø±ÙŠØ· Ø§Ù„ØªÙ‚Ø¯Ù… Ø¹Ù†Ø¯ Ø§Ù„ØªÙ…Ø±ÙŠØ±
+
+// شريط التقدم عند التمرير
+
 // ================================================================
+
 const progressBar = document.getElementById('progressBar');
+
 window.addEventListener('scroll', () => {
+
     const total = document.body.scrollHeight - window.innerHeight;
+
     progressBar.style.width = (window.scrollY / total * 100) + '%';
+
 });
 
+
+
 // ================================================================
-// Ø´Ø±ÙŠØ· Ø§Ù„ØªÙ†Ù‚Ù„
+
+// شريط التنقل
+
 // ================================================================
+
 const nav = document.getElementById('navbar'), stb = document.getElementById('scrollTop');
+
 window.addEventListener('scroll', () => {
+
     nav.classList.toggle('scrolled', window.scrollY > 60);
+
     stb.classList.toggle('show', window.scrollY > 600);
+
 });
+
 function toggleMobile(){ document.getElementById('hamburger').classList.toggle('active'); const m=document.getElementById('mobileMenu'); m.classList.toggle('open'); document.body.style.overflow=m.classList.contains('open')?'hidden':''; if(m.classList.contains('open')) gsap.from('.mobile-menu a',{opacity:0,y:40,stagger:.08,duration:.5,ease:'power3.out'}); }
+
 function closeMobile(){ document.getElementById('hamburger').classList.remove('active'); document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow=''; }
 
+
+
 // ================================================================
-// Ù†Ù…ÙˆØ°Ø¬ Ø§Ù„ØªÙˆØ§ØµÙ„
+
+// نموذج التواصل
+
 // ================================================================
+
 const form = document.getElementById('contactForm'), toast = document.getElementById('toast');
+
 const submitBtn = form.querySelector('button[type="submit"]');
+
 let hCaptchaToken = '';
+
 function onHCaptchaSolved(token) { hCaptchaToken = token; }
+
 function onHCaptchaExpired() { hCaptchaToken = ''; }
 
+
+
 function showToast(m, success = true) {
+
     const icon = toast.querySelector('i');
+
     icon.className = success ? 'fa-solid fa-circle-check text-accent text-lg' : 'fa-solid fa-circle-xmark text-red-400 text-lg';
+
     document.getElementById('toastMsg').textContent = m;
+
     gsap.fromTo(toast, {opacity:0,y:40}, {opacity:1,y:0,duration:.5,ease:'back.out(2)'});
+
     gsap.to(toast, {opacity:0,y:40,duration:.4,delay:4,ease:'power2.in'});
+
 }
 
+
+
 form.addEventListener('submit', async e => {
+
     e.preventDefault();
+
     let v = true;
+
     const n = document.getElementById('nameInput'), em = document.getElementById('emailInput'), ms = document.getElementById('messageInput');
+
     [n,em,ms].forEach(x => x.classList.remove('error'));
+
     document.querySelectorAll('[id$="Error"]').forEach(x => x.classList.add('hidden'));
+
     if(!n.value.trim()){ n.classList.add('error'); document.getElementById('nameError').classList.remove('hidden'); v=false; }
+
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim())){ em.classList.add('error'); document.getElementById('emailError').classList.remove('hidden'); v=false; }
+
     if(!ms.value.trim()){ ms.classList.add('error'); document.getElementById('messageError').classList.remove('hidden'); v=false; }
+
     if (!v) return;
 
-    // Ø§Ù„ØªØ­Ù‚Ù‚ Ù…Ù† hCaptcha â€” ÙŠÙØªØ¬Ø§ÙˆØ² Ø¹Ù„Ù‰ localhost Ùˆfile:// Ù„Ù„ØªØ¬Ø±Ø¨Ø© Ø§Ù„Ù…Ø­Ù„ÙŠØ©
+
+
+    // التحقق من hCaptcha — يُتجاوز على localhost وfile:// للتجربة المحلية
+
     const isLocal = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
     if (!isLocal && !hCaptchaToken) {
-        showToast('ÙŠØ±Ø¬Ù‰ Ø¥ØªÙ…Ø§Ù… Ø§Ù„ØªØ­Ù‚Ù‚ Ù…Ù† Ø£Ù†Ùƒ Ù„Ø³Øª Ø±ÙˆØ¨ÙˆØª', false);
+
+        showToast('يرجى إتمام التحقق من أنك لست روبوت', false);
+
         return;
+
     }
+
+
 
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-sm"></i> Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¥Ø±Ø³Ø§Ù„...';
+
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-sm"></i> جاري الإرسال...';
+
     gsap.to(form, {scale:.99, duration:.1, yoyo:true, repeat:1});
 
+
+
     try {
+
         const data = {
+
             access_key: document.querySelector('input[name="access_key"]').value,
-            subject: 'Ø±Ø³Ø§Ù„Ø© Ø¬Ø¯ÙŠØ¯Ø© Ù…Ù† Ù…ÙˆÙ‚Ø¹Ùƒ Ø§Ù„Ø´Ø®ØµÙŠ',
-            from_name: 'Ù…ÙˆÙ‚Ø¹ Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ',
+
+            subject: 'رسالة جديدة من موقعك الشخصي',
+
+            from_name: 'موقع سعيد العريني',
+
             name: document.getElementById('nameInput').value.trim(),
+
             email: document.getElementById('emailInput').value.trim(),
+
             project_type: document.getElementById('projectType').value,
+
             message: document.getElementById('messageInput').value.trim(),
+
             'h-captcha-response': hCaptchaToken,
+
         };
 
+
+
         const res = await fetch('https://api.web3forms.com/submit', {
+
             method: 'POST',
+
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+
             body: JSON.stringify(data)
+
         });
+
         const json = await res.json();
 
+
+
         if (json.success) {
-            showToast('âœ“ ÙˆØµÙ„Øª Ø±Ø³Ø§Ù„ØªÙƒ! Ø³Ø£Ø±Ø¯ Ø¹Ù„ÙŠÙƒ ÙÙŠ Ø£Ù‚Ø±Ø¨ ÙˆÙ‚Øª', true);
+
+            showToast('✓ وصلت رسالتك! سأرد عليك في أقرب وقت', true);
+
             form.reset();
+
             hCaptchaToken = '';
+
             if (window.hcaptcha) window.hcaptcha.reset();
+
         } else {
-            showToast('Ø­Ø¯Ø« Ø®Ø·Ø£: ' + (json.message || 'Ø­Ø§ÙˆÙ„ Ù…Ø¬Ø¯Ø¯Ø§Ù‹'), false);
+
+            showToast('حدث خطأ: ' + (json.message || 'حاول مجدداً'), false);
+
         }
+
     } catch {
-        showToast('ØªØ¹Ø°Ù‘Ø± Ø§Ù„Ø§ØªØµØ§Ù„ØŒ ØªØ­Ù‚Ù‚ Ù…Ù† Ø§Ù„Ø¥Ù†ØªØ±Ù†Øª ÙˆØ­Ø§ÙˆÙ„ Ù…Ø¬Ø¯Ø¯Ø§Ù‹', false);
+
+        showToast('تعذّر الاتصال، تحقق من الإنترنت وحاول مجدداً', false);
+
     } finally {
+
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Ø£Ø±Ø³Ù„ Ø±Ø³Ø§Ù„ØªÙƒ <i class="fa-solid fa-paper-plane text-sm"></i>';
+
+        submitBtn.innerHTML = 'أرسل رسالتك <i class="fa-solid fa-paper-plane text-sm"></i>';
+
     }
+
 });
+
 ['nameInput','emailInput','messageInput'].forEach(id => {
+
     document.getElementById(id).addEventListener('input', function(){ this.classList.remove('error'); this.nextElementSibling.classList.add('hidden'); });
+
 });
 
+
+
 // ================================================================
-// hover Ø¹Ù„Ù‰ Ø¨Ø·Ø§Ù‚Ø§Øª Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª ÙˆØ§Ù„Ø£Ø²Ø±Ø§Ø±
+
+// hover على بطاقات المهارات والأزرار
+
 // ================================================================
+
 document.querySelectorAll('.skill-card').forEach(c => {
+
     c.addEventListener('mouseenter', () => gsap.to(c, {y:-8,duration:.4,ease:'power2.out'}));
+
     c.addEventListener('mouseleave', () => gsap.to(c, {y:0,duration:.5,ease:'elastic.out(1,.6)'}));
-});
-document.querySelectorAll('.btn-primary,.btn-secondary').forEach(b => {
-    b.addEventListener('mouseenter', () => gsap.to(b, {scale:1.05,duration:.3,ease:'power2.out'}));
-    b.addEventListener('mouseleave', () => gsap.to(b, {scale:1,duration:.5,ease:'elastic.out(1,.5)'}));
-});
-document.querySelectorAll('footer a').forEach(a => {
-    a.addEventListener('mouseenter', () => gsap.to(a, {scale:1.2,rotation:5,duration:.3,ease:'power2.out'}));
-    a.addEventListener('mouseleave', () => gsap.to(a, {scale:1,rotation:0,duration:.5,ease:'elastic.out(1,.5)'}));
+
 });
 
+document.querySelectorAll('.btn-primary,.btn-secondary').forEach(b => {
+
+    b.addEventListener('mouseenter', () => gsap.to(b, {scale:1.05,duration:.3,ease:'power2.out'}));
+
+    b.addEventListener('mouseleave', () => gsap.to(b, {scale:1,duration:.5,ease:'elastic.out(1,.5)'}));
+
+});
+
+document.querySelectorAll('footer a').forEach(a => {
+
+    a.addEventListener('mouseenter', () => gsap.to(a, {scale:1.2,rotation:5,duration:.3,ease:'power2.out'}));
+
+    a.addEventListener('mouseleave', () => gsap.to(a, {scale:1,rotation:0,duration:.5,ease:'elastic.out(1,.5)'}));
+
+});
+
+
+
 // ================================================================
-// Ù†Ø¸Ø§Ù… Ø§Ù„ØªØ±Ø¬Ù…Ø© Ù…ØªØ¹Ø¯Ø¯ Ø§Ù„Ù„ØºØ§Øª
+
+// نظام الترجمة متعدد اللغات
+
 // ================================================================
+
 const translations = {
+
     ar: {
-        dir: 'rtl', lang: 'ar', label: 'Ø¹Ø±Ø¨ÙŠ',
-        nav_home:'Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©', nav_about:'Ø¹Ù†Ù‘ÙŠ', nav_skills:'Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª', nav_portfolio:'Ø§Ù„Ø£Ø¹Ù…Ø§Ù„', nav_contact:'ØªÙˆØ§ØµÙ„', nav_cta:'Ø§Ø¨Ø¯Ø£ Ù…Ø´Ø±ÙˆØ¹Ùƒ',
-        hero_sub:'Ù…Ø·ÙˆÙ‘Ø± ÙˆØ§Ø¬Ù‡Ø§Øª ÙˆØªØ¬Ø§Ø±Ø¨ ÙˆÙŠØ¨',
-        hero_h1:'Ø£Ø¨Ù†ÙŠ Ù…ÙˆØ§Ù‚Ø¹',
-        hero_typing:['ØªÙØ­Ø¯Ø« ÙØ±Ù‚Ø§Ù‹','ØªØ±ÙˆÙŠ Ù‚ØµØªÙƒ','ØªÙØ¨Ù‡Ø± Ø²ÙˆÙ‘Ø§Ø±Ùƒ','ØªØ­Ù‚Ù‚ Ø£Ù‡Ø¯Ø§ÙÙƒ'],
-        hero_desc:'Ø¨Ø®Ø¨Ø±Ø© ØªØªØ¬Ø§ÙˆØ² 3 Ø³Ù†ÙˆØ§ØªØŒ Ø£Ø­ÙˆÙ‘Ù„ Ø§Ù„Ø£ÙÙƒØ§Ø± Ø¥Ù„Ù‰ ØªØ¬Ø§Ø±Ø¨ Ø±Ù‚Ù…ÙŠØ© Ø³Ø±ÙŠØ¹Ø© ÙˆØ¬Ù…ÙŠÙ„Ø© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø£Ø­Ø¯Ø« Ø§Ù„ØªÙ‚Ù†ÙŠØ§Øª',
-        hero_btn1:'Ø´Ø§Ù‡Ø¯ Ø£Ø¹Ù…Ø§Ù„ÙŠ', hero_btn2:'ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙŠ',
-        about_tag:'Ù…Ù† Ø£Ù†Ø§', about_h2:'Ù„Ø³ØªÙ Ù…Ø¬Ø±Ø¯ Ù…Ø¨Ø±Ù…Ø¬ØŒ\nØ¨Ù„ Ø´Ø±ÙŠÙƒ ÙÙŠ Ù†Ø¬Ø§Ø­ Ù…Ø´Ø±ÙˆØ¹Ùƒ',
-        about_p:'Ø£Ù†Ø§ Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠØŒ Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ø£Ø¤Ù…Ù† Ø¨Ø£Ù† Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù„ÙŠØ³ Ù…Ø¬Ø±Ø¯ ØµÙØ­Ø© Ø¹Ù„Ù‰ Ø§Ù„Ø¥Ù†ØªØ±Ù†ØªØŒ Ø¨Ù„ Ù‡Ùˆ Ø§Ù†Ø¹ÙƒØ§Ø³ Ø­Ù‚ÙŠÙ‚ÙŠ Ù„Ù‡ÙˆÙŠØ© Ø§Ù„Ø¹Ù„Ø§Ù…Ø© Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ© ÙˆØ£ÙˆÙ„ Ø§Ù†Ø·Ø¨Ø§Ø¹ ÙŠØªØ±ÙƒÙ‡ Ù„Ø¯Ù‰ Ø¹Ù…Ù„Ø§Ø¦Ùƒ.',
-        skills_tag:'Ù…Ø§ Ø£ØªÙ‚Ù†Ù‡', skills_h2:'Ø£Ø¯ÙˆØ§ØªÙŠ ÙˆØ£Ø³Ù„ÙˆØ¨ Ø¹Ù…Ù„ÙŠ',
-        port_tag:'Ø£Ø¹Ù…Ø§Ù„ÙŠ', port_h2:'Ù…Ø´Ø§Ø±ÙŠØ¹ Ø§Ø®ØªØ¨Ø±Øª ÙÙŠÙ‡Ø§ Ø£ÙÙƒØ§Ø±ÙŠ', port_p:'ÙƒÙ„ Ù…Ø´Ø±ÙˆØ¹ Ù‡Ùˆ ØªØ­Ø¯ÙÙ‘ Ø¬Ø¯ÙŠØ¯ ÙˆÙØ±ØµØ© Ù„ØªÙ‚Ø¯ÙŠÙ… Ø£ÙØ¶Ù„ Ù…Ø§ Ù„Ø¯ÙŠÙ‘',
-        filter_all:'Ø§Ù„ÙƒÙ„',
-        contact_tag:'ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙŠ', contact_h2:'Ù„Ø¯ÙŠÙƒ ÙÙƒØ±Ø©ØŸ\nØ¯Ø¹Ù†Ø§ Ù†Ø­ÙˆÙ‘Ù„Ù‡Ø§ ÙˆØ§Ù‚Ø¹Ø§Ù‹',
-        contact_p:'Ø³ÙˆØ§Ø¡ ÙƒØ§Ù†Øª ÙÙƒØ±Ø© Ù…Ø´Ø±ÙˆØ¹ Ø¬Ø¯ÙŠØ¯ Ø£Ùˆ ØªØ·ÙˆÙŠØ± Ù„Ù…ÙˆÙ‚Ø¹ Ù…ÙˆØ¬ÙˆØ¯ØŒ Ø£Ù†Ø§ Ø¬Ø§Ù‡Ø² Ù„Ù„Ø§Ø³ØªÙ…Ø§Ø¹ ÙˆÙ…Ø³Ø§Ø¹Ø¯ØªÙƒ ÙÙŠ ÙƒÙ„ Ø®Ø·ÙˆØ©.',
-        form_name:'Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„', form_email:'Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ', form_type:'Ù†ÙˆØ¹ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹', form_msg:'ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹',
-        form_submit:'Ø£Ø±Ø³Ù„ Ø±Ø³Ø§Ù„ØªÙƒ', form_sending:'Ø¬Ø§Ø±ÙŠ Ø§Ù„Ø¥Ø±Ø³Ø§Ù„...',
-        stat1:'Ø³Ù†ÙˆØ§Øª Ø®Ø¨Ø±Ø©', stat2:'Ù…Ø´Ø±ÙˆØ¹ Ù…ÙÙ†Ø¬Ø²', stat3:'ØªÙ‚Ù†ÙŠØ© Ø£ØªÙ‚Ù†Ù‡Ø§', stat4:'Ø§Ù„ØªØ²Ø§Ù… Ø¨Ø§Ù„Ø¬ÙˆØ¯Ø©',
-        ap1_h:'ØªØ±ÙƒÙŠØ² Ø¹Ù„Ù‰ Ø§Ù„Ø£Ø¯Ø§Ø¡', ap1_p:'Ù…ÙˆØ§Ù‚Ø¹ Ø³Ø±ÙŠØ¹Ø© Ø§Ù„ØªØ­Ù…ÙŠÙ„ ÙˆÙ…ÙØ­Ø³Ù‘Ù†Ø© Ù„Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø«',
-        ap2_h:'ØªØµÙ…ÙŠÙ… ÙŠØ®Ø¯Ù… Ø§Ù„ØªØ¬Ø±Ø¨Ø©', ap2_p:'ÙˆØ§Ø¬Ù‡Ø§Øª Ø¨Ø¯ÙŠÙ‡ÙŠØ© ÙˆØ¬Ø°Ø§Ø¨Ø© ØªÙØ­Ø¨Ù‘Ùƒ Ø§Ù„Ø²Ø§Ø¦Ø± ÙÙŠ Ø£ÙˆÙ„ Ù†Ø¸Ø±Ø©',
-        ap3_h:'ÙƒÙˆØ¯ Ù†Ø¸ÙŠÙ ÙˆÙ‚Ø§Ø¨Ù„ Ù„Ù„ØªØ·ÙˆÙŠØ±', ap3_p:'Ø£Ø³Ø§Ø³ Ù…ØªÙŠÙ† ÙŠØ¶Ù…Ù† Ø§Ø³ØªÙ…Ø±Ø§Ø±ÙŠØ© Ù…Ø´Ø±ÙˆØ¹Ùƒ ÙˆÙ†Ù…ÙˆÙ‡',
-        sk1_h:'ÙˆØ§Ø¬Ù‡Ø§Øª Ø£Ù…Ø§Ù…ÙŠØ©', sk1_p:'Ø¨Ù†Ø§Ø¡ ØªØ¬Ø§Ø±Ø¨ Ù…Ø³ØªØ®Ø¯Ù… ØªÙØ§Ø¹Ù„ÙŠØ© ÙˆØ³Ø±ÙŠØ¹Ø©',
-        sk2_h:'Ø®Ù„ÙÙŠØ© ÙˆØ±Ø¨Ø·', sk2_p:'Ø£Ù†Ø¸Ù…Ø© Ù‚ÙˆÙŠØ© ÙˆØ¢Ù…Ù†Ø© ØªØªØ­Ù…Ù„ Ø§Ù„Ø¶ØºØ·', sk2_tag:'Ù„ÙˆØ­Ø§Øª ØªØ­ÙƒÙ…',
-        sk3_h:'ØªØ¬Ø§Ø±Ø© ÙˆØ£Ù†Ø¸Ù…Ø© Ø¥Ø¯Ø§Ø±Ø©', sk3_p:'Ø­Ù„ÙˆÙ„ Ø³Ø±ÙŠØ¹Ø© ÙˆÙ‚Ø§Ø¨Ù„Ø© Ù„Ù„ØªØ®ØµÙŠØµ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„', sk3_tag:'ØªØ®ØµÙŠØµ ÙƒØ§Ù…Ù„',
-        ci_email:'Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ', ci_phone:'Ø§Ù„Ù‡Ø§ØªÙ', ci_loc:'Ø§Ù„Ù…ÙˆÙ‚Ø¹', ci_loc_val:'ÙÙ„Ø³Ø·ÙŠÙ† â€” ØºØ²Ø©',
-        form_email:'Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ', form_type:'Ù†ÙˆØ¹ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹', form_msg:'ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹',
-        ph_name:'Ù…Ø«Ø§Ù„: Ø£Ø­Ù…Ø¯ Ù…Ø­Ù…Ø¯', ph_msg:'Ø§Ø®Ø¨Ø±Ù†ÙŠ Ø¹Ù† ÙÙƒØ±ØªÙƒ...',
-        opt_select:'Ø§Ø®ØªØ± Ù†ÙˆØ¹ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹', opt_web:'Ù…ÙˆÙ‚Ø¹ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ', opt_store:'Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ', opt_sys:'Ù†Ø¸Ø§Ù… Ø¥Ø¯Ø§Ø±Ø©', opt_other:'Ø£Ø®Ø±Ù‰',
-        err_name:'ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ø§Ø³Ù…Ùƒ', err_email:'ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ø¨Ø±ÙŠØ¯ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ ØµØ­ÙŠØ­', err_msg:'ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹',
-        footer_rights:'Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©',
+
+        dir: 'rtl', lang: 'ar', label: 'عربي',
+
+        nav_home:'الرئيسية', nav_about:'عنّي', nav_skills:'المهارات', nav_portfolio:'الأعمال', nav_contact:'تواصل', nav_cta:'ابدأ مشروعك',
+
+        hero_sub:'مطوّر واجهات وتجارب ويب',
+
+        hero_h1:'أبني مواقع',
+
+        hero_typing:['تُحدث فرقاً','تروي قصتك','تُبهر زوّارك','تحقق أهدافك'],
+
+        hero_desc:'بخبرة تتجاوز 3 سنوات، أحوّل الأفكار إلى تجارب رقمية سريعة وجميلة باستخدام أحدث التقنيات',
+
+        hero_btn1:'شاهد أعمالي', hero_btn2:'تواصل معي',
+
+        about_tag:'من أنا', about_h2:'لستُ مجرد مبرمج،\nبل شريك في نجاح مشروعك',
+
+        about_p:'أنا سعيد العريني، مطوّر ويب متكامل أؤمن بأن الموقع الإلكتروني ليس مجرد صفحة على الإنترنت، بل هو انعكاس حقيقي لهوية العلامة التجارية وأول انطباع يتركه لدى عملائك.',
+
+        skills_tag:'ما أتقنه', skills_h2:'أدواتي وأسلوب عملي',
+
+        port_tag:'أعمالي', port_h2:'مشاريع اختبرت فيها أفكاري', port_p:'كل مشروع هو تحدٍّ جديد وفرصة لتقديم أفضل ما لديّ',
+
+        filter_all:'الكل',
+
+        contact_tag:'تواصل معي', contact_h2:'لديك فكرة؟\nدعنا نحوّلها واقعاً',
+
+        contact_p:'سواء كانت فكرة مشروع جديد أو تطوير لموقع موجود، أنا جاهز للاستماع ومساعدتك في كل خطوة.',
+
+        form_name:'الاسم الكامل', form_email:'البريد الإلكتروني', form_type:'نوع المشروع', form_msg:'تفاصيل المشروع',
+
+        form_submit:'أرسل رسالتك', form_sending:'جاري الإرسال...',
+
+        stat1:'سنوات خبرة', stat2:'مشروع مُنجز', stat3:'تقنية أتقنها', stat4:'التزام بالجودة',
+
+        ap1_h:'تركيز على الأداء', ap1_p:'مواقع سريعة التحميل ومُحسّنة لمحركات البحث',
+
+        ap2_h:'تصميم يخدم التجربة', ap2_p:'واجهات بديهية وجذابة تُحبّك الزائر في أول نظرة',
+
+        ap3_h:'كود نظيف وقابل للتطوير', ap3_p:'أساس متين يضمن استمرارية مشروعك ونموه',
+
+        sk1_h:'واجهات أمامية', sk1_p:'بناء تجارب مستخدم تفاعلية وسريعة',
+
+        sk2_h:'خلفية وربط', sk2_p:'أنظمة قوية وآمنة تتحمل الضغط', sk2_tag:'لوحات تحكم',
+
+        sk3_h:'تجارة وأنظمة إدارة', sk3_p:'حلول سريعة وقابلة للتخصيص بالكامل', sk3_tag:'تخصيص كامل',
+
+        ci_email:'البريد الإلكتروني', ci_phone:'الهاتف', ci_loc:'الموقع', ci_loc_val:'فلسطين — غزة',
+
+        form_email:'البريد الإلكتروني', form_type:'نوع المشروع', form_msg:'تفاصيل المشروع',
+
+        ph_name:'مثال: أحمد محمد', ph_msg:'اخبرني عن فكرتك...',
+
+        opt_select:'اختر نوع المشروع', opt_web:'موقع إلكتروني', opt_store:'متجر إلكتروني', opt_sys:'نظام إدارة', opt_other:'أخرى',
+
+        err_name:'يرجى إدخال اسمك', err_email:'يرجى إدخال بريد إلكتروني صحيح', err_msg:'يرجى إدخال تفاصيل المشروع',
+
+        footer_rights:'جميع الحقوق محفوظة',
+
     },
+
     en: {
+
         dir: 'ltr', lang: 'en', label: 'English',
+
         nav_home:'Home', nav_about:'About', nav_skills:'Skills', nav_portfolio:'Portfolio', nav_contact:'Contact', nav_cta:'Start a Project',
+
         hero_sub:'Full-Stack Web Developer',
+
         hero_h1:'I Build Websites',
+
         hero_typing:['That Make a Difference','That Tell Your Story','That Impress Visitors','That Achieve Goals'],
+
         hero_desc:'With 3+ years of experience, I turn ideas into fast, beautiful digital experiences using the latest technologies.',
+
         hero_btn1:'View My Work', hero_btn2:'Contact Me',
+
         about_tag:'About Me', about_h2:"I'm not just a developer,\nI'm your project's partner",
-        about_p:"I'm Saeed Al-Areeni, a full-stack web developer who believes a website isn't just a page on the internet â€” it's a true reflection of your brand identity and the first impression you leave on your clients.",
+
+        about_p:"I'm Saeed Al-Areeni, a full-stack web developer who believes a website isn't just a page on the internet — it's a true reflection of your brand identity and the first impression you leave on your clients.",
+
         skills_tag:'What I Master', skills_h2:'My Tools & Approach',
+
         port_tag:'My Work', port_h2:'Projects Where I Tested My Ideas', port_p:'Every project is a new challenge and an opportunity to deliver my best.',
+
         filter_all:'All',
+
         contact_tag:'Contact Me', contact_h2:"Got an Idea?\nLet's Make It Real",
+
         contact_p:"Whether it's a new project idea or improving an existing website, I'm ready to listen and help you every step of the way.",
+
         form_name:'Full Name', form_email:'Email Address', form_type:'Project Type', form_msg:'Project Details',
+
         form_submit:'Send Message', form_sending:'Sending...',
+
         stat1:'Years Experience', stat2:'Projects Done', stat3:'Technologies', stat4:'Quality Commitment',
+
         ap1_h:'Performance Focus', ap1_p:'Fast-loading websites optimized for search engines',
+
         ap2_h:'Experience-Driven Design', ap2_p:'Intuitive and beautiful interfaces that captivate visitors at first glance',
+
         ap3_h:'Clean & Scalable Code', ap3_p:'A solid foundation that ensures your project\'s continuity and growth',
+
         sk1_h:'Frontend', sk1_p:'Building interactive and fast user experiences',
+
         sk2_h:'Backend & Integration', sk2_p:'Powerful and secure systems that handle pressure', sk2_tag:'Control Panels',
+
         sk3_h:'E-Commerce & CMS', sk3_p:'Fast solutions fully customizable', sk3_tag:'Full Customization',
-        ci_email:'Email', ci_phone:'Phone', ci_loc:'Location', ci_loc_val:'Palestine â€” Gaza',
+
+        ci_email:'Email', ci_phone:'Phone', ci_loc:'Location', ci_loc_val:'Palestine — Gaza',
+
         form_email:'Email Address', form_type:'Project Type', form_msg:'Project Details',
+
         ph_name:'e.g. John Smith', ph_msg:'Tell me about your idea...',
+
         opt_select:'Select project type', opt_web:'Website', opt_store:'E-Commerce Store', opt_sys:'Management System', opt_other:'Other',
+
         err_name:'Please enter your name', err_email:'Please enter a valid email', err_msg:'Please enter project details',
+
         footer_rights:'All Rights Reserved',
+
     },
+
     zh: {
-        dir: 'ltr', lang: 'zh', label: 'ä¸­æ–‡',
-        nav_home:'é¦–é¡µ', nav_about:'å…³äºŽ', nav_skills:'æŠ€èƒ½', nav_portfolio:'ä½œå“é›†', nav_contact:'è”ç³»', nav_cta:'å¼€å§‹é¡¹ç›®',
-        hero_sub:'å…¨æ ˆç½‘é¡µå¼€å‘è€…',
-        hero_h1:'æˆ‘æž„å»ºç½‘ç«™',
-        hero_typing:['åˆ›é€ ä¸Žä¼—ä¸åŒ','è®²è¿°æ‚¨çš„æ•…äº‹','ä»¤è®¿å®¢æƒŠå¹','å®žçŽ°æ‚¨çš„ç›®æ ‡'],
-        hero_desc:'æ‹¥æœ‰3å¹´ä»¥ä¸Šç»éªŒï¼Œæˆ‘ä½¿ç”¨æœ€æ–°æŠ€æœ¯å°†åˆ›æ„è½¬åŒ–ä¸ºå¿«é€Ÿã€ç²¾ç¾Žçš„æ•°å­—ä½“éªŒã€‚',
-        hero_btn1:'æŸ¥çœ‹ä½œå“', hero_btn2:'è”ç³»æˆ‘',
-        about_tag:'å…³äºŽæˆ‘', about_h2:'æˆ‘ä¸åªæ˜¯å¼€å‘è€…ï¼Œ\næ›´æ˜¯æ‚¨é¡¹ç›®çš„åˆä½œä¼™ä¼´',
-        about_p:'æˆ‘æ˜¯èµ›ä¹‰å¾·Â·é˜¿é›·å°¼ï¼Œä¸€åå…¨æ ˆç½‘é¡µå¼€å‘è€…ã€‚æˆ‘ç›¸ä¿¡ç½‘ç«™ä¸ä»…ä»…æ˜¯äº’è”ç½‘ä¸Šçš„é¡µé¢ï¼Œè€Œæ˜¯å“ç‰Œå½¢è±¡çš„çœŸå®žä½“çŽ°ã€‚',
-        skills_tag:'æˆ‘çš„æŠ€èƒ½', skills_h2:'æˆ‘çš„å·¥å…·å’Œæ–¹æ³•',
-        port_tag:'æˆ‘çš„ä½œå“', port_h2:'å±•çŽ°åˆ›æ„çš„é¡¹ç›®', port_p:'æ¯ä¸ªé¡¹ç›®éƒ½æ˜¯æ–°çš„æŒ‘æˆ˜å’Œå±•ç¤ºæœ€ä½³æˆæžœçš„æœºä¼šã€‚',
-        filter_all:'å…¨éƒ¨',
-        contact_tag:'è”ç³»æˆ‘', contact_h2:'æœ‰æƒ³æ³•ï¼Ÿ\nè®©æˆ‘ä»¬å®žçŽ°å®ƒ',
-        contact_p:'æ— è®ºæ˜¯æ–°é¡¹ç›®è¿˜æ˜¯æ”¹è¿›çŽ°æœ‰ç½‘ç«™ï¼Œæˆ‘éƒ½å‡†å¤‡å¥½å€¾å¬å¹¶åœ¨æ¯ä¸€æ­¥å¸®åŠ©æ‚¨ã€‚',
-        form_name:'å…¨å', form_email:'ç”µå­é‚®ä»¶', form_type:'é¡¹ç›®ç±»åž‹', form_msg:'é¡¹ç›®è¯¦æƒ…',
-        form_submit:'å‘é€æ¶ˆæ¯', form_sending:'å‘é€ä¸­...',
-        stat1:'å¹´ç»éªŒ', stat2:'å®Œæˆé¡¹ç›®', stat3:'æŽŒæ¡æŠ€æœ¯', stat4:'è´¨é‡æ‰¿è¯º',
-        ap1_h:'ä¸“æ³¨æ€§èƒ½', ap1_p:'å¿«é€ŸåŠ è½½ä¸”é’ˆå¯¹æœç´¢å¼•æ“Žä¼˜åŒ–çš„ç½‘ç«™',
-        ap2_h:'ä½“éªŒé©±åŠ¨è®¾è®¡', ap2_p:'ç›´è§‚ç¾Žè§‚çš„ç•Œé¢ï¼Œè®©è®¿å®¢ä¸€è§é’Ÿæƒ…',
-        ap3_h:'å¹²å‡€å¯æ‰©å±•çš„ä»£ç ', ap3_p:'åšå®žçš„åŸºç¡€ï¼Œç¡®ä¿é¡¹ç›®æŒç»­å‘å±•',
-        sk1_h:'å‰ç«¯å¼€å‘', sk1_p:'æž„å»ºäº¤äº’å¼å¿«é€Ÿç”¨æˆ·ä½“éªŒ',
-        sk2_h:'åŽç«¯ä¸Žé›†æˆ', sk2_p:'å¼ºå¤§å®‰å…¨çš„ç³»ç»Ÿ', sk2_tag:'æŽ§åˆ¶é¢æ¿',
-        sk3_h:'ç”µå•†ä¸Žç®¡ç†ç³»ç»Ÿ', sk3_p:'å¿«é€Ÿä¸”å®Œå…¨å¯å®šåˆ¶çš„è§£å†³æ–¹æ¡ˆ', sk3_tag:'å®Œå…¨å®šåˆ¶',
-        ci_email:'ç”µå­é‚®ä»¶', ci_phone:'ç”µè¯', ci_loc:'ä½ç½®', ci_loc_val:'å·´å‹’æ–¯å¦ â€” åŠ æ²™',
-        form_email:'ç”µå­é‚®ä»¶åœ°å€', form_type:'é¡¹ç›®ç±»åž‹', form_msg:'é¡¹ç›®è¯¦æƒ…',
-        ph_name:'ä¾‹å¦‚ï¼šå¼ ä¼Ÿ', ph_msg:'å‘Šè¯‰æˆ‘ä½ çš„æƒ³æ³•...',
-        opt_select:'é€‰æ‹©é¡¹ç›®ç±»åž‹', opt_web:'ç½‘ç«™', opt_store:'ç”µå•†åº—é“º', opt_sys:'ç®¡ç†ç³»ç»Ÿ', opt_other:'å…¶ä»–',
-        err_name:'è¯·è¾“å…¥æ‚¨çš„å§“å', err_email:'è¯·è¾“å…¥æœ‰æ•ˆçš„ç”µå­é‚®ä»¶', err_msg:'è¯·è¾“å…¥é¡¹ç›®è¯¦æƒ…',
-        footer_rights:'ç‰ˆæƒæ‰€æœ‰',
+
+        dir: 'ltr', lang: 'zh', label: '中文',
+
+        nav_home:'首页', nav_about:'关于', nav_skills:'技能', nav_portfolio:'作品集', nav_contact:'联系', nav_cta:'开始项目',
+
+        hero_sub:'全栈网页开发者',
+
+        hero_h1:'我构建网站',
+
+        hero_typing:['创造与众不同','讲述您的故事','令访客惊叹','实现您的目标'],
+
+        hero_desc:'拥有3年以上经验，我使用最新技术将创意转化为快速、精美的数字体验。',
+
+        hero_btn1:'查看作品', hero_btn2:'联系我',
+
+        about_tag:'关于我', about_h2:'我不只是开发者，\n更是您项目的合作伙伴',
+
+        about_p:'我是赛义德·阿雷尼，一名全栈网页开发者。我相信网站不仅仅是互联网上的页面，而是品牌形象的真实体现。',
+
+        skills_tag:'我的技能', skills_h2:'我的工具和方法',
+
+        port_tag:'我的作品', port_h2:'展现创意的项目', port_p:'每个项目都是新的挑战和展示最佳成果的机会。',
+
+        filter_all:'全部',
+
+        contact_tag:'联系我', contact_h2:'有想法？\n让我们实现它',
+
+        contact_p:'无论是新项目还是改进现有网站，我都准备好倾听并在每一步帮助您。',
+
+        form_name:'全名', form_email:'电子邮件', form_type:'项目类型', form_msg:'项目详情',
+
+        form_submit:'发送消息', form_sending:'发送中...',
+
+        stat1:'年经验', stat2:'完成项目', stat3:'掌握技术', stat4:'质量承诺',
+
+        ap1_h:'专注性能', ap1_p:'快速加载且针对搜索引擎优化的网站',
+
+        ap2_h:'体验驱动设计', ap2_p:'直观美观的界面，让访客一见钟情',
+
+        ap3_h:'干净可扩展的代码', ap3_p:'坚实的基础，确保项目持续发展',
+
+        sk1_h:'前端开发', sk1_p:'构建交互式快速用户体验',
+
+        sk2_h:'后端与集成', sk2_p:'强大安全的系统', sk2_tag:'控制面板',
+
+        sk3_h:'电商与管理系统', sk3_p:'快速且完全可定制的解决方案', sk3_tag:'完全定制',
+
+        ci_email:'电子邮件', ci_phone:'电话', ci_loc:'位置', ci_loc_val:'巴勒斯坦 — 加沙',
+
+        form_email:'电子邮件地址', form_type:'项目类型', form_msg:'项目详情',
+
+        ph_name:'例如：张伟', ph_msg:'告诉我你的想法...',
+
+        opt_select:'选择项目类型', opt_web:'网站', opt_store:'电商店铺', opt_sys:'管理系统', opt_other:'其他',
+
+        err_name:'请输入您的姓名', err_email:'请输入有效的电子邮件', err_msg:'请输入项目详情',
+
+        footer_rights:'版权所有',
+
     },
+
     es: {
-        dir: 'ltr', lang: 'es', label: 'EspaÃ±ol',
-        nav_home:'Inicio', nav_about:'Sobre mÃ­', nav_skills:'Habilidades', nav_portfolio:'Portafolio', nav_contact:'Contacto', nav_cta:'Iniciar Proyecto',
+
+        dir: 'ltr', lang: 'es', label: 'Español',
+
+        nav_home:'Inicio', nav_about:'Sobre mí', nav_skills:'Habilidades', nav_portfolio:'Portafolio', nav_contact:'Contacto', nav_cta:'Iniciar Proyecto',
+
         hero_sub:'Desarrollador Web Full-Stack',
+
         hero_h1:'Construyo Sitios Web',
+
         hero_typing:['Que Marcan la Diferencia','Que Cuentan Tu Historia','Que Impresionan Visitantes','Que Logran Objetivos'],
-        hero_desc:'Con mÃ¡s de 3 aÃ±os de experiencia, convierto ideas en experiencias digitales rÃ¡pidas y hermosas usando las Ãºltimas tecnologÃ­as.',
-        hero_btn1:'Ver Mi Trabajo', hero_btn2:'ContÃ¡ctame',
-        about_tag:'Sobre MÃ­', about_h2:'No soy solo un programador,\nsoy el socio de tu proyecto',
-        about_p:'Soy Saeed Al-Areeni, desarrollador web full-stack. Creo que un sitio web no es solo una pÃ¡gina en internet, sino el reflejo real de tu marca.',
+
+        hero_desc:'Con más de 3 años de experiencia, convierto ideas en experiencias digitales rápidas y hermosas usando las últimas tecnologías.',
+
+        hero_btn1:'Ver Mi Trabajo', hero_btn2:'Contáctame',
+
+        about_tag:'Sobre Mí', about_h2:'No soy solo un programador,\nsoy el socio de tu proyecto',
+
+        about_p:'Soy Saeed Al-Areeni, desarrollador web full-stack. Creo que un sitio web no es solo una página en internet, sino el reflejo real de tu marca.',
+
         skills_tag:'Lo Que Domino', skills_h2:'Mis Herramientas y Enfoque',
-        port_tag:'Mi Trabajo', port_h2:'Proyectos Donde ProbÃ© Mis Ideas', port_p:'Cada proyecto es un nuevo desafÃ­o y una oportunidad para dar lo mejor.',
+
+        port_tag:'Mi Trabajo', port_h2:'Proyectos Donde Probé Mis Ideas', port_p:'Cada proyecto es un nuevo desafío y una oportunidad para dar lo mejor.',
+
         filter_all:'Todo',
-        contact_tag:'ContÃ¡ctame', contact_h2:'Â¿Tienes una Idea?\nHagÃ¡mosla Realidad',
+
+        contact_tag:'Contáctame', contact_h2:'¿Tienes una Idea?\nHagámosla Realidad',
+
         contact_p:'Ya sea una nueva idea de proyecto o mejorar un sitio existente, estoy listo para escucharte y ayudarte en cada paso.',
-        form_name:'Nombre Completo', form_email:'Correo ElectrÃ³nico', form_type:'Tipo de Proyecto', form_msg:'Detalles del Proyecto',
+
+        form_name:'Nombre Completo', form_email:'Correo Electrónico', form_type:'Tipo de Proyecto', form_msg:'Detalles del Proyecto',
+
         form_submit:'Enviar Mensaje', form_sending:'Enviando...',
-        stat1:'AÃ±os de Experiencia', stat2:'Proyectos Completados', stat3:'TecnologÃ­as', stat4:'Compromiso de Calidad',
-        ap1_h:'Enfoque en Rendimiento', ap1_p:'Sitios de carga rÃ¡pida optimizados para motores de bÃºsqueda',
-        ap2_h:'DiseÃ±o para la Experiencia', ap2_p:'Interfaces intuitivas y atractivas que cautivan a los visitantes',
-        ap3_h:'CÃ³digo Limpio y Escalable', ap3_p:'Una base sÃ³lida que garantiza la continuidad y crecimiento de tu proyecto',
-        sk1_h:'Frontend', sk1_p:'Construyendo experiencias de usuario interactivas y rÃ¡pidas',
-        sk2_h:'Backend e IntegraciÃ³n', sk2_p:'Sistemas potentes y seguros', sk2_tag:'Paneles de Control',
-        sk3_h:'E-Commerce y CMS', sk3_p:'Soluciones rÃ¡pidas y completamente personalizables', sk3_tag:'PersonalizaciÃ³n Total',
-        ci_email:'Correo ElectrÃ³nico', ci_phone:'TelÃ©fono', ci_loc:'UbicaciÃ³n', ci_loc_val:'Palestina â€” Gaza',
-        form_email:'Correo ElectrÃ³nico', form_type:'Tipo de Proyecto', form_msg:'Detalles del Proyecto',
-        ph_name:'ej. Juan GarcÃ­a', ph_msg:'CuÃ©ntame sobre tu idea...',
-        opt_select:'Selecciona tipo de proyecto', opt_web:'Sitio Web', opt_store:'Tienda Online', opt_sys:'Sistema de GestiÃ³n', opt_other:'Otro',
-        err_name:'Por favor ingresa tu nombre', err_email:'Por favor ingresa un email vÃ¡lido', err_msg:'Por favor ingresa los detalles del proyecto',
+
+        stat1:'Años de Experiencia', stat2:'Proyectos Completados', stat3:'Tecnologías', stat4:'Compromiso de Calidad',
+
+        ap1_h:'Enfoque en Rendimiento', ap1_p:'Sitios de carga rápida optimizados para motores de búsqueda',
+
+        ap2_h:'Diseño para la Experiencia', ap2_p:'Interfaces intuitivas y atractivas que cautivan a los visitantes',
+
+        ap3_h:'Código Limpio y Escalable', ap3_p:'Una base sólida que garantiza la continuidad y crecimiento de tu proyecto',
+
+        sk1_h:'Frontend', sk1_p:'Construyendo experiencias de usuario interactivas y rápidas',
+
+        sk2_h:'Backend e Integración', sk2_p:'Sistemas potentes y seguros', sk2_tag:'Paneles de Control',
+
+        sk3_h:'E-Commerce y CMS', sk3_p:'Soluciones rápidas y completamente personalizables', sk3_tag:'Personalización Total',
+
+        ci_email:'Correo Electrónico', ci_phone:'Teléfono', ci_loc:'Ubicación', ci_loc_val:'Palestina — Gaza',
+
+        form_email:'Correo Electrónico', form_type:'Tipo de Proyecto', form_msg:'Detalles del Proyecto',
+
+        ph_name:'ej. Juan García', ph_msg:'Cuéntame sobre tu idea...',
+
+        opt_select:'Selecciona tipo de proyecto', opt_web:'Sitio Web', opt_store:'Tienda Online', opt_sys:'Sistema de Gestión', opt_other:'Otro',
+
+        err_name:'Por favor ingresa tu nombre', err_email:'Por favor ingresa un email válido', err_msg:'Por favor ingresa los detalles del proyecto',
+
         footer_rights:'Todos los Derechos Reservados',
+
     },
+
     fr: {
-        dir: 'ltr', lang: 'fr', label: 'FranÃ§ais',
-        nav_home:'Accueil', nav_about:'Ã€ Propos', nav_skills:'CompÃ©tences', nav_portfolio:'Portfolio', nav_contact:'Contact', nav_cta:'DÃ©marrer un Projet',
-        hero_sub:'DÃ©veloppeur Web Full-Stack',
+
+        dir: 'ltr', lang: 'fr', label: 'Français',
+
+        nav_home:'Accueil', nav_about:'À Propos', nav_skills:'Compétences', nav_portfolio:'Portfolio', nav_contact:'Contact', nav_cta:'Démarrer un Projet',
+
+        hero_sub:'Développeur Web Full-Stack',
+
         hero_h1:'Je Construis des Sites Web',
-        hero_typing:['Qui Font la DiffÃ©rence','Qui Racontent Votre Histoire','Qui Impressionnent les Visiteurs','Qui Atteignent Vos Objectifs'],
-        hero_desc:"Avec plus de 3 ans d'expÃ©rience, je transforme les idÃ©es en expÃ©riences numÃ©riques rapides et belles avec les derniÃ¨res technologies.",
+
+        hero_typing:['Qui Font la Différence','Qui Racontent Votre Histoire','Qui Impressionnent les Visiteurs','Qui Atteignent Vos Objectifs'],
+
+        hero_desc:"Avec plus de 3 ans d'expérience, je transforme les idées en expériences numériques rapides et belles avec les dernières technologies.",
+
         hero_btn1:'Voir Mon Travail', hero_btn2:'Me Contacter',
-        about_tag:'Ã€ Propos', about_h2:"Je ne suis pas qu'un dÃ©veloppeur,\nje suis votre partenaire",
-        about_p:"Je suis Saeed Al-Areeni, dÃ©veloppeur web full-stack. Je crois qu'un site web n'est pas qu'une page internet, c'est le vrai reflet de votre marque.",
-        skills_tag:'Ce Que Je MaÃ®trise', skills_h2:'Mes Outils et Approche',
-        port_tag:'Mon Travail', port_h2:'Projets OÃ¹ J\'ai TestÃ© Mes IdÃ©es', port_p:'Chaque projet est un nouveau dÃ©fi et une opportunitÃ© de donner le meilleur de moi-mÃªme.',
+
+        about_tag:'À Propos', about_h2:"Je ne suis pas qu'un développeur,\nje suis votre partenaire",
+
+        about_p:"Je suis Saeed Al-Areeni, développeur web full-stack. Je crois qu'un site web n'est pas qu'une page internet, c'est le vrai reflet de votre marque.",
+
+        skills_tag:'Ce Que Je Maîtrise', skills_h2:'Mes Outils et Approche',
+
+        port_tag:'Mon Travail', port_h2:'Projets Où J\'ai Testé Mes Idées', port_p:'Chaque projet est un nouveau défi et une opportunité de donner le meilleur de moi-même.',
+
         filter_all:'Tout',
-        contact_tag:'Contactez-Moi', contact_h2:'Vous Avez une IdÃ©e?\nRÃ©alisons-la Ensemble',
-        contact_p:"Que ce soit une nouvelle idÃ©e de projet ou l'amÃ©lioration d'un site existant, je suis prÃªt Ã  vous Ã©couter et vous aider Ã  chaque Ã©tape.",
-        form_name:'Nom Complet', form_email:'Adresse Email', form_type:'Type de Projet', form_msg:'DÃ©tails du Projet',
+
+        contact_tag:'Contactez-Moi', contact_h2:'Vous Avez une Idée?\nRéalisons-la Ensemble',
+
+        contact_p:"Que ce soit une nouvelle idée de projet ou l'amélioration d'un site existant, je suis prêt à vous écouter et vous aider à chaque étape.",
+
+        form_name:'Nom Complet', form_email:'Adresse Email', form_type:'Type de Projet', form_msg:'Détails du Projet',
+
         form_submit:'Envoyer le Message', form_sending:'Envoi en cours...',
-        stat1:"AnnÃ©es d'ExpÃ©rience", stat2:'Projets RÃ©alisÃ©s', stat3:'Technologies', stat4:'Engagement QualitÃ©',
-        ap1_h:'AxÃ© sur la Performance', ap1_p:'Sites rapides optimisÃ©s pour les moteurs de recherche',
-        ap2_h:'Design au Service de l\'ExpÃ©rience', ap2_p:'Interfaces intuitives et attrayantes qui captivent les visiteurs',
-        ap3_h:'Code Propre et Ã‰volutif', ap3_p:'Une base solide qui garantit la continuitÃ© et la croissance de votre projet',
-        sk1_h:'Frontend', sk1_p:'CrÃ©ation d\'expÃ©riences utilisateur interactives et rapides',
-        sk2_h:'Backend & IntÃ©gration', sk2_p:'SystÃ¨mes puissants et sÃ©curisÃ©s', sk2_tag:'Tableaux de Bord',
-        sk3_h:'E-Commerce & CMS', sk3_p:'Solutions rapides entiÃ¨rement personnalisables', sk3_tag:'Personnalisation Totale',
-        ci_email:'E-mail', ci_phone:'TÃ©lÃ©phone', ci_loc:'Localisation', ci_loc_val:'Palestine â€” Gaza',
-        form_email:'Adresse E-mail', form_type:'Type de Projet', form_msg:'DÃ©tails du Projet',
-        ph_name:'ex. Jean Dupont', ph_msg:'Parlez-moi de votre idÃ©e...',
-        opt_select:'SÃ©lectionnez le type', opt_web:'Site Web', opt_store:'Boutique en ligne', opt_sys:'SystÃ¨me de gestion', opt_other:'Autre',
-        err_name:'Veuillez entrer votre nom', err_email:'Veuillez entrer un email valide', err_msg:'Veuillez entrer les dÃ©tails du projet',
-        footer_rights:'Tous Droits RÃ©servÃ©s',
+
+        stat1:"Années d'Expérience", stat2:'Projets Réalisés', stat3:'Technologies', stat4:'Engagement Qualité',
+
+        ap1_h:'Axé sur la Performance', ap1_p:'Sites rapides optimisés pour les moteurs de recherche',
+
+        ap2_h:'Design au Service de l\'Expérience', ap2_p:'Interfaces intuitives et attrayantes qui captivent les visiteurs',
+
+        ap3_h:'Code Propre et Évolutif', ap3_p:'Une base solide qui garantit la continuité et la croissance de votre projet',
+
+        sk1_h:'Frontend', sk1_p:'Création d\'expériences utilisateur interactives et rapides',
+
+        sk2_h:'Backend & Intégration', sk2_p:'Systèmes puissants et sécurisés', sk2_tag:'Tableaux de Bord',
+
+        sk3_h:'E-Commerce & CMS', sk3_p:'Solutions rapides entièrement personnalisables', sk3_tag:'Personnalisation Totale',
+
+        ci_email:'E-mail', ci_phone:'Téléphone', ci_loc:'Localisation', ci_loc_val:'Palestine — Gaza',
+
+        form_email:'Adresse E-mail', form_type:'Type de Projet', form_msg:'Détails du Projet',
+
+        ph_name:'ex. Jean Dupont', ph_msg:'Parlez-moi de votre idée...',
+
+        opt_select:'Sélectionnez le type', opt_web:'Site Web', opt_store:'Boutique en ligne', opt_sys:'Système de gestion', opt_other:'Autre',
+
+        err_name:'Veuillez entrer votre nom', err_email:'Veuillez entrer un email valide', err_msg:'Veuillez entrer les détails du projet',
+
+        footer_rights:'Tous Droits Réservés',
+
     },
+
     tr: {
-        dir: 'ltr', lang: 'tr', label: 'TÃ¼rkÃ§e',
-        nav_home:'Ana Sayfa', nav_about:'HakkÄ±mda', nav_skills:'Beceriler', nav_portfolio:'PortfÃ¶y', nav_contact:'Ä°letiÅŸim', nav_cta:'Projeye BaÅŸla',
-        hero_sub:'Full-Stack Web GeliÅŸtirici',
-        hero_h1:'Web Siteleri Ä°nÅŸa Ediyorum',
-        hero_typing:['Fark Yaratan','Hikayenizi Anlatan','ZiyaretÃ§ileri Etkileyen','Hedeflerinize UlaÅŸan'],
-        hero_desc:'3 yÄ±lÄ± aÅŸkÄ±n deneyimimle en son teknolojileri kullanarak fikirleri hÄ±zlÄ± ve gÃ¼zel dijital deneyimlere dÃ¶nÃ¼ÅŸtÃ¼rÃ¼yorum.',
-        hero_btn1:'Ã‡alÄ±ÅŸmalarÄ±mÄ± GÃ¶r', hero_btn2:'Ä°letiÅŸime GeÃ§',
-        about_tag:'HakkÄ±mda', about_h2:"Ben sadece bir geliÅŸtirici deÄŸilim,\nprojenizin ortaÄŸÄ±yÄ±m",
-        about_p:"Ben Saeed Al-Areeni, full-stack web geliÅŸtiricisiyim. Bir web sitesinin sadece internetteki bir sayfa olmadÄ±ÄŸÄ±na, markanÄ±zÄ±n gerÃ§ek yansÄ±masÄ± olduÄŸuna inanÄ±yorum.",
-        skills_tag:'UzmanlÄ±k AlanlarÄ±m', skills_h2:'AraÃ§larÄ±m ve YaklaÅŸÄ±mÄ±m',
-        port_tag:'Ã‡alÄ±ÅŸmalarÄ±m', port_h2:'Fikirlerimi Test EttiÄŸim Projeler', port_p:'Her proje yeni bir zorluk ve en iyimi sunma fÄ±rsatÄ±.',
-        filter_all:'TÃ¼mÃ¼',
-        contact_tag:'Ä°letiÅŸim', contact_h2:"Bir Fikriniz mi Var?\nGerÃ§eÄŸe DÃ¶nÃ¼ÅŸtÃ¼relim",
-        contact_p:'Ä°ster yeni bir proje fikri ister mevcut bir siteyi geliÅŸtirmek olsun, her adÄ±mda dinlemeye ve yardÄ±mcÄ± olmaya hazÄ±rÄ±m.',
-        form_name:'Ad Soyad', form_email:'E-posta Adresi', form_type:'Proje TÃ¼rÃ¼', form_msg:'Proje DetaylarÄ±',
-        form_submit:'Mesaj GÃ¶nder', form_sending:'GÃ¶nderiliyor...',
-        stat1:'YÄ±l Deneyim', stat2:'Tamamlanan Proje', stat3:'Teknoloji', stat4:'Kalite TaahhÃ¼dÃ¼',
-        ap1_h:'Performansa Odaklanma', ap1_p:'Arama motorlarÄ± iÃ§in optimize edilmiÅŸ hÄ±zlÄ± yÃ¼klenen siteler',
-        ap2_h:'Deneyime Hizmet Eden TasarÄ±m', ap2_p:'ZiyaretÃ§ileri ilk bakÄ±ÅŸta etkileyen sezgisel arayÃ¼zler',
-        ap3_h:'Temiz ve Ã–lÃ§eklenebilir Kod', ap3_p:'Projenizin sÃ¼rekliliÄŸini ve bÃ¼yÃ¼mesini saÄŸlayan saÄŸlam bir temel',
-        sk1_h:'Frontend', sk1_p:'EtkileÅŸimli ve hÄ±zlÄ± kullanÄ±cÄ± deneyimleri oluÅŸturma',
-        sk2_h:'Backend ve Entegrasyon', sk2_p:'GÃ¼Ã§lÃ¼ ve gÃ¼venli sistemler', sk2_tag:'Kontrol Panelleri',
-        sk3_h:'E-Ticaret ve CMS', sk3_p:'Tamamen Ã¶zelleÅŸtirilebilir hÄ±zlÄ± Ã§Ã¶zÃ¼mler', sk3_tag:'Tam Ã–zelleÅŸtirme',
-        ci_email:'E-posta', ci_phone:'Telefon', ci_loc:'Konum', ci_loc_val:'Filistin â€” Gazze',
-        form_email:'E-posta Adresi', form_type:'Proje TÃ¼rÃ¼', form_msg:'Proje DetaylarÄ±',
-        ph_name:'Ã¶rn. Ahmet YÄ±lmaz', ph_msg:'Fikrinizi anlatÄ±n...',
-        opt_select:'Proje tÃ¼rÃ¼ seÃ§in', opt_web:'Web Sitesi', opt_store:'E-Ticaret MaÄŸazasÄ±', opt_sys:'YÃ¶netim Sistemi', opt_other:'DiÄŸer',
-        err_name:'LÃ¼tfen adÄ±nÄ±zÄ± girin', err_email:'LÃ¼tfen geÃ§erli bir e-posta girin', err_msg:'LÃ¼tfen proje detaylarÄ±nÄ± girin',
-        footer_rights:'TÃ¼m HaklarÄ± SaklÄ±dÄ±r',
+
+        dir: 'ltr', lang: 'tr', label: 'Türkçe',
+
+        nav_home:'Ana Sayfa', nav_about:'Hakkımda', nav_skills:'Beceriler', nav_portfolio:'Portföy', nav_contact:'İletişim', nav_cta:'Projeye Başla',
+
+        hero_sub:'Full-Stack Web Geliştirici',
+
+        hero_h1:'Web Siteleri İnşa Ediyorum',
+
+        hero_typing:['Fark Yaratan','Hikayenizi Anlatan','Ziyaretçileri Etkileyen','Hedeflerinize Ulaşan'],
+
+        hero_desc:'3 yılı aşkın deneyimimle en son teknolojileri kullanarak fikirleri hızlı ve güzel dijital deneyimlere dönüştürüyorum.',
+
+        hero_btn1:'Çalışmalarımı Gör', hero_btn2:'İletişime Geç',
+
+        about_tag:'Hakkımda', about_h2:"Ben sadece bir geliştirici değilim,\nprojenizin ortağıyım",
+
+        about_p:"Ben Saeed Al-Areeni, full-stack web geliştiricisiyim. Bir web sitesinin sadece internetteki bir sayfa olmadığına, markanızın gerçek yansıması olduğuna inanıyorum.",
+
+        skills_tag:'Uzmanlık Alanlarım', skills_h2:'Araçlarım ve Yaklaşımım',
+
+        port_tag:'Çalışmalarım', port_h2:'Fikirlerimi Test Ettiğim Projeler', port_p:'Her proje yeni bir zorluk ve en iyimi sunma fırsatı.',
+
+        filter_all:'Tümü',
+
+        contact_tag:'İletişim', contact_h2:"Bir Fikriniz mi Var?\nGerçeğe Dönüştürelim",
+
+        contact_p:'İster yeni bir proje fikri ister mevcut bir siteyi geliştirmek olsun, her adımda dinlemeye ve yardımcı olmaya hazırım.',
+
+        form_name:'Ad Soyad', form_email:'E-posta Adresi', form_type:'Proje Türü', form_msg:'Proje Detayları',
+
+        form_submit:'Mesaj Gönder', form_sending:'Gönderiliyor...',
+
+        stat1:'Yıl Deneyim', stat2:'Tamamlanan Proje', stat3:'Teknoloji', stat4:'Kalite Taahhüdü',
+
+        ap1_h:'Performansa Odaklanma', ap1_p:'Arama motorları için optimize edilmiş hızlı yüklenen siteler',
+
+        ap2_h:'Deneyime Hizmet Eden Tasarım', ap2_p:'Ziyaretçileri ilk bakışta etkileyen sezgisel arayüzler',
+
+        ap3_h:'Temiz ve Ölçeklenebilir Kod', ap3_p:'Projenizin sürekliliğini ve büyümesini sağlayan sağlam bir temel',
+
+        sk1_h:'Frontend', sk1_p:'Etkileşimli ve hızlı kullanıcı deneyimleri oluşturma',
+
+        sk2_h:'Backend ve Entegrasyon', sk2_p:'Güçlü ve güvenli sistemler', sk2_tag:'Kontrol Panelleri',
+
+        sk3_h:'E-Ticaret ve CMS', sk3_p:'Tamamen özelleştirilebilir hızlı çözümler', sk3_tag:'Tam Özelleştirme',
+
+        ci_email:'E-posta', ci_phone:'Telefon', ci_loc:'Konum', ci_loc_val:'Filistin — Gazze',
+
+        form_email:'E-posta Adresi', form_type:'Proje Türü', form_msg:'Proje Detayları',
+
+        ph_name:'örn. Ahmet Yılmaz', ph_msg:'Fikrinizi anlatın...',
+
+        opt_select:'Proje türü seçin', opt_web:'Web Sitesi', opt_store:'E-Ticaret Mağazası', opt_sys:'Yönetim Sistemi', opt_other:'Diğer',
+
+        err_name:'Lütfen adınızı girin', err_email:'Lütfen geçerli bir e-posta girin', err_msg:'Lütfen proje detaylarını girin',
+
+        footer_rights:'Tüm Hakları Saklıdır',
+
     },
+
     hr: {
+
         dir: 'ltr', lang: 'hr', label: 'Hrvatski',
-        nav_home:'PoÄetna', nav_about:'O Meni', nav_skills:'VjeÅ¡tine', nav_portfolio:'Portfolio', nav_contact:'Kontakt', nav_cta:'Pokreni Projekt',
+
+        nav_home:'Početna', nav_about:'O Meni', nav_skills:'Vještine', nav_portfolio:'Portfolio', nav_contact:'Kontakt', nav_cta:'Pokreni Projekt',
+
         hero_sub:'Full-Stack Web Developer',
+
         hero_h1:'Gradim Web Stranice',
-        hero_typing:['Koje ÄŒine Razliku','Koje PriÄaju VaÅ¡u PriÄu','Koje Impresioniraju Posjetitelje','Koje Ostvaruju Ciljeve'],
-        hero_desc:'S viÅ¡e od 3 godine iskustva, pretvaram ideje u brza i lijepa digitalna iskustva koristeÄ‡i najnovije tehnologije.',
+
+        hero_typing:['Koje Čine Razliku','Koje Pričaju Vašu Priču','Koje Impresioniraju Posjetitelje','Koje Ostvaruju Ciljeve'],
+
+        hero_desc:'S više od 3 godine iskustva, pretvaram ideje u brza i lijepa digitalna iskustva koristeći najnovije tehnologije.',
+
         hero_btn1:'Pogledaj Radove', hero_btn2:'Kontaktiraj Me',
-        about_tag:'O Meni', about_h2:"Nisam samo programer,\npartner sam vaÅ¡eg projekta",
-        about_p:'Ja sam Saeed Al-Areeni, full-stack web developer. Vjerujem da web stranica nije samo stranica na internetu, nego pravi odraz vaÅ¡eg brenda.',
-        skills_tag:'Å to Savladam', skills_h2:'Moji Alati i Pristup',
-        port_tag:'Moji Radovi', port_h2:'Projekti Gdje Sam Testirao Ideje', port_p:'Svaki projekt je novi izazov i prilika za pruÅ¾anje najboljeg.',
+
+        about_tag:'O Meni', about_h2:"Nisam samo programer,\npartner sam vašeg projekta",
+
+        about_p:'Ja sam Saeed Al-Areeni, full-stack web developer. Vjerujem da web stranica nije samo stranica na internetu, nego pravi odraz vašeg brenda.',
+
+        skills_tag:'Što Savladam', skills_h2:'Moji Alati i Pristup',
+
+        port_tag:'Moji Radovi', port_h2:'Projekti Gdje Sam Testirao Ideje', port_p:'Svaki projekt je novi izazov i prilika za pružanje najboljeg.',
+
         filter_all:'Sve',
+
         contact_tag:'Kontaktiraj Me', contact_h2:"Imate Ideju?\nPretvorimo Je u Stvarnost",
-        contact_p:'Bez obzira je li nova ideja ili poboljÅ¡anje postojeÄ‡e stranice, spreman sam sluÅ¡ati i pomagati vam u svakom koraku.',
+
+        contact_p:'Bez obzira je li nova ideja ili poboljšanje postojeće stranice, spreman sam slušati i pomagati vam u svakom koraku.',
+
         form_name:'Puno Ime', form_email:'Email Adresa', form_type:'Vrsta Projekta', form_msg:'Detalji Projekta',
-        form_submit:'PoÅ¡alji Poruku', form_sending:'Slanje...',
-        stat1:'Godina Iskustva', stat2:'ZavrÅ¡enih Projekata', stat3:'Tehnologija', stat4:'Predanost Kvaliteti',
-        ap1_h:'Fokus na Performanse', ap1_p:'Brzo uÄitavajuÄ‡e stranice optimizirane za traÅ¾ilice',
-        ap2_h:'Dizajn koji SluÅ¾i Iskustvu', ap2_p:'Intuitivna i atraktivna suÄelja koja osvajaju posjetitelje',
-        ap3_h:'ÄŒist i Skalabilan Kod', ap3_p:'ÄŒvrsti temelji koji osiguravaju kontinuitet i rast projekta',
-        sk1_h:'Frontend', sk1_p:'Izgradnja interaktivnih i brzih korisniÄkih iskustava',
-        sk2_h:'Backend i Integracija', sk2_p:'MoÄ‡ni i sigurni sustavi', sk2_tag:'UpravljaÄke PloÄe',
-        sk3_h:'E-Commerce i CMS', sk3_p:'Brza i potpuno prilagodljiva rjeÅ¡enja', sk3_tag:'Potpuna Prilagodba',
-        ci_email:'E-poÅ¡ta', ci_phone:'Telefon', ci_loc:'Lokacija', ci_loc_val:'Palestina â€” Gaza',
+
+        form_submit:'Pošalji Poruku', form_sending:'Slanje...',
+
+        stat1:'Godina Iskustva', stat2:'Završenih Projekata', stat3:'Tehnologija', stat4:'Predanost Kvaliteti',
+
+        ap1_h:'Fokus na Performanse', ap1_p:'Brzo učitavajuće stranice optimizirane za tražilice',
+
+        ap2_h:'Dizajn koji Služi Iskustvu', ap2_p:'Intuitivna i atraktivna sučelja koja osvajaju posjetitelje',
+
+        ap3_h:'Čist i Skalabilan Kod', ap3_p:'Čvrsti temelji koji osiguravaju kontinuitet i rast projekta',
+
+        sk1_h:'Frontend', sk1_p:'Izgradnja interaktivnih i brzih korisničkih iskustava',
+
+        sk2_h:'Backend i Integracija', sk2_p:'Moćni i sigurni sustavi', sk2_tag:'Upravljačke Ploče',
+
+        sk3_h:'E-Commerce i CMS', sk3_p:'Brza i potpuno prilagodljiva rješenja', sk3_tag:'Potpuna Prilagodba',
+
+        ci_email:'E-pošta', ci_phone:'Telefon', ci_loc:'Lokacija', ci_loc_val:'Palestina — Gaza',
+
         form_email:'E-mail Adresa', form_type:'Vrsta Projekta', form_msg:'Detalji Projekta',
+
         ph_name:'npr. Ivan Horvat', ph_msg:'Recite mi o svojoj ideji...',
+
         opt_select:'Odaberite vrstu projekta', opt_web:'Web Stranica', opt_store:'Online Trgovina', opt_sys:'Sustav Upravljanja', opt_other:'Ostalo',
-        err_name:'Molimo unesite svoje ime', err_email:'Molimo unesite valjanu e-poÅ¡tu', err_msg:'Molimo unesite detalje projekta',
-        footer_rights:'Sva Prava PridrÅ¾ana',
+
+        err_name:'Molimo unesite svoje ime', err_email:'Molimo unesite valjanu e-poštu', err_msg:'Molimo unesite detalje projekta',
+
+        footer_rights:'Sva Prava Pridržana',
+
     },
+
     de: {
+
         dir: 'ltr', lang: 'de', label: 'Deutsch',
-        nav_home:'Startseite', nav_about:'Ãœber Mich', nav_skills:'FÃ¤higkeiten', nav_portfolio:'Portfolio', nav_contact:'Kontakt', nav_cta:'Projekt Starten',
+
+        nav_home:'Startseite', nav_about:'Über Mich', nav_skills:'Fähigkeiten', nav_portfolio:'Portfolio', nav_contact:'Kontakt', nav_cta:'Projekt Starten',
+
         hero_sub:'Full-Stack Webentwickler',
+
         hero_h1:'Ich Baue Webseiten',
-        hero_typing:['Die Einen Unterschied Machen','Die Ihre Geschichte ErzÃ¤hlen','Die Besucher Begeistern','Die Ziele Erreichen'],
-        hero_desc:'Mit Ã¼ber 3 Jahren Erfahrung verwandle ich Ideen in schnelle und schÃ¶ne digitale Erlebnisse mit den neuesten Technologien.',
+
+        hero_typing:['Die Einen Unterschied Machen','Die Ihre Geschichte Erzählen','Die Besucher Begeistern','Die Ziele Erreichen'],
+
+        hero_desc:'Mit über 3 Jahren Erfahrung verwandle ich Ideen in schnelle und schöne digitale Erlebnisse mit den neuesten Technologien.',
+
         hero_btn1:'Meine Arbeiten', hero_btn2:'Kontakt',
-        about_tag:'Ãœber Mich', about_h2:"Ich bin nicht nur Entwickler,\nich bin Ihr Projektpartner",
+
+        about_tag:'Über Mich', about_h2:"Ich bin nicht nur Entwickler,\nich bin Ihr Projektpartner",
+
         about_p:'Ich bin Saeed Al-Areeni, Full-Stack Webentwickler. Ich glaube, eine Webseite ist nicht nur eine Seite im Internet, sondern das wahre Spiegelbild Ihrer Marke.',
+
         skills_tag:'Was Ich Beherrsche', skills_h2:'Meine Werkzeuge und Ansatz',
+
         port_tag:'Meine Arbeiten', port_h2:'Projekte Wo Ich Meine Ideen Testete', port_p:'Jedes Projekt ist eine neue Herausforderung und Chance, mein Bestes zu geben.',
+
         filter_all:'Alle',
+
         contact_tag:'Kontakt', contact_h2:"Haben Sie eine Idee?\nLassen Sie Uns Sie Umsetzen",
-        contact_p:'Ob neue Projektidee oder Verbesserung einer bestehenden Website, ich bin bereit zuzuhÃ¶ren und Ihnen bei jedem Schritt zu helfen.',
-        form_name:'VollstÃ¤ndiger Name', form_email:'E-Mail-Adresse', form_type:'Projekttyp', form_msg:'Projektdetails',
+
+        contact_p:'Ob neue Projektidee oder Verbesserung einer bestehenden Website, ich bin bereit zuzuhören und Ihnen bei jedem Schritt zu helfen.',
+
+        form_name:'Vollständiger Name', form_email:'E-Mail-Adresse', form_type:'Projekttyp', form_msg:'Projektdetails',
+
         form_submit:'Nachricht Senden', form_sending:'Wird gesendet...',
-        stat1:'Jahre Erfahrung', stat2:'Abgeschlossene Projekte', stat3:'Technologien', stat4:'QualitÃ¤tsverpflichtung',
-        ap1_h:'Leistungsorientierung', ap1_p:'Schnell ladende Websites fÃ¼r Suchmaschinen optimiert',
-        ap2_h:'Erlebnisorientiertes Design', ap2_p:'Intuitive und ansprechende OberflÃ¤chen, die Besucher begeistern',
-        ap3_h:'Sauberer und skalierbarer Code', ap3_p:'Ein solides Fundament fÃ¼r die KontinuitÃ¤t und das Wachstum Ihres Projekts',
+
+        stat1:'Jahre Erfahrung', stat2:'Abgeschlossene Projekte', stat3:'Technologien', stat4:'Qualitätsverpflichtung',
+
+        ap1_h:'Leistungsorientierung', ap1_p:'Schnell ladende Websites für Suchmaschinen optimiert',
+
+        ap2_h:'Erlebnisorientiertes Design', ap2_p:'Intuitive und ansprechende Oberflächen, die Besucher begeistern',
+
+        ap3_h:'Sauberer und skalierbarer Code', ap3_p:'Ein solides Fundament für die Kontinuität und das Wachstum Ihres Projekts',
+
         sk1_h:'Frontend', sk1_p:'Interaktive und schnelle Benutzererlebnisse erstellen',
+
         sk2_h:'Backend & Integration', sk2_p:'Leistungsstarke und sichere Systeme', sk2_tag:'Kontrollpanels',
-        sk3_h:'E-Commerce & CMS', sk3_p:'Schnelle und vollstÃ¤ndig anpassbare LÃ¶sungen', sk3_tag:'VollstÃ¤ndige Anpassung',
-        ci_email:'E-Mail', ci_phone:'Telefon', ci_loc:'Standort', ci_loc_val:'PalÃ¤stina â€” Gaza',
+
+        sk3_h:'E-Commerce & CMS', sk3_p:'Schnelle und vollständig anpassbare Lösungen', sk3_tag:'Vollständige Anpassung',
+
+        ci_email:'E-Mail', ci_phone:'Telefon', ci_loc:'Standort', ci_loc_val:'Palästina — Gaza',
+
         form_email:'E-Mail-Adresse', form_type:'Projekttyp', form_msg:'Projektdetails',
-        ph_name:'z.B. Hans MÃ¼ller', ph_msg:'ErzÃ¤hlen Sie mir von Ihrer Idee...',
-        opt_select:'Projekttyp wÃ¤hlen', opt_web:'Webseite', opt_store:'Online-Shop', opt_sys:'Verwaltungssystem', opt_other:'Sonstiges',
-        err_name:'Bitte geben Sie Ihren Namen ein', err_email:'Bitte geben Sie eine gÃ¼ltige E-Mail ein', err_msg:'Bitte geben Sie Projektdetails ein',
+
+        ph_name:'z.B. Hans Müller', ph_msg:'Erzählen Sie mir von Ihrer Idee...',
+
+        opt_select:'Projekttyp wählen', opt_web:'Webseite', opt_store:'Online-Shop', opt_sys:'Verwaltungssystem', opt_other:'Sonstiges',
+
+        err_name:'Bitte geben Sie Ihren Namen ein', err_email:'Bitte geben Sie eine gültige E-Mail ein', err_msg:'Bitte geben Sie Projektdetails ein',
+
         footer_rights:'Alle Rechte Vorbehalten',
+
     },
+
 };
+
+
 
 let currentLang = localStorage.getItem('lang') || 'ar';
 
+
+
 function setLang(code) {
+
     const t = translations[code];
+
     if (!t) return;
+
     currentLang = code;
+
     localStorage.setItem('lang', code);
 
+
+
     // dir & lang
+
     document.documentElement.lang = t.lang;
+
     document.documentElement.dir = t.dir;
 
+
+
     // Update canonical & meta lang
+
     document.querySelector('meta[name="description"]') && (document.querySelector('meta[name="description"]').content = code === 'ar'
-        ? 'Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ù† ÙÙ„Ø³Ø·ÙŠÙ†ØŒ ØºØ²Ø©. Ø®Ø¨Ø±Ø© +3 Ø³Ù†ÙˆØ§Øª ÙÙŠ LaravelØŒ React.jsØŒ WordPress.'
-        : 'Saeed Al-Areeni â€” Full-Stack Web Developer from Palestine. 3+ years experience in Laravel, React.js, WordPress.');
+
+        ? 'سعيد العريني — مطوّر ويب متكامل من فلسطين، غزة. خبرة +3 سنوات في Laravel، React.js، WordPress.'
+
+        : 'Saeed Al-Areeni — Full-Stack Web Developer from Palestine. 3+ years experience in Laravel, React.js, WordPress.');
+
+
 
     // i18n text elements
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
+
         const key = el.dataset.i18n;
+
         if (t[key] === undefined) return;
+
         if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+
             const icon = el.querySelector('i');
+
             el.textContent = t[key];
+
             if (icon) el.appendChild(icon);
+
         } else if (el.tagName === 'OPTION') {
+
             el.textContent = t[key];
+
         } else {
+
             el.textContent = t[key];
+
         }
+
     });
+
     // i18n placeholders
+
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+
         const key = el.dataset.i18nPh;
+
         if (t[key] !== undefined) el.placeholder = t[key];
+
     });
+
+
 
     // Typing phrases
+
     typingPhrases.length = 0;
+
     typingPhrases.push(...t.hero_typing);
 
+
+
     // Nav label
+
     document.getElementById('currentLangLabel').textContent = t.label;
 
+
+
     // Page title
+
     document.title = code === 'ar'
-        ? 'Ø³Ø¹ÙŠØ¯ Ø§Ù„Ø¹Ø±ÙŠÙ†ÙŠ â€” Ù…Ø·ÙˆÙ‘Ø± ÙˆÙŠØ¨ Ù…ØªÙƒØ§Ù…Ù„'
-        : `Saeed Al-Areeni â€” Full-Stack Web Developer | ${t.label}`;
+
+        ? 'سعيد العريني — مطوّر ويب متكامل'
+
+        : `Saeed Al-Areeni — Full-Stack Web Developer | ${t.label}`;
+
+
 
     // Close dropdown
+
     closeLangDrop();
 
+
+
     // Animate transition
+
     gsap.fromTo('main', {opacity:.7}, {opacity:1, duration:.4, ease:'power2.out'});
+
 }
+
+
 
 function toggleLangDrop() {
+
     const drop = document.getElementById('langDrop');
+
     const chevron = document.getElementById('langChevron');
+
     const isOpen = drop.style.display !== 'none';
+
     drop.style.display = isOpen ? 'none' : 'block';
+
     chevron.style.transform = isOpen ? 'rotate(0)' : 'rotate(180deg)';
+
     if (!isOpen) gsap.fromTo(drop, {opacity:0,y:-8}, {opacity:1,y:0,duration:.25,ease:'power2.out'});
+
 }
+
 function closeLangDrop() {
+
     document.getElementById('langDrop').style.display = 'none';
+
     document.getElementById('langChevron').style.transform = 'rotate(0)';
+
 }
+
 document.addEventListener('click', e => {
+
     if (!document.getElementById('langDropWrap').contains(e.target)) closeLangDrop();
+
 });
 
-// ØªØ·Ø¨ÙŠÙ‚ Ø§Ù„Ù„ØºØ© Ø§Ù„Ù…Ø­ÙÙˆØ¸Ø© Ø¹Ù†Ø¯ Ø§Ù„ØªØ­Ù…ÙŠÙ„
+
+
+// تطبيق اللغة المحفوظة عند التحميل
+
 if (currentLang !== 'ar') setTimeout(() => setLang(currentLang), 100);
 
+
+
 // ================================================================
-// Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…Ø´Ø§Ø±ÙŠØ¹
+
+// بيانات المشاريع
+
 // ================================================================
+
 const projectsData = {
+
     'store-laravel': {
-        title: 'Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù…ØªÙƒØ§Ù…Ù„',
+
+        title: 'متجر إلكتروني متكامل',
+
         cat: 'Laravel + React',
-        desc: 'Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø§Ø­ØªØ±Ø§ÙÙŠ Ù…Ø¨Ù†ÙŠ Ø¨Ù€ Laravel ÙÙŠ Ø§Ù„Ø®Ù„ÙÙŠØ© Ùˆ React.js ÙÙŠ Ø§Ù„ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ©ØŒ Ù…Ø¹ Ù†Ø¸Ø§Ù… CMS ÙƒØ§Ù…Ù„ Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØµÙØ­Ø§Øª Ø§Ù„Ù…ÙˆÙ‚Ø¹.',
+
+        desc: 'متجر إلكتروني احترافي مبني بـ Laravel في الخلفية و React.js في الواجهة الأمامية، مع نظام CMS كامل لإدارة المنتجات والطلبات والمستخدمين وصفحات الموقع.',
+
         features: [
-            'Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… CMS Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª',
-            'ØµÙØ­Ø© Ø§Ù„Ù…Ù†ØªØ¬ Ù…Ø¹ ØªÙØ§ØµÙŠÙ„ ÙˆØµÙˆØ± ÙˆØ®ÙŠØ§Ø±Ø§Øª Ø§Ù„ØªØ®ØµÙŠØµ',
-            'Ù†Ø¸Ø§Ù… ØªØ³Ø¬ÙŠÙ„ Ø¯Ø®ÙˆÙ„ ÙˆØ¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ Ù„Ù„Ù…Ø´ØªØ±ÙŠ',
-            'Ù„ÙˆØ­Ø© Ø§Ù„Ù…Ø´Ø±Ù Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ§Ù„Ù…Ø¨ÙŠØ¹Ø§Øª',
-            'ÙˆØ§Ø¬Ù‡Ø© Ø³Ø±ÙŠØ¹Ø© ÙˆÙ…ØªØ¬Ø§ÙˆØ¨Ø© Ù…Ø¹ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©',
+
+            'لوحة تحكم CMS متكاملة لإدارة المنتجات والطلبات',
+
+            'صفحة المنتج مع تفاصيل وصور وخيارات التخصيص',
+
+            'نظام تسجيل دخول وإنشاء حساب للمشتري',
+
+            'لوحة المشرف لإدارة المستخدمين والمبيعات',
+
+            'واجهة سريعة ومتجاوبة مع جميع الأجهزة',
+
         ],
+
         tags: ['Laravel', 'React.js', 'MySQL', 'TailwindCSS', 'REST API'],
+
         images: [
+
             'Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-2025-08-05-11_35_34.png',
+
             'Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-product-qtqlbvekfd86zjgq-2025-08-05-11_36_10.png',
+
             'Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-login-2025-08-05-11_37_04.png',
+
             'Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-register-2025-08-05-11_40_12.png',
+
             'Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-cms-admin-2025-08-05-11_44_52.png',
+
             'Store%20laravel%20cpanel/screencapture-127-0-0-1-8000-cms-admin-products-2025-08-05-11_45_17.png',
+
             'Store%20laravel%20cpanel/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
     'travel': {
-        title: 'Golden Eagle â€” Ø­Ø¬ÙˆØ²Ø§Øª Ø§Ù„Ø³ÙØ±',
+
+        title: 'Golden Eagle — حجوزات السفر',
+
         cat: 'WordPress',
-        desc: 'Ù…Ù†ØµØ© Ø³ÙŠØ§Ø­ÙŠØ© Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ø´Ø±ÙƒØ© Golden Eagle ØªØªÙŠØ­ Ø­Ø¬Ø² Ø§Ù„Ø±Ø­Ù„Ø§Øª ÙˆØ§Ù„ÙÙ†Ø§Ø¯Ù‚ ÙˆØ§Ù„Ø¨Ø§Ù‚Ø§Øª Ø§Ù„Ø³ÙŠØ§Ø­ÙŠØ© Ù…Ø¹ ØªØµÙ…ÙŠÙ… Ø±Ø§Ù‚Ù ÙˆØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªØ®Ø¯Ù… Ø³Ù„Ø³Ø© Ø¹Ù„Ù‰ ÙƒÙ„ Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©.',
+
+        desc: 'منصة سياحية متكاملة لشركة Golden Eagle تتيح حجز الرحلات والفنادق والباقات السياحية مع تصميم راقٍ وتجربة مستخدم سلسة على كل الأجهزة.',
+
         features: [
-            'Ù†Ø¸Ø§Ù… Ø­Ø¬Ø² Ø±Ø­Ù„Ø§Øª ÙˆÙÙ†Ø§Ø¯Ù‚ ÙˆØ¨Ø§Ù‚Ø§Øª Ø³ÙŠØ§Ø­ÙŠØ©',
-            'ØªØµÙ…ÙŠÙ… Ø§Ø­ØªØ±Ø§ÙÙŠ ÙŠØ¹ÙƒØ³ Ù‡ÙˆÙŠØ© Ø§Ù„Ø¹Ù„Ø§Ù…Ø© Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ©',
-            'ØµÙØ­Ø§Øª Ù…Ø®ØµØµØ© Ù„ÙƒÙ„ ÙˆØ¬Ù‡Ø© Ø³ÙŠØ§Ø­ÙŠØ©',
-            'Ù†Ù…Ø§Ø°Ø¬ Ø­Ø¬Ø² ØªÙØ§Ø¹Ù„ÙŠØ© Ù…Ø¹ ØªØ£ÙƒÙŠØ¯ ÙÙˆØ±ÙŠ',
-            'Ù…ØªØ¬Ø§ÙˆØ¨ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ù…Ø¹ Ø§Ù„Ø¬ÙˆØ§Ù„ ÙˆØ§Ù„ØªØ§Ø¨Ù„Øª',
+
+            'نظام حجز رحلات وفنادق وباقات سياحية',
+
+            'تصميم احترافي يعكس هوية العلامة التجارية',
+
+            'صفحات مخصصة لكل وجهة سياحية',
+
+            'نماذج حجز تفاعلية مع تأكيد فوري',
+
+            'متجاوب بالكامل مع الجوال والتابلت',
+
         ],
+
         tags: ['WordPress', 'WooCommerce', 'Elementor', 'PHP'],
+
         images: [
+
             'travel%20website/screencapture-goldeneagle-ae-2025-05-08-16_27_56.png',
+
             'travel%20website/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop.png',
+
         ]
+
     },
+
     'podcast': {
-        title: 'Ù…Ù†ØµØ© Ø§Ù„Ø¨ÙˆØ¯ÙƒØ§Ø³Øª',
+
+        title: 'منصة البودكاست',
+
         cat: 'Laravel + React',
-        desc: 'Ù…ÙˆÙ‚Ø¹ Ø¨ÙˆØ¯ÙƒØ§Ø³Øª Ù…ØªÙƒØ§Ù…Ù„ ÙŠØªÙŠØ­ Ù†Ø´Ø± ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø­Ù„Ù‚Ø§Øª Ø§Ù„ØµÙˆØªÙŠØ©ØŒ Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ù„Ù„Ù…Ø´Ø±ÙÙŠÙ† ÙˆØ¥Ù…ÙƒØ§Ù†ÙŠØ© Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ§Ù„Ù…Ø­ØªÙˆÙ‰ Ø§Ù„ØµÙˆØªÙŠ Ø¨Ø´ÙƒÙ„ ÙƒØ§Ù…Ù„.',
+
+        desc: 'موقع بودكاست متكامل يتيح نشر وإدارة الحلقات الصوتية، مع لوحة تحكم للمشرفين وإمكانية إدارة المستخدمين والمحتوى الصوتي بشكل كامل.',
+
         features: [
-            'ÙˆØ§Ø¬Ù‡Ø© Ø§Ø³ØªÙ…Ø§Ø¹ Ø³Ù„Ø³Ø© Ù„Ø­Ù„Ù‚Ø§Øª Ø§Ù„Ø¨ÙˆØ¯ÙƒØ§Ø³Øª',
-            'Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ù„Ø¥Ø¶Ø§ÙØ© ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„Ø­Ù„Ù‚Ø§Øª',
-            'Ù†Ø¸Ø§Ù… Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ§Ù„ØµÙ„Ø§Ø­ÙŠØ§Øª',
-            'ØµÙØ­Ø© ØªØ³Ø¬ÙŠÙ„ Ø¯Ø®ÙˆÙ„ Ù…Ø´Ø±Ù Ø¢Ù…Ù†Ø©',
-            'ØªØµÙ…ÙŠÙ… Ø¹ØµØ±ÙŠ ÙˆØ³Ø±ÙŠØ¹ Ø§Ù„ØªØ­Ù…ÙŠÙ„',
+
+            'واجهة استماع سلسة لحلقات البودكاست',
+
+            'لوحة تحكم لإضافة وإدارة الحلقات',
+
+            'نظام إدارة المستخدمين والصلاحيات',
+
+            'صفحة تسجيل دخول مشرف آمنة',
+
+            'تصميم عصري وسريع التحميل',
+
         ],
+
         tags: ['Laravel', 'React.js', 'MySQL', 'REST API'],
+
         images: [
+
             'Cpanel%20podcast/screencapture-localhost-3000-2025-08-05-12_21_08.png',
+
             'Cpanel%20podcast/screencapture-localhost-3000-cms-admin-login-2025-08-05-12_21_49.png',
+
             'Cpanel%20podcast/screencapture-localhost-3000-cms-admin-podcasts-2025-08-05-12_22_09.png',
+
             'Cpanel%20podcast/screencapture-localhost-3000-cms-admin-users-2025-08-05-12_22_21.png',
+
             'Cpanel%20podcast/screencapture-localhost-3000-2025-08-05-12_22_40.png',
+
             'Cpanel%20podcast/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
     'chernobyl': {
-        title: 'Chernobyl Arena â€” Ø­Ø¬ÙˆØ²Ø§Øª Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨',
+
+        title: 'Chernobyl Arena — حجوزات الألعاب',
+
         cat: 'WordPress',
-        desc: 'Ù…ÙˆÙ‚Ø¹ Ø­Ø¬ÙˆØ²Ø§Øª Ù„Ø­Ù„Ø¨Ø§Øª Ø³Ø¨Ø§Ù‚ Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Ø¨ØªØµÙ…ÙŠÙ… Ø¯Ø§ÙƒÙ† Ø¬Ø°Ø§Ø¨ ÙŠØ¹ÙƒØ³ Ù‡ÙˆÙŠØ© Ø§Ù„Ø¹Ù„Ø§Ù…Ø© Ø§Ù„ØªØ¬Ø§Ø±ÙŠØ©ØŒ Ù…Ø¹ Ù†Ø¸Ø§Ù… Ø­Ø¬Ø² Ù…ØªÙƒØ§Ù…Ù„ ÙˆÙ…ØªØ§Ø¨Ø¹Ø© Ø§Ù„Ø·Ù„Ø¨Ø§Øª ÙˆØ§Ù„Ø¯ÙØ¹ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ.',
+
+        desc: 'موقع حجوزات لحلبات سباق الألعاب بتصميم داكن جذاب يعكس هوية العلامة التجارية، مع نظام حجز متكامل ومتابعة الطلبات والدفع الإلكتروني.',
+
         features: [
-            'Ù†Ø¸Ø§Ù… Ø­Ø¬Ø² Ø­Ù„Ø¨Ø§Øª Ø§Ù„Ø³Ø¨Ø§Ù‚ Ø¨Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ÙˆÙ‚Øª',
-            'ØªØµÙ…ÙŠÙ… Ø¯Ø§ÙƒÙ† Ù…Ù…ÙŠØ² ÙŠÙ†Ø§Ø³Ø¨ Ø¹Ø§Ù„Ù… Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨',
-            'ØµÙØ­Ø© Ø¥ØªÙ…Ø§Ù… Ø§Ù„Ø­Ø¬Ø² ÙˆØ§Ù„Ø¯ÙØ¹ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ',
-            'ØµÙØ­Ø© ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø­Ø¬Ø² Ø§Ù„Ù†Ø§Ø¬Ø­',
-            'ØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªØ®Ø¯Ù… Ø³Ù„Ø³Ø© Ù…Ù† Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© Ù„Ù„Ù†Ù‡Ø§ÙŠØ©',
+
+            'نظام حجز حلبات السباق بالتاريخ والوقت',
+
+            'تصميم داكن مميز يناسب عالم الألعاب',
+
+            'صفحة إتمام الحجز والدفع الإلكتروني',
+
+            'صفحة تأكيد الحجز الناجح',
+
+            'تجربة مستخدم سلسة من البداية للنهاية',
+
         ],
+
         tags: ['WordPress', 'WooCommerce', 'PHP', 'Custom CSS'],
+
         images: [
+
             'chernobyel%20design/screencapture-chernobylarena-2023-04-19-01_10_06.png',
+
             'chernobyel%20design/screencapture-chernobyl-local-2023-03-27-01_09_43.png',
+
             'chernobyel%20design/screencapture-chernobylarena-checkout-2023-04-26-18_08_19.png',
+
             'chernobyel%20design/screencapture-chernobylarena-checkout-booked-successfully-2498-2023-04-28-01_39_45.png',
+
             'chernobyel%20design/screencapture-chernobylarena-2023-05-03-00_44_46.png',
+
         ]
+
     },
+
     'smartmatrix': {
-        title: 'SmartMatrix â€” Ø­Ù„ÙˆÙ„ Ø§Ù„ØªÙ‚Ù†ÙŠØ©',
+
+        title: 'SmartMatrix — حلول التقنية',
+
         cat: 'WordPress',
-        desc: 'Ù…ÙˆÙ‚Ø¹ Ø´Ø±ÙƒØ© ØªÙ‚Ù†ÙŠØ© Ø³Ø¹ÙˆØ¯ÙŠØ© Ù…ØªØ®ØµØµØ© ÙÙŠ Ø®Ø¯Ù…Ø§Øª Ø§Ù„ÙˆÙŠØ¨ ÙˆØ§Ù„Ø¨Ø±Ù…Ø¬Ø© ÙˆØ§Ù„ØªØ³ÙˆÙŠÙ‚ Ø§Ù„Ø±Ù‚Ù…ÙŠØŒ ÙŠØ¹Ø±Ø¶ Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø´Ø±ÙƒØ© Ø¨Ø£Ø³Ù„ÙˆØ¨ Ø§Ø­ØªØ±Ø§ÙÙŠ Ù…Ø¹ ØµÙØ­Ø§Øª Ø®Ø¯Ù…Ø§Øª Ù…Ø®ØµØµØ© ÙˆÙ†Ù…ÙˆØ°Ø¬ ØªÙˆØ§ØµÙ„.',
+
+        desc: 'موقع شركة تقنية سعودية متخصصة في خدمات الويب والبرمجة والتسويق الرقمي، يعرض خدمات الشركة بأسلوب احترافي مع صفحات خدمات مخصصة ونموذج تواصل.',
+
         features: [
-            'ØµÙØ­Ø© Ø±Ø¦ÙŠØ³ÙŠØ© Ø§Ø­ØªØ±Ø§ÙÙŠØ© ØªØ¹ÙƒØ³ Ù‡ÙˆÙŠØ© Ø§Ù„Ø´Ø±ÙƒØ©',
-            'ØµÙØ­Ø§Øª ØªÙØµÙŠÙ„ÙŠØ© Ù„ÙƒÙ„ Ø®Ø¯Ù…Ø© Ù…Ù‚Ø¯Ù…Ø©',
-            'ØµÙØ­Ø© ØªÙˆØ§ØµÙ„ Ù…Ø¹ Ù†Ù…ÙˆØ°Ø¬ Ù…ØªÙ‚Ø¯Ù…',
-            'ØªØµÙ…ÙŠÙ… Ù…ØªØ¬Ø§ÙˆØ¨ ÙˆÙ…Ø­Ø³Ù‘Ù† Ù„Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø«',
-            'Ø³Ø±Ø¹Ø© ØªØ­Ù…ÙŠÙ„ Ø¹Ø§Ù„ÙŠØ© ÙˆØ£Ø¯Ø§Ø¡ Ù…ÙØ­Ø³ÙŽÙ‘Ù†',
+
+            'صفحة رئيسية احترافية تعكس هوية الشركة',
+
+            'صفحات تفصيلية لكل خدمة مقدمة',
+
+            'صفحة تواصل مع نموذج متقدم',
+
+            'تصميم متجاوب ومحسّن لمحركات البحث',
+
+            'سرعة تحميل عالية وأداء مُحسَّن',
+
         ],
+
         tags: ['WordPress', 'Elementor', 'PHP', 'SEO'],
+
         images: [
+
             'SmartMatrix%20design/screencapture-smartmatrix-sa-2025-07-24-11_20_30.png',
+
             'SmartMatrix%20design/screencapture-smartmatrix-sa-services-2025-08-07-10_43_01.png',
+
             'SmartMatrix%20design/screencapture-smartmatrix-sa-contact-2025-08-07-10_43_22.png',
+
             'SmartMatrix%20design/screencapture-smartmatrix-sa-web-design-2025-08-07-10_44_22.png',
+
             'SmartMatrix%20design/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
     'riyadah': {
-        title: 'Ù†Ø¸Ø§Ù… Ø¥Ø¯Ø§Ø±Ø© Ø±ÙŠØ§Ø¶ÙŠ',
+
+        title: 'نظام إدارة رياضي',
+
         cat: 'Laravel',
-        desc: 'Ù…Ù†ØµØ© Ù…ØªÙƒØ§Ù…Ù„Ø© Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø±Ø§ÙƒØ² ÙˆØ§Ù„Ø£Ù†Ø´Ø·Ø© Ø§Ù„Ø±ÙŠØ§Ø¶ÙŠØ©ØŒ ØªØ´Ù…Ù„ Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø´Ø±ÙÙŠÙ† ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ§Ù„Ø£Ù†Ø´Ø·Ø© Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ø´Ø§Ù…Ù„Ø© ÙˆÙ†Ø¸Ø§Ù… ØµÙ„Ø§Ø­ÙŠØ§Øª Ù…ØªØ¯Ø±Ø¬.',
+
+        desc: 'منصة متكاملة لإدارة المراكز والأنشطة الرياضية، تشمل إدارة المشرفين والمستخدمين والأنشطة مع لوحة تحكم شاملة ونظام صلاحيات متدرج.',
+
         features: [
-            'Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ø´Ø§Ù…Ù„Ø© Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø±ÙƒØ² Ø§Ù„Ø±ÙŠØ§Ø¶ÙŠ',
-            'Ù†Ø¸Ø§Ù… Ø¥Ø¶Ø§ÙØ© ÙˆØ¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø´Ø±ÙÙŠÙ†',
-            'Ù‚Ø§Ø¦Ù…Ø© ØªÙØµÙŠÙ„ÙŠØ© Ù„Ù„Ù…Ø´Ø±ÙÙŠÙ† ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ†',
-            'Ù†Ø¸Ø§Ù… ØµÙ„Ø§Ø­ÙŠØ§Øª Ù…ØªØ¯Ø±Ø¬ ÙˆÙ…ØªØ¹Ø¯Ø¯ Ø§Ù„Ø£Ø¯ÙˆØ§Ø±',
-            'ÙˆØ§Ø¬Ù‡Ø© Ø¹Ø±Ø¨ÙŠØ© ÙƒØ§Ù…Ù„Ø© ÙˆØ³Ù‡Ù„Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…',
+
+            'لوحة تحكم شاملة لإدارة المركز الرياضي',
+
+            'نظام إضافة وإدارة المشرفين',
+
+            'قائمة تفصيلية للمشرفين والمستخدمين',
+
+            'نظام صلاحيات متدرج ومتعدد الأدوار',
+
+            'واجهة عربية كاملة وسهلة الاستخدام',
+
         ],
+
         tags: ['Laravel', 'Bootstrap', 'MySQL', 'PHP'],
+
         images: [
+
             'Riyadah%20project/home.png',
+
             'Riyadah%20project/add_admin.png',
+
             'Riyadah%20project/list_admins.png',
+
             'Riyadah%20project/Screenshot%202025-08-07%20110205.png',
+
             'Riyadah%20project/Screenshot%202025-08-07%20110226.png',
+
             'Riyadah%20project/Screenshot%202025-08-07%20110248.png',
+
             'Riyadah%20project/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
     'itek': {
-        title: 'Itek â€” Ù…Ù†ØµØ© ØªÙ‚Ù†ÙŠØ©',
+
+        title: 'Itek — منصة تقنية',
+
         cat: 'Laravel',
-        desc: 'Ù…ÙˆÙ‚Ø¹ Ø´Ø±ÙƒØ© ØªÙ‚Ù†ÙŠØ© Ù…Ø¹ Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ù…Ø®ØµØµØ© ØªÙ…ÙƒÙ‘Ù† Ø§Ù„Ø´Ø±ÙƒØ© Ù…Ù† Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ† ÙˆØ·Ù„Ø¨Ø§Øª Ø§Ù„Ø®Ø¯Ù…Ø© Ø¨Ø³Ù‡ÙˆÙ„Ø© ØªØ§Ù…Ø©ØŒ Ù…Ø¹ ÙˆØ§Ø¬Ù‡Ø© Ø¹ØµØ±ÙŠØ© ÙˆØ³Ø±ÙŠØ¹Ø©.',
+
+        desc: 'موقع شركة تقنية مع لوحة تحكم مخصصة تمكّن الشركة من إدارة المحتوى والمستخدمين وطلبات الخدمة بسهولة تامة، مع واجهة عصرية وسريعة.',
+
         features: [
-            'ÙˆØ§Ø¬Ù‡Ø© Ø±Ø¦ÙŠØ³ÙŠØ© Ø§Ø­ØªØ±Ø§ÙÙŠØ© ØªØ¹Ø±Ø¶ Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ø´Ø±ÙƒØ©',
-            'Ù†Ø¸Ø§Ù… ØªØ³Ø¬ÙŠÙ„ ÙˆØ¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨ Ù„Ù„Ù…Ø³ØªØ®Ø¯Ù…ÙŠÙ†',
-            'Ù„ÙˆØ­Ø© ØªØ­ÙƒÙ… Ù„Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª',
-            'Ù†Ù…ÙˆØ°Ø¬ Ø¥Ù†Ø´Ø§Ø¡ ÙˆØªØ¹Ø¯ÙŠÙ„ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ø¨Ø³Ù‡ÙˆÙ„Ø©',
-            'ØªØµÙ…ÙŠÙ… Ù…ØªØ¬Ø§ÙˆØ¨ ÙˆØ³Ø±ÙŠØ¹ Ø§Ù„ØªØ­Ù…ÙŠÙ„',
+
+            'واجهة رئيسية احترافية تعرض خدمات الشركة',
+
+            'نظام تسجيل وإنشاء حساب للمستخدمين',
+
+            'لوحة تحكم لإدارة المحتوى والطلبات',
+
+            'نموذج إنشاء وتعديل البيانات بسهولة',
+
+            'تصميم متجاوب وسريع التحميل',
+
         ],
+
         tags: ['Laravel', 'TailwindCSS', 'MySQL', 'PHP'],
+
         images: [
+
             'Itek%20project/home.png',
+
             'Itek%20project/screencapture-127-0-0-1-8080-2025-08-07-11_22_21.png',
+
             'Itek%20project/screencapture-127-0-0-1-8080-register-2025-08-07-11_24_18.png',
+
             'Itek%20project/screencapture-127-0-0-1-8080-cpanel-2025-08-07-11_26_02.png',
+
             'Itek%20project/screencapture-127-0-0-1-8080-create-2025-08-07-11_26_12.png',
+
             'Itek%20project/Screenshot%202025-08-07%20112627.png',
+
             'Itek%20project/Screenshot%202025-08-07%20112726.png',
+
             'Itek%20project/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
     'college-theme': {
-        title: 'Ù‚Ø§Ù„Ø¨ WordPress Ù…Ø®ØµØµ â€” ÙƒÙ„ÙŠØ©',
+
+        title: 'قالب WordPress مخصص — كلية',
+
         cat: 'WordPress Custom Theme',
-        desc: 'Ù‚Ø§Ù„Ø¨ ÙˆÙˆØ±Ø¯Ø¨Ø±ÙŠØ³ Ù…Ø¨Ù†ÙŠ Ù…Ù† Ø§Ù„ØµÙØ± Ø¨Ù€ PHP Ø®Ø§Ù„Øµ Ù„Ù…ÙˆÙ‚Ø¹ ÙƒÙ„ÙŠØ© Ø£ÙƒØ§Ø¯ÙŠÙ…ÙŠØ©ØŒ ÙŠØ´Ù…Ù„ ØµÙØ­Ø© Ø±Ø¦ÙŠØ³ÙŠØ©ØŒ ØµÙØ­Ø© ØªÙˆØ§ØµÙ„ØŒ ÙˆØµÙØ­Ø© Ù…Ù†Ø´ÙˆØ±Ø§ØªØŒ Ù…Ø¹ ØªØµÙ…ÙŠÙ… Ø£ÙƒØ§Ø¯ÙŠÙ…ÙŠ Ø±Ø§Ù‚Ù.',
+
+        desc: 'قالب ووردبريس مبني من الصفر بـ PHP خالص لموقع كلية أكاديمية، يشمل صفحة رئيسية، صفحة تواصل، وصفحة منشورات، مع تصميم أكاديمي راقٍ.',
+
         features: [
-            'Ù‚Ø§Ù„Ø¨ Ù…Ø®ØµØµ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„ Ø¨Ø¯ÙˆÙ† Elementor Ø£Ùˆ Page Builder',
-            'ØµÙØ­Ø© Ø±Ø¦ÙŠØ³ÙŠØ© ØªØ¹Ø±Ø¶ Ø§Ù„ÙƒÙ„ÙŠØ© ÙˆØ£Ù‚Ø³Ø§Ù…Ù‡Ø§',
-            'ØµÙØ­Ø© ØªÙˆØ§ØµÙ„ Ø¨Ù†Ù…ÙˆØ°Ø¬ Ù…ØªÙ‚Ø¯Ù…',
-            'ØµÙØ­Ø© Ø§Ù„Ù…Ù†Ø´ÙˆØ±Ø§Øª ÙˆØ§Ù„Ø£Ø®Ø¨Ø§Ø±',
-            'ÙƒÙˆØ¯ PHP Ù†Ø¸ÙŠÙ ÙˆÙ‚Ø§Ø¨Ù„ Ù„Ù„ØªØ·ÙˆÙŠØ±',
+
+            'قالب مخصص بالكامل بدون Elementor أو Page Builder',
+
+            'صفحة رئيسية تعرض الكلية وأقسامها',
+
+            'صفحة تواصل بنموذج متقدم',
+
+            'صفحة المنشورات والأخبار',
+
+            'كود PHP نظيف وقابل للتطوير',
+
         ],
+
         tags: ['WordPress', 'PHP', 'Custom Theme', 'CSS3', 'JavaScript'],
+
         images: [
+
             'custom%20theme/screencapture-college-local-2023-02-23-141541.png',
+
             'custom%20theme/screencapture-college-local-contact-us-2023-02-23-141614.png',
+
             'custom%20theme/screencapture-college-local-post-page-2023-02-23-141635.png',
+
             'custom%20theme/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(4).png',
+
         ]
+
     },
+
     'gaming-wp': {
-        title: 'Ù…ÙˆÙ‚Ø¹ Ø£Ù„Ø¹Ø§Ø¨ â€” WordPress',
+
+        title: 'موقع ألعاب — WordPress',
+
         cat: 'WordPress',
-        desc: 'Ù…ÙˆÙ‚Ø¹ Ø£Ù„Ø¹Ø§Ø¨ Ù…ØªÙƒØ§Ù…Ù„ Ù…Ø¨Ù†ÙŠ Ø¨Ù€ WordPress Ø¨ØªØµÙ…ÙŠÙ… Ø¯Ø§ÙƒÙ† Ø¬Ø°Ø§Ø¨ ÙŠÙ†Ø§Ø³Ø¨ Ø¹Ø§Ù„Ù… Ø§Ù„ØºÙŠÙ…Ù†ØºØŒ Ù…Ø¹ ØµÙØ­Ø§Øª Ù…Ø®ØµØµØ© ÙˆØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªØ®Ø¯Ù… ØªÙØ§Ø¹Ù„ÙŠØ©.',
+
+        desc: 'موقع ألعاب متكامل مبني بـ WordPress بتصميم داكن جذاب يناسب عالم الغيمنغ، مع صفحات مخصصة وتجربة مستخدم تفاعلية.',
+
         features: [
-            'ØªØµÙ…ÙŠÙ… Ø¯Ø§ÙƒÙ† ÙˆØ¹ØµØ±ÙŠ ÙŠÙ†Ø§Ø³Ø¨ Ø¹Ø§Ù„Ù… Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨',
-            'ØµÙØ­Ø§Øª Ù…Ø®ØµØµØ© Ù„Ù„Ø£Ù„Ø¹Ø§Ø¨ ÙˆØ§Ù„Ù…Ø­ØªÙˆÙ‰',
-            'ÙˆØ§Ø¬Ù‡Ø© ØªÙØ§Ø¹Ù„ÙŠØ© ÙˆØ³Ø±ÙŠØ¹Ø© Ø§Ù„ØªØ­Ù…ÙŠÙ„',
-            'Ù…ØªØ¬Ø§ÙˆØ¨ Ù…Ø¹ Ø¬Ù…ÙŠØ¹ Ø£Ø­Ø¬Ø§Ù… Ø§Ù„Ø´Ø§Ø´Ø§Øª',
-            'ØªØ­Ø³ÙŠÙ† Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø« SEO',
+
+            'تصميم داكن وعصري يناسب عالم الألعاب',
+
+            'صفحات مخصصة للألعاب والمحتوى',
+
+            'واجهة تفاعلية وسريعة التحميل',
+
+            'متجاوب مع جميع أحجام الشاشات',
+
+            'تحسين محركات البحث SEO',
+
         ],
+
         tags: ['WordPress', 'Custom Design', 'PHP', 'CSS3'],
+
         images: [
+
             'Gamming%20wordpress%20site/screencapture-localhost-wordpress-test-2025-05-22-15_44_19.png',
+
             'Gamming%20wordpress%20site/Screenshot%202025-05-22%20154607.png',
+
             'Gamming%20wordpress%20site/Screenshot%202025-05-22%20155226.png',
+
             'Gamming%20wordpress%20site/Screenshot%202025-05-22%20155314.png',
+
             'Gamming%20wordpress%20site/Screenshot%202025-05-22%20155332.png',
+
             'Gamming%20wordpress%20site/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
     'emall': {
-        title: 'E-Mall â€” Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ',
+
+        title: 'E-Mall — متجر إلكتروني',
+
         cat: 'Laravel',
-        desc: 'Ù…ØªØ¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ø´Ø§Ù…Ù„ Ø¨ÙˆØ§Ø¬Ù‡Ø© Ø¹ØµØ±ÙŠØ© ÙˆØªØ¬Ø±Ø¨Ø© ØªØ³ÙˆÙ‚ Ø³Ù„Ø³Ø©ØŒ ÙŠØ´Ù…Ù„ Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„Ø·Ù„Ø¨Ø§Øª ÙˆØ§Ù„Ø¹Ù…Ù„Ø§Ø¡ Ù…Ø¹ ØªØµÙ…ÙŠÙ… Ø§Ø­ØªØ±Ø§ÙÙŠ.',
+
+        desc: 'متجر إلكتروني شامل بواجهة عصرية وتجربة تسوق سلسة، يشمل إدارة المنتجات والطلبات والعملاء مع تصميم احترافي.',
+
         features: [
-            'ÙˆØ§Ø¬Ù‡Ø© Ø£Ù…Ø§Ù…ÙŠØ© Ø¹ØµØ±ÙŠØ© ÙˆØ¬Ø°Ø§Ø¨Ø© Ù„Ù„Ù…ØªØ³ÙˆÙ‚ÙŠÙ†',
-            'Ø¥Ø¯Ø§Ø±Ø© ÙƒØ§Ù…Ù„Ø© Ù„Ù„Ù…Ù†ØªØ¬Ø§Øª ÙˆØ§Ù„ÙØ¦Ø§Øª',
-            'Ù†Ø¸Ø§Ù… Ø·Ù„Ø¨Ø§Øª Ù…ØªÙƒØ§Ù…Ù„',
-            'ØªØ¬Ø±Ø¨Ø© Ø´Ø±Ø§Ø¡ Ø³Ù„Ø³Ø© ÙˆÙ…Ø±ÙŠØ­Ø©',
-            'Ù…ØªØ¬Ø§ÙˆØ¨ Ù…Ø¹ Ø§Ù„Ø¬ÙˆØ§Ù„ ÙˆØ§Ù„Ø­Ø§Ø³ÙˆØ¨',
+
+            'واجهة أمامية عصرية وجذابة للمتسوقين',
+
+            'إدارة كاملة للمنتجات والفئات',
+
+            'نظام طلبات متكامل',
+
+            'تجربة شراء سلسة ومريحة',
+
+            'متجاوب مع الجوال والحاسوب',
+
         ],
+
         tags: ['Laravel', 'MySQL', 'Bootstrap', 'PHP'],
+
         images: [
+
             'E-mall%20store/Screenshot%202025-08-07%20114620.png',
+
             'E-mall%20store/Screenshot%202025-08-07%20114724.png',
+
         ]
+
     },
+
     'orthounion': {
-        title: 'Orthounion â€” Ø®Ø¯Ù…Ø§Øª Ø·Ø¨ÙŠØ©',
+
+        title: 'Orthounion — خدمات طبية',
+
         cat: 'WordPress',
-        desc: 'Ù…ÙˆÙ‚Ø¹ Ø·Ø¨ÙŠ Ø§Ø­ØªØ±Ø§ÙÙŠ Ù„Ø¹Ø±Ø¶ Ø§Ù„Ø®Ø¯Ù…Ø§Øª ÙˆØ§Ù„ØªØ®ØµØµØ§Øª Ø§Ù„Ø·Ø¨ÙŠØ© Ø¨ØªØµÙ…ÙŠÙ… Ù†Ø¸ÙŠÙ ÙˆÙ‡Ø§Ø¯Ø¦ ÙŠØ¨Ø« Ø§Ù„Ø«Ù‚Ø© ÙˆÙŠØ³Ù‡Ù‘Ù„ ÙˆØµÙˆÙ„ Ø§Ù„Ù…Ø±Ø¶Ù‰ Ù„Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª.',
+
+        desc: 'موقع طبي احترافي لعرض الخدمات والتخصصات الطبية بتصميم نظيف وهادئ يبث الثقة ويسهّل وصول المرضى للمعلومات.',
+
         features: [
-            'ØªØµÙ…ÙŠÙ… Ø·Ø¨ÙŠ Ø§Ø­ØªØ±Ø§ÙÙŠ ÙˆÙ†Ø¸ÙŠÙ',
-            'Ø¹Ø±Ø¶ Ø§Ù„Ø®Ø¯Ù…Ø§Øª ÙˆØ§Ù„ØªØ®ØµØµØ§Øª Ø§Ù„Ø·Ø¨ÙŠØ© Ø¨ÙˆØ¶ÙˆØ­',
-            'Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø§ØªØµØ§Ù„ ÙˆØ·Ù„Ø¨ Ø§Ù„Ù…ÙˆØ§Ø¹ÙŠØ¯',
-            'Ù…ØªØ¬Ø§ÙˆØ¨ Ù…Ø¹ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©',
-            'ØªØ­Ø³ÙŠÙ† Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø« Ù„Ù„Ù…Ø¬Ø§Ù„ Ø§Ù„Ø·Ø¨ÙŠ',
+
+            'تصميم طبي احترافي ونظيف',
+
+            'عرض الخدمات والتخصصات الطبية بوضوح',
+
+            'معلومات الاتصال وطلب المواعيد',
+
+            'متجاوب مع جميع الأجهزة',
+
+            'تحسين محركات البحث للمجال الطبي',
+
         ],
+
         tags: ['WordPress', 'Elementor', 'PHP', 'SEO'],
+
         images: [
+
             'services%20website/screencapture-orthounion-2023-05-15-14_07_25.png',
+
         ]
+
     },
+
     'bwader': {
-        title: 'Ø¨ÙˆØ§Ø¯Ø± Ø§Ù„ØªÙ…ÙŠØ² â€” Ø®Ø¯Ù…Ø§Øª ØªØ¹Ù„ÙŠÙ…ÙŠØ©',
+
+        title: 'بوادر التميز — خدمات تعليمية',
+
         cat: 'WordPress',
-        desc: 'Ù…ÙˆÙ‚Ø¹ ØªØ¹Ù„ÙŠÙ…ÙŠ ÙŠØ¹Ø±Ø¶ Ø®Ø¯Ù…Ø§Øª Ù…ØªÙ†ÙˆØ¹Ø© Ø¨ØªØµÙ…ÙŠÙ… Ø£Ù†ÙŠÙ‚ ÙˆØªØ¬Ø±Ø¨Ø© Ù…Ø³ØªØ®Ø¯Ù… Ø³Ù„Ø³Ø©ØŒ Ù…ÙØ­Ø³ÙŽÙ‘Ù† Ù„Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø« ÙˆÙ…ØªØ¬Ø§ÙˆØ¨ Ù…Ø¹ ÙƒØ§ÙØ© Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©.',
+
+        desc: 'موقع تعليمي يعرض خدمات متنوعة بتصميم أنيق وتجربة مستخدم سلسة، مُحسَّن لمحركات البحث ومتجاوب مع كافة الأجهزة.',
+
         features: [
-            'ØªØµÙ…ÙŠÙ… Ø¹ØµØ±ÙŠ ÙŠØ¹ÙƒØ³ Ù‡ÙˆÙŠØ© Ø§Ù„Ù…Ø¤Ø³Ø³Ø© Ø§Ù„ØªØ¹Ù„ÙŠÙ…ÙŠØ©',
-            'Ø¹Ø±Ø¶ Ø§Ù„Ø®Ø¯Ù…Ø§Øª Ø¨Ø·Ø±ÙŠÙ‚Ø© ÙˆØ§Ø¶Ø­Ø© ÙˆØ¬Ø°Ø§Ø¨Ø©',
-            'ØªØ­Ø³ÙŠÙ† Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø« SEO',
-            'Ø³Ø±Ø¹Ø© ØªØ­Ù…ÙŠÙ„ Ù…ÙØ­Ø³ÙŽÙ‘Ù†Ø©',
-            'Ù…ØªØ¬Ø§ÙˆØ¨ Ù…Ø¹ Ø§Ù„Ø¬ÙˆØ§Ù„ ÙˆØ§Ù„ØªØ§Ø¨Ù„Øª ÙˆØ§Ù„Ø­Ø§Ø³ÙˆØ¨',
+
+            'تصميم عصري يعكس هوية المؤسسة التعليمية',
+
+            'عرض الخدمات بطريقة واضحة وجذابة',
+
+            'تحسين محركات البحث SEO',
+
+            'سرعة تحميل مُحسَّنة',
+
+            'متجاوب مع الجوال والتابلت والحاسوب',
+
         ],
+
         tags: ['WordPress', 'Elementor', 'WooCommerce', 'SEO'],
+
         images: [
+
             'services%20website/screencapture-bwaderaltmyz-2025-06-01-10_56_26.png',
+
             'services%20website/screencapture-orthounion-2023-05-15-14_07_25.png',
+
             'services%20website/New%20Website%20Blue%20Mockup%20Instagram%20-%20Laptop%20(2).png',
+
         ]
+
     },
+
 };
 
+
+
 // ================================================================
+
 // Modal logic
+
 // ================================================================
+
 let currentImgs = [], currentIdx = 0;
 
+
+
 function openProject(id) {
+
     const p = projectsData[id];
+
     if (!p) return;
+
     currentImgs = p.images;
+
     currentIdx = 0;
 
+
+
     document.getElementById('modalCatBadge').textContent = p.cat;
+
     document.getElementById('modalTitle').textContent = p.title;
+
     document.getElementById('modalDesc').textContent = p.desc;
 
+
+
     const featuresList = document.getElementById('modalFeatures');
+
     featuresList.innerHTML = p.features.map(f => `<li>${f}</li>`).join('');
 
+
+
     const tagsEl = document.getElementById('modalTags');
+
     tagsEl.innerHTML = p.tags.map(t => `<span>${t}</span>`).join('');
 
+
+
     buildThumbs();
+
     setModalImg(0, false);
 
+
+
     const modal = document.getElementById('projectModal');
+
     modal.classList.add('open');
+
     document.body.style.overflow = 'hidden';
 
+
+
     gsap.fromTo('#modalBox', { scale:.88, opacity:0, y:50 }, { scale:1, opacity:1, y:0, duration:.5, ease:'back.out(1.4)' });
+
 }
+
+
 
 function closeModal() {
+
     gsap.to('#modalBox', { scale:.9, opacity:0, y:30, duration:.3, ease:'power2.in', onComplete:() => {
+
         document.getElementById('projectModal').classList.remove('open');
+
         document.body.style.overflow = '';
+
     }});
+
 }
+
+
 
 function buildThumbs() {
+
     const container = document.getElementById('modalThumbs');
+
     container.innerHTML = currentImgs.map((src, i) => `
+
         <div class="modal-thumb ${i===0?'active':''}" onclick="setModalImg(${i}, true)">
+
             <img src="${src}"  width="600" height="240" loading="lazy" decoding="async">
+
         </div>
+
     `).join('');
+
 }
 
+
+
 function setModalImg(idx, animate) {
+
     currentIdx = idx;
+
     const img = document.getElementById('modalImg');
+
     const counter = document.getElementById('modalImgCounter');
+
     counter.textContent = `${idx + 1} / ${currentImgs.length}`;
+
+
 
     document.querySelectorAll('.modal-thumb').forEach((t, i) => t.classList.toggle('active', i === idx));
 
+
+
     const imgWrap = document.getElementById('modalMainImg');
+
     if (animate) {
+
         img.classList.add('switching');
+
         setTimeout(() => {
+
             img.src = currentImgs[idx];
+
             img.onload = () => {
+
                 img.classList.remove('switching');
+
                 imgWrap.scrollTo({ top: 0, behavior: 'smooth' });
+
             };
+
         }, 180);
+
     } else {
+
         img.src = currentImgs[idx];
+
         img.onload = () => imgWrap.scrollTo({ top: 0, behavior: 'instant' });
+
     }
+
 }
+
+
 
 function modalNav(dir) {
+
     let next = currentIdx + dir;
+
     if (next < 0) next = currentImgs.length - 1;
+
     if (next >= currentImgs.length) next = 0;
+
     setModalImg(next, true);
+
 }
 
-// Ø¥ØºÙ„Ø§Ù‚ Ø¨Ù€ Escape
+
+
+// إغلاق بـ Escape
+
 document.addEventListener('keydown', e => {
+
     if (e.key === 'Escape') closeModal();
+
     if (e.key === 'ArrowRight') modalNav(-1);
+
     if (e.key === 'ArrowLeft') modalNav(1);
+
 });
 
-// ÙØªØ­ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø¹Ù†Ø¯ Ø§Ù„Ø¶ØºØ· Ø¹Ù„Ù‰ Ø£ÙŠ Ù…ÙƒØ§Ù† ÙÙŠ Ø§Ù„Ø¨Ø·Ø§Ù‚Ø©
+
+
+// فتح المشروع عند الضغط على أي مكان في البطاقة
+
 document.querySelectorAll('.project-item').forEach(card => {
+
     card.style.cursor = 'pointer';
+
     card.addEventListener('click', () => {
+
         const id = card.dataset.project;
+
         if (id) openProject(id);
+
     });
+
 });
+
 </script>
+
 </body>
+
 </html>
+
