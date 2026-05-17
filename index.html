@@ -197,6 +197,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     <style>
 
@@ -358,7 +359,7 @@
 
         .filter-btn.active{background:#0D7C66;border-color:#0D7C66;color:#F8F6F1;font-weight:700}
 
-        .project-item{transition:opacity .5s,transform .5s cubic-bezier(.16,1,.3,1)}
+        .project-item{transition:box-shadow .3s,border-color .3s}
 
         .project-item.hide{opacity:0;transform:scale(.85);pointer-events:none;position:absolute;visibility:hidden}
 
@@ -596,6 +597,179 @@
 
         @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
+        /* ===== Custom Scrollbar ===== */
+        ::-webkit-scrollbar{width:5px}
+        ::-webkit-scrollbar-track{background:#F0EDE6}
+        ::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,#0D7C66,#C5985A);border-radius:3px}
+
+        /* ===== 3D Orbs Hero ===== */
+        .orb-3d{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(13,124,102,.18),rgba(13,124,102,.04) 60%,transparent);border:1px solid rgba(13,124,102,.12);animation:orbFloat 9s ease-in-out infinite;backdrop-filter:blur(2px)}
+        .orb-gold{background:radial-gradient(circle at 35% 35%,rgba(197,152,90,.18),rgba(197,152,90,.04) 60%,transparent);border-color:rgba(197,152,90,.12)}
+        @keyframes orbFloat{0%,100%{transform:translateY(0) rotate(0deg) scale(1)}33%{transform:translateY(-24px) rotate(5deg) scale(1.04)}66%{transform:translateY(12px) rotate(-3deg) scale(.97)}}
+
+        /* ===== Floating Tech Tags ===== */
+        .tech-float{position:absolute;font-family:'Changa',sans-serif;font-size:.75rem;font-weight:700;padding:6px 16px;border-radius:100px;border:1px solid;backdrop-filter:blur(8px);animation:techFloat linear infinite;white-space:nowrap;letter-spacing:1px}
+        @keyframes techFloat{0%{transform:translateY(0) translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateY(-110vh) translateX(var(--tx));opacity:0}}
+
+        /* ===== Glitch Effect ===== */
+        .glitch{position:relative}
+        .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;clip-path:inset(0)}
+        .glitch::before{left:2px;text-shadow:-2px 0 #C5985A;animation:glitch1 3.5s infinite linear alternate-reverse}
+        .glitch::after{left:-2px;text-shadow:2px 0 #0D7C66;animation:glitch2 2.8s infinite linear alternate-reverse}
+        @keyframes glitch1{0%,90%,100%{clip-path:inset(100% 0 0 0)}92%{clip-path:inset(20% 0 60% 0)}94%{clip-path:inset(50% 0 30% 0)}96%{clip-path:inset(80% 0 5% 0)}}
+        @keyframes glitch2{0%,88%,100%{clip-path:inset(0 0 100% 0)}90%{clip-path:inset(60% 0 10% 0)}93%{clip-path:inset(10% 0 70% 0)}97%{clip-path:inset(40% 0 40% 0)}}
+
+        /* ===== Holographic Card ===== */
+        .skill-card{transition:border-color .3s,box-shadow .3s,transform .3s;transform-style:preserve-3d}
+        .holo-shine{position:absolute;inset:0;border-radius:20px;background:linear-gradient(135deg,transparent 40%,rgba(13,124,102,.06) 50%,transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none;mix-blend-mode:screen}
+        .skill-card:hover .holo-shine{opacity:1}
+
+        /* ===== Neon Glow Text ===== */
+        .neon-accent{text-shadow:0 0 20px rgba(13,124,102,.5),0 0 40px rgba(13,124,102,.3),0 0 80px rgba(13,124,102,.15)}
+        .neon-gold{text-shadow:0 0 20px rgba(197,152,90,.5),0 0 40px rgba(197,152,90,.3)}
+
+        /* ===== Scan Line Overlay ===== */
+        #scanLines{position:fixed;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.012) 3px,rgba(0,0,0,.012) 4px);opacity:.6}
+
+        /* ===== Hero 3D container ===== */
+        #hero3dContainer{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(500px,90vw);height:min(500px,90vw);pointer-events:none;z-index:1}
+        .ring-3d{position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid;transform:translate(-50%,-50%);animation:spin3d linear infinite}
+        @keyframes spin3d{to{transform:translate(-50%,-50%) rotateX(65deg) rotateY(var(--ry,30deg)) rotateZ(360deg)}}
+
+        /* ===== Noise Texture ===== */
+        #noiseOverlay{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+
+        /* ===== Magnetic btn glow ===== */
+        .btn-primary{transition:transform .3s,box-shadow .3s;will-change:transform}
+        .btn-secondary{will-change:transform}
+
+        /* ===== Section divider gradient ===== */
+        .section-divider{height:2px;background:linear-gradient(to right,transparent,#0D7C66 30%,#C5985A 70%,transparent);opacity:.4;margin:0}
+
+        /* ================================================================
+           NOOMO-KILLER — AGENCY LEVEL EFFECTS
+        ================================================================ */
+
+        /* --- Cursor Spotlight --- */
+        #cursorSpotlight{position:fixed;inset:0;z-index:4;pointer-events:none;background:radial-gradient(circle 220px at var(--cx,-999px) var(--cy,-999px),transparent 0%,transparent 55%,rgba(18,16,12,.82) 100%);transition:background .05s;display:none}
+        #home:hover ~ * #cursorSpotlight,body.spotlight-on #cursorSpotlight{display:block}
+
+        /* Hero spotlight only */
+        #heroSpotlight{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 350px 300px at var(--cx,50%) var(--cy,50%),rgba(13,124,102,.07) 0%,transparent 70%);transition:background .08s}
+
+        /* --- Hero Grid --- */
+        #heroGrid{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;opacity:.35}
+        #heroGrid svg{width:100%;height:100%;position:absolute;inset:0}
+
+        /* --- Marquee Ticker --- */
+        .marquee-wrap{overflow:hidden;white-space:nowrap;border-top:1px solid #E8E4DC;border-bottom:1px solid #E8E4DC;padding:13px 0;background:#FAFAF8;position:relative;z-index:10}
+        .marquee-inner{display:inline-flex;align-items:center;gap:0;animation:marqueeScroll 22s linear infinite;will-change:transform}
+        .marquee-inner.reverse{animation-direction:reverse;animation-duration:28s}
+        @keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        .marquee-item{font-family:'Changa',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8C8C8C;padding:0 28px;white-space:nowrap}
+        .marquee-sep{color:#0D7C66;font-size:.9rem;padding:0 4px;flex-shrink:0}
+        .marquee-wrap:hover .marquee-inner{animation-play-state:paused}
+
+        /* --- Split Text Hero --- */
+        .split-char{display:inline-block;overflow:hidden;vertical-align:bottom}
+        .split-char-inner{display:inline-block;will-change:transform}
+
+        /* --- Project Horizontal Drag --- */
+        #projectsGrid.drag-mode{display:flex;flex-wrap:nowrap;gap:20px;overflow:visible;cursor:grab;user-select:none;width:max-content}
+        #projectsGrid.drag-mode.dragging{cursor:grabbing}
+        #projectsGrid.drag-mode .project-item{flex:0 0 320px;max-width:320px}
+        .drag-hint{text-align:center;font-family:'Changa',sans-serif;font-size:.72rem;letter-spacing:4px;color:#C4C0B8;margin-top:1.5rem;display:flex;align-items:center;justify-content:center;gap:8px}
+        .drag-hint i{animation:dragArrow 1.5s ease-in-out infinite}
+        @keyframes dragArrow{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}
+
+        /* --- Spotlight Blob Cursor --- */
+        #blobCursor{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(13,124,102,.055) 0%,transparent 70%);pointer-events:none;z-index:3;transform:translate(-50%,-50%);transition:opacity .4s;mix-blend-mode:multiply;filter:blur(1px)}
+
+        /* --- Hero dark overlay toggle --- */
+        #heroVeil{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(to bottom,rgba(26,26,26,.02),transparent 40%)}
+
+        /* --- Number flip (slot machine) --- */
+        .num-flip{display:inline-block;overflow:hidden;height:1.2em;vertical-align:bottom}
+        .num-flip-inner{display:flex;flex-direction:column;transition:transform .05s}
+
+        /* --- Bold agency section header --- */
+        .agency-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+        .agency-eyebrow-line{width:40px;height:1px;background:currentColor;opacity:.4}
+        .agency-eyebrow-num{font-family:'Changa',sans-serif;font-size:.7rem;letter-spacing:4px;opacity:.5}
+
+        /* --- Magnetic nav links --- */
+        .nav-link{position:relative;overflow:visible}
+
+        /* --- Project card FULL viewport peek on hover --- */
+        .card-peek{position:fixed;top:50%;right:20px;transform:translateY(-50%) scale(.85);width:280px;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.2);opacity:0;pointer-events:none;z-index:50000;transition:opacity .3s,transform .3s}
+        .card-peek.show{opacity:1;transform:translateY(-50%) scale(1)}
+        .card-peek img{width:100%;height:180px;object-fit:cover}
+        @media(max-width:768px){.card-peek{display:none}}
+
+        /* ================================================================
+           STORYTELLING — PAGE FLIP EXPERIENCE
+        ================================================================ */
+
+        /* Chapter watermark numbers */
+        .ch-watermark{position:absolute;top:24px;font-family:'Changa',sans-serif;font-size:clamp(5rem,14vw,11rem);font-weight:800;color:rgba(13,124,102,.04);line-height:1;pointer-events:none;z-index:0;user-select:none;transition:color .6s}
+        [dir="rtl"] .ch-watermark{left:24px}
+        [dir="ltr"] .ch-watermark{right:24px}
+
+        /* Chapter label pill */
+        .ch-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:8px;opacity:0}
+        .ch-label-line{width:28px;height:1.5px;background:#0D7C66;flex-shrink:0}
+        .ch-label-text{font-family:'Changa',sans-serif;font-size:.7rem;letter-spacing:5px;color:#0D7C66;text-transform:uppercase}
+
+        /* Page fold shadow between sections */
+        .story-section{position:relative;overflow:hidden}
+        .story-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to bottom,transparent,rgba(0,0,0,.04));pointer-events:none;z-index:1}
+        .story-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,rgba(13,124,102,.25) 30%,rgba(197,152,90,.2) 70%,transparent);z-index:2;pointer-events:none}
+
+        /* Book spine nav */
+        #bookSpine{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:65000;display:flex;flex-direction:column;gap:10px}
+        .spine-dot{width:7px;height:7px;border-radius:50%;background:#D5D0C7;border:none;cursor:pointer;transition:all .4s;position:relative;padding:0}
+        .spine-dot.active{background:#0D7C66;transform:scale(1.6);box-shadow:0 0 10px rgba(13,124,102,.5)}
+        .spine-dot::before{content:attr(data-lbl);position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:'Changa',sans-serif;font-size:.68rem;color:#0D7C66;white-space:nowrap;opacity:0;transition:opacity .25s;background:rgba(248,246,241,.95);padding:4px 12px;border-radius:100px;border:1px solid rgba(13,124,102,.2);pointer-events:none}
+        .spine-dot:hover::before{opacity:1}
+        @media(max-width:768px){#bookSpine{display:none}}
+
+        /* Story progress line (right edge) */
+        #storyLine{position:fixed;right:0;top:0;width:2px;z-index:65001;height:100vh;pointer-events:none}
+        #storyLine::before{content:'';position:absolute;top:0;left:0;width:100%;background:linear-gradient(to bottom,#0D7C66,#C5985A);height:var(--p,0%);transition:height .1s}
+        #storyLine::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:#E8E4DC20}
+
+        /* Page-flip chapter flash */
+        #chapterFlash{position:fixed;inset:0;z-index:45000;pointer-events:none;opacity:0;background:linear-gradient(135deg,#F8F6F1,#E8E4DC)}
+
+        /* Page curl hint bottom-right */
+        #pageCurl{position:fixed;bottom:0;right:0;width:60px;height:60px;pointer-events:none;z-index:45001;overflow:hidden}
+        #pageCurl::before{content:'';position:absolute;bottom:0;right:0;width:0;height:0;border-style:solid;border-width:0 0 60px 60px;border-color:transparent transparent rgba(13,124,102,.12) transparent;transition:border-width .4s}
+        body:not(.scrolled-top) #pageCurl::before{border-width:0 0 80px 80px}
+
+        /* Narrative quote style */
+        .story-quote{font-family:'Changa',sans-serif;font-size:clamp(1rem,2.5vw,1.4rem);font-weight:700;color:#1A1A1A;line-height:1.6;position:relative;padding:0 0 0 20px;border-right:3px solid #0D7C66;margin-bottom:2rem;opacity:0}
+        [dir="ltr"] .story-quote{padding:0 20px 0 0;border-right:none;border-left:3px solid #0D7C66}
+
+        /* Horizontal scroll story for portfolio */
+        #storyScrollTrack{display:flex;gap:2px;width:max-content}
+
+        /* Ink drop reveal animation */
+        @keyframes inkDrop{0%{clip-path:circle(0% at 50% 50%)}100%{clip-path:circle(150% at 50% 50%)}}
+        .ink-reveal{animation:inkDrop 1.2s cubic-bezier(.16,1,.3,1) forwards}
+
+        /* Section tilt-in (page flip from left/right) */
+        @keyframes flipFromLeft{from{transform:perspective(1400px) rotateY(-12deg) translateX(-40px);opacity:.3;filter:blur(3px)}to{transform:perspective(1400px) rotateY(0deg) translateX(0);opacity:1;filter:blur(0)}}
+        @keyframes flipFromBottom{from{transform:perspective(1200px) rotateX(8deg) translateY(60px) scale(.97);opacity:.4;filter:blur(2px)}to{transform:perspective(1200px) rotateX(0deg) translateY(0) scale(1);opacity:1;filter:blur(0)}}
+        .flip-from-left{animation:flipFromLeft 1s cubic-bezier(.16,1,.3,1) forwards}
+        .flip-from-bottom{animation:flipFromBottom 1s cubic-bezier(.16,1,.3,1) forwards}
+
+        /* Typewriter blinking for narrative */
+        .tw-cursor{display:inline-block;width:2px;height:1.1em;background:#0D7C66;vertical-align:text-bottom;margin-right:2px;animation:blink .7s step-end infinite}
+
+        /* Stats storytelling reveal */
+        .stat-story{overflow:visible}
+        .stat-story-inner{transform:translateY(0)}
+
     </style>
 
 </head>
@@ -634,6 +808,13 @@
 
 
 
+<div id="scanLines"></div>
+<div id="noiseOverlay"></div>
+<div id="chapterFlash"></div>
+<div id="storyLine"></div>
+<div id="pageCurl"></div>
+<div id="bookSpine"></div>
+<div id="blobCursor"></div>
 <canvas id="threeCanvas"></canvas>
 
 
@@ -666,7 +847,7 @@
 
     <div class="max-w-7xl mx-auto flex items-center justify-between">
 
-        <a href="#home" class="font-display text-xl font-800 text-accent tracking-wide">سعيد<span class="text-fg">.</span></a>
+        <a href="#home" class="font-display text-xl font-800 text-accent tracking-wide neon-accent" style="transition:text-shadow .3s">سعيد<span class="text-fg">.</span></a>
 
         <div class="hidden md:flex items-center gap-10">
 
@@ -736,9 +917,44 @@
 
     <section id="home" class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
 
-        <!-- جزيئات عائمة -->
+        <!-- شبكة هندسية Hero -->
+        <div id="heroGrid" aria-hidden="true">
+            <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="gridPat" width="60" height="60" patternUnits="userSpaceOnUse">
+                        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(13,124,102,.18)" stroke-width=".6"/>
+                    </pattern>
+                    <radialGradient id="gridFade" cx="50%" cy="50%" r="55%">
+                        <stop offset="0%" stop-color="white" stop-opacity="0"/>
+                        <stop offset="100%" stop-color="white" stop-opacity="1"/>
+                    </radialGradient>
+                    <mask id="gridMask"><rect width="100%" height="100%" fill="url(#gridFade)"/></mask>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#gridPat)" mask="url(#gridMask)"/>
+                <!-- نقاط تقاطع -->
+                <g id="gridDots" fill="rgba(13,124,102,.25)"></g>
+            </svg>
+        </div>
 
+        <!-- spotlight تفاعلي على Hero -->
+        <div id="heroSpotlight" aria-hidden="true"></div>
+
+        <!-- جزيئات عائمة -->
         <div id="heroParticles" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1"></div>
+
+        <!-- حلقات 3D دوارة -->
+        <div id="hero3dRings" style="position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden">
+            <div class="ring-3d" style="width:420px;height:420px;border-color:rgba(13,124,102,.12);--ry:30deg;animation-duration:18s;top:50%;left:50%"></div>
+            <div class="ring-3d" style="width:320px;height:320px;border-color:rgba(197,152,90,.1);--ry:-20deg;animation-duration:14s;animation-direction:reverse;top:50%;left:50%"></div>
+            <div class="ring-3d" style="width:220px;height:220px;border-color:rgba(13,124,102,.08);--ry:60deg;animation-duration:10s;top:50%;left:50%"></div>
+        </div>
+
+        <!-- تاغات التقنيات الطائرة -->
+        <div id="floatingTech" style="position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden"></div>
+
+        <!-- كرات ضوئية -->
+        <div style="position:absolute;top:15%;right:8%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(13,124,102,.15),transparent 70%);pointer-events:none;z-index:1;animation:orbFloat 8s ease-in-out infinite"></div>
+        <div style="position:absolute;bottom:20%;left:6%;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(197,152,90,.12),transparent 70%);pointer-events:none;z-index:1;animation:orbFloat 11s ease-in-out infinite;animation-delay:-4s"></div>
 
         <div class="relative z-10 text-center max-w-5xl mx-auto pt-24">
 
@@ -778,6 +994,33 @@
 
 
 
+    <!-- Marquee 1 — Tech Stack -->
+    <div class="marquee-wrap relative z-10" aria-hidden="true">
+        <div class="marquee-inner" id="mq1">
+            <span class="marquee-item">React.js</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">Laravel 12</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">WordPress</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">PHP</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">MySQL</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">TailwindCSS</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">REST APIs</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">Full-Stack</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">WooCommerce</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">Palestine 🇵🇸</span><span class="marquee-sep">✦</span>
+            <!-- duplicate for seamless loop -->
+            <span class="marquee-item">React.js</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">Laravel 12</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">WordPress</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">PHP</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">MySQL</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">TailwindCSS</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">REST APIs</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">Full-Stack</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">WooCommerce</span><span class="marquee-sep">✦</span>
+            <span class="marquee-item">Palestine 🇵🇸</span><span class="marquee-sep">✦</span>
+        </div>
+    </div>
+
     <!-- ===== إحصاءات ===== -->
 
     <section class="relative z-10 border-y border-brd bg-card" id="statsSection">
@@ -800,7 +1043,7 @@
 
     <!-- ===== عنّي ===== -->
 
-    <section id="about" class="py-28 md:py-36 px-6">
+    <section id="about" class="py-28 md:py-36 px-6 story-section">
 
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
@@ -866,9 +1109,32 @@
 
 
 
+    <!-- Marquee 2 — Values (reverse) -->
+    <div class="marquee-wrap relative z-10" aria-hidden="true">
+        <div class="marquee-inner reverse">
+            <span class="marquee-item" style="color:#0D7C66">أداء عالٍ</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">Performance</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">كود نظيف</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">Clean Code</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">تصميم إبداعي</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">Creative Design</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">تجربة مستخدم</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">UX First</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <!-- duplicate -->
+            <span class="marquee-item" style="color:#0D7C66">أداء عالٍ</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">Performance</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">كود نظيف</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">Clean Code</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">تصميم إبداعي</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">Creative Design</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">تجربة مستخدم</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+            <span class="marquee-item" style="color:#0D7C66">UX First</span><span class="marquee-sep" style="color:#C5985A">◆</span>
+        </div>
+    </div>
+
     <!-- ===== المهارات ===== -->
 
-    <section id="skills" class="py-28 md:py-36 px-6 bg-bg-alt relative overflow-hidden">
+    <section id="skills" class="py-28 md:py-36 px-6 bg-bg-alt relative overflow-hidden story-section">
 
         <!-- خلفية زخرفية -->
 
@@ -904,7 +1170,7 @@
 
     <!-- ===== الأعمال ===== -->
 
-    <section id="portfolio" class="py-28 md:py-36 px-6 relative overflow-hidden">
+    <section id="portfolio" class="py-28 md:py-36 px-6 relative overflow-hidden story-section">
 
         <div class="max-w-7xl mx-auto">
 
@@ -1412,7 +1678,7 @@
 
     <!-- ===== تواصل ===== -->
 
-    <section id="contact" class="py-28 md:py-36 px-6 bg-bg-alt relative overflow-hidden">
+    <section id="contact" class="py-28 md:py-36 px-6 bg-bg-alt relative overflow-hidden story-section">
 
         <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,#0D7C66,transparent)"></div>
 
@@ -1750,90 +2016,171 @@ introTl.to('#introFlash', { opacity: 0, duration: 0.5, ease: 'power2.out' }, '-=
 
 
 // ================================================================
-
-// Three.js
-
+// Three.js — ULTRA ENHANCED SCENE
 // ================================================================
-
 const canvas3 = document.getElementById('threeCanvas');
-
 const renderer = new THREE.WebGLRenderer({ canvas: canvas3, alpha: true, antialias: true });
-
 renderer.setSize(window.innerWidth, window.innerHeight);
-
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
 const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 3000);
+camera.position.set(0, 0, 550);
 
-const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 2000);
-
-camera.position.set(0, 0, 0);
-
-
-
-const sColors = [new THREE.Color(0xC5985A), new THREE.Color(0xE8D5B0), new THREE.Color(0x0D7C66), new THREE.Color(0xF0EDE6), new THREE.Color(0x8FBFAA)];
-
-const sCount = 3000;
-
-const sPos = new Float32Array(sCount * 3);
-
-const sCol = new Float32Array(sCount * 3);
-
-const sSizes = new Float32Array(sCount);
-
-for (let i = 0; i < sCount; i++) {
-
-    const t = Math.random() * Math.PI * 2, p = Math.acos(2 * Math.random() - 1), r = 150 + Math.random() * 800;
-
-    sPos[i*3]=r*Math.sin(p)*Math.cos(t); sPos[i*3+1]=r*Math.sin(p)*Math.sin(t); sPos[i*3+2]=r*Math.cos(p);
-
-    const c = sColors[Math.floor(Math.random() * sColors.length)];
-
-    sCol[i*3]=c.r; sCol[i*3+1]=c.g; sCol[i*3+2]=c.b;
-
-    sSizes[i] = Math.random()*2.5+0.3;
-
-}
-
-const sGeo = new THREE.BufferGeometry();
-
-sGeo.setAttribute('position', new THREE.BufferAttribute(sPos, 3));
-
-sGeo.setAttribute('color', new THREE.BufferAttribute(sCol, 3));
-
-sGeo.setAttribute('size', new THREE.BufferAttribute(sSizes, 1));
-
-const sMat = new THREE.ShaderMaterial({
-
-    vertexShader:`attribute float size;varying vec3 vColor;void main(){vColor=color;vec4 mv=modelViewMatrix*vec4(position,1.);gl_PointSize=size*(250./-mv.z);gl_Position=projectionMatrix*mv;}`,
-
-    fragmentShader:`varying vec3 vColor;void main(){float d=length(gl_PointCoord-vec2(.5));if(d>.5)discard;float g=1.-smoothstep(0.,.5,d);g=pow(g,1.8);gl_FragColor=vec4(vColor,g*.9);}`,
-
-    transparent:true, vertexColors:true, depthWrite:false, blending:THREE.AdditiveBlending,
-
+// --- Aurora Background Shader Plane ---
+const auroraGeo = new THREE.PlaneGeometry(6000, 4000, 1, 1);
+const auroraMat = new THREE.ShaderMaterial({
+    uniforms: { uTime: { value: 0 } },
+    vertexShader: `varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    fragmentShader: `
+        varying vec2 vUv;
+        uniform float uTime;
+        vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}
+        vec2 mod289(vec2 x){return x-floor(x*(1./289.))*289.;}
+        vec3 permute(vec3 x){return mod289(((x*34.)+1.)*x);}
+        float snoise(vec2 v){
+            const vec4 C=vec4(.211324865405187,.366025403784439,-.577350269189626,.024390243902439);
+            vec2 i=floor(v+dot(v,C.yy)),x0=v-i+dot(i,C.xx);
+            vec2 i1=(x0.x>x0.y)?vec2(1.,0.):vec2(0.,1.);
+            vec4 x12=x0.xyxy+C.xxzz;x12.xy-=i1;
+            i=mod289(i);
+            vec3 p=permute(permute(i.y+vec3(0.,i1.y,1.))+i.x+vec3(0.,i1.x,1.));
+            vec3 m=max(.5-vec3(dot(x0,x0),dot(x12.xy,x12.xy),dot(x12.zw,x12.zw)),0.);
+            m=m*m;m=m*m;
+            vec3 x=2.*fract(p*C.www)-1.,h=abs(x)-.5,ox=floor(x+.5),a0=x-ox;
+            m*=1.79284291400159-.85373472095314*(a0*a0+h*h);
+            vec3 g;g.x=a0.x*x0.x+h.x*x0.y;g.yz=a0.yz*x12.xz+h.yz*x12.yw;
+            return 130.*dot(m,g);
+        }
+        void main(){
+            vec2 uv=vUv;float t=uTime*.08;
+            float n1=snoise(uv*2.2+vec2(t,t*.7));
+            float n2=snoise(uv*4.5-vec2(t*.9,t*1.3));
+            float n3=snoise(uv*1.3+vec2(-t*.4,t*.35));
+            float n=(n1+n2*.5+n3*.25)/1.75;n=n*.5+.5;
+            vec3 c1=vec3(.051,.486,.4),c2=vec3(.773,.596,.353),c3=vec3(.005,.03,.022);
+            vec3 col=mix(c3,c1,smoothstep(.15,.65,n));
+            col=mix(col,c2,smoothstep(.6,1.,n)*.45);
+            float a=(.03+n*.07)*smoothstep(0.,.08,uv.y)*smoothstep(0.,.08,1.-uv.y);
+            gl_FragColor=vec4(col,a);
+        }
+    `,
+    transparent: true, depthWrite: false, side: THREE.DoubleSide,
 });
+const auroraMesh = new THREE.Mesh(auroraGeo, auroraMat);
+auroraMesh.position.z = -700;
+scene.add(auroraMesh);
 
-scene.add(new THREE.Points(sGeo, sMat));
+// --- Particle Constellation ---
+const pCount = 2800;
+const pPos = new Float32Array(pCount * 3);
+const pCol = new Float32Array(pCount * 3);
+const pSiz = new Float32Array(pCount);
+const pal = [new THREE.Color(0xC5985A),new THREE.Color(0x0D7C66),new THREE.Color(0xE8D5B0),new THREE.Color(0x8FBFAA),new THREE.Color(0xF8F6F1)];
+for (let i = 0; i < pCount; i++) {
+    const r = 180 + Math.random() * 700, t = Math.random()*Math.PI*2, p = Math.acos(2*Math.random()-1);
+    pPos[i*3]=r*Math.sin(p)*Math.cos(t); pPos[i*3+1]=r*Math.sin(p)*Math.sin(t); pPos[i*3+2]=r*Math.cos(p);
+    const c = pal[Math.floor(Math.random()*pal.length)];
+    pCol[i*3]=c.r; pCol[i*3+1]=c.g; pCol[i*3+2]=c.b;
+    pSiz[i] = Math.random()*2.8+0.4;
+}
+const pGeo = new THREE.BufferGeometry();
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+pGeo.setAttribute('color', new THREE.BufferAttribute(pCol, 3));
+pGeo.setAttribute('size', new THREE.BufferAttribute(pSiz, 1));
+const pMat = new THREE.ShaderMaterial({
+    uniforms: { uTime: { value: 0 } },
+    vertexShader: `attribute float size;attribute vec3 color;varying vec3 vColor;varying float vZ;void main(){vColor=color;vec4 mv=modelViewMatrix*vec4(position,1.);vZ=-mv.z;gl_PointSize=size*(280./-mv.z);gl_Position=projectionMatrix*mv;}`,
+    fragmentShader: `varying vec3 vColor;varying float vZ;void main(){float d=length(gl_PointCoord-vec2(.5));if(d>.5)discard;float g=pow(1.-smoothstep(0.,.5,d),1.6);float fade=1.-smoothstep(350.,850.,vZ);gl_FragColor=vec4(vColor,g*.95*fade);}`,
+    transparent: true, vertexColors: true, depthWrite: false, blending: THREE.AdditiveBlending,
+});
+const particles = new THREE.Points(pGeo, pMat);
+scene.add(particles);
 
-scene.add(new THREE.Mesh(new THREE.SphereGeometry(200,32,32),new THREE.MeshBasicMaterial({color:0x0D7C66,transparent:true,opacity:0.012,side:THREE.BackSide,depthWrite:false})));
+// --- Central Torus Knot (Wireframe Holographic) ---
+const torusGeo = new THREE.TorusKnotGeometry(55, 16, 220, 32, 2, 3);
+const torusMat = new THREE.ShaderMaterial({
+    uniforms: { uTime: { value: 0 } },
+    vertexShader: `varying vec3 vPos;void main(){vPos=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+    fragmentShader: `
+        varying vec3 vPos;uniform float uTime;
+        void main(){
+            float t=uTime*.4;
+            float stripe=sin(vPos.x*.06+t)*sin(vPos.y*.06+t*1.4)*sin(vPos.z*.06+t*.8);
+            stripe=stripe*.5+.5;
+            vec3 c1=vec3(.051,.486,.4),c2=vec3(.773,.596,.353);
+            vec3 col=mix(c1,c2,stripe);
+            float pulse=pow(abs(sin(t*.7+length(vPos)*.008)),.4);
+            col+=pulse*.25*c2;
+            gl_FragColor=vec4(col,clamp(pulse*.9+.3,0.,1.));
+        }
+    `,
+    transparent: true, wireframe: true, depthWrite: false, blending: THREE.AdditiveBlending,
+});
+const torusKnot = new THREE.Mesh(torusGeo, torusMat);
+scene.add(torusKnot);
 
-scene.add(new THREE.Mesh(new THREE.SphereGeometry(300,32,32),new THREE.MeshBasicMaterial({color:0xC5985A,transparent:true,opacity:0.008,side:THREE.BackSide,depthWrite:false})));
+// --- Surrounding Icosahedron ---
+const icoGeo = new THREE.IcosahedronGeometry(130, 1);
+const icoMat = new THREE.MeshBasicMaterial({ color: 0x0D7C66, wireframe: true, transparent: true, opacity: 0.07, depthWrite: false });
+const icosahedron = new THREE.Mesh(icoGeo, icoMat);
+scene.add(icosahedron);
 
+// --- Outer Ring Geometry ---
+const ringGeo = new THREE.TorusGeometry(200, 0.8, 4, 200);
+const ringMat = new THREE.MeshBasicMaterial({ color: 0xC5985A, transparent: true, opacity: 0.12, depthWrite: false });
+const ring1 = new THREE.Mesh(ringGeo, ringMat);
+ring1.rotation.x = Math.PI / 3;
+scene.add(ring1);
+const ring2 = new THREE.Mesh(new THREE.TorusGeometry(260, 0.5, 4, 200), new THREE.MeshBasicMaterial({ color: 0x0D7C66, transparent: true, opacity: 0.08, depthWrite: false }));
+ring2.rotation.x = -Math.PI / 5;
+ring2.rotation.z = Math.PI / 4;
+scene.add(ring2);
 
+// Mouse + scroll state
+let mx3 = 0, my3 = 0, sp3 = 0, time3 = 0;
+document.addEventListener('mousemove', e => { mx3 = (e.clientX/window.innerWidth-.5)*2; my3 = (e.clientY/window.innerHeight-.5)*2; });
+ScrollTrigger.create({ trigger:'body', start:'top top', end:'bottom bottom', onUpdate: s => { sp3 = s.progress; } });
 
-let mx3=0, my3=0, sp=0;
+function anim3() {
+    requestAnimationFrame(anim3);
+    time3 += 0.012;
+    auroraMat.uniforms.uTime.value = time3;
+    pMat.uniforms.uTime.value = time3;
+    torusMat.uniforms.uTime.value = time3;
 
-document.addEventListener('mousemove', e => { mx3=(e.clientX/window.innerWidth-.5)*2; my3=(e.clientY/window.innerHeight-.5)*2 });
+    torusKnot.rotation.x = time3 * 0.28;
+    torusKnot.rotation.y = time3 * 0.18;
+    torusKnot.rotation.z = time3 * 0.09;
+    icosahedron.rotation.x = -time3 * 0.08;
+    icosahedron.rotation.y = time3 * 0.12;
+    icosahedron.rotation.z = time3 * 0.05;
+    ring1.rotation.y += 0.006;
+    ring2.rotation.x += 0.004;
+    ring2.rotation.z += 0.003;
+    particles.rotation.y = time3 * 0.025;
+    particles.rotation.x = Math.sin(time3 * 0.008) * 0.08;
 
-ScrollTrigger.create({ trigger:'body', start:'top top', end:'bottom bottom', onUpdate: s => { sp = s.progress } });
+    camera.rotation.x += (my3 * 0.07 - camera.rotation.x) * 0.03;
+    camera.rotation.y += (-mx3 * 0.09 - camera.rotation.y) * 0.03;
+    camera.position.z = 550 - sp3 * 250;
+    camera.position.y = sp3 * -80;
 
-function anim3(){requestAnimationFrame(anim3);camera.rotation.x+=(sp*0.6-camera.rotation.x)*0.05;camera.rotation.y+=(-mx3*0.15-camera.rotation.y)*0.03;renderer.render(scene,camera)}
+    const heroVisible = Math.max(0, 1 - sp3 * 4);
+    torusMat.uniforms.uTime.value = time3;
+    torusKnot.material.opacity = heroVisible * 0.85;
+    icoMat.opacity = heroVisible * 0.07;
+    ring1.material.opacity = heroVisible * 0.12;
+    ring2.material.opacity = heroVisible * 0.08;
 
+    renderer.render(scene, camera);
+}
 anim3();
 
-ScrollTrigger.create({ trigger:'#skills', start:'top 80%', end:'top 20%', onUpdate: s => { sMat.opacity = 1 - s.progress } });
-
-window.addEventListener('resize',()=>{ camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth,window.innerHeight) });
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
 
 
 
@@ -1989,25 +2336,7 @@ function startMainSite() {
 
 function initScrollAnimations() {
 
-    // عداد الأرقام
-
-    ScrollTrigger.create({ trigger:'#statsSection', start:'top 75%', once:true, onEnter:() => {
-
-        document.querySelectorAll('.counter').forEach(el => {
-
-            const t = +el.dataset.target;
-
-            gsap.to({ v:0 }, { v:t, duration:2, ease:'power2.out',
-
-                onUpdate: function(){ el.textContent = Math.floor(this.targets()[0].v) },
-
-                onComplete: function(){ el.textContent = t }
-
-            });
-
-        });
-
-    }});
+    // عداد الأرقام — handled by enhanced version below
 
 
 
@@ -2025,26 +2354,46 @@ function initScrollAnimations() {
 
 
 
-    gsap.from('.about-anim', { scrollTrigger:{ trigger:'#about', start:'top 70%' }, opacity:0, y:60, duration:.8, stagger:.12, ease:'power3.out' });
+    // About — image يدخل من الجانب الصحيح فقط (بدون x offset يكسر الـ grid)
+    gsap.from('.about-anim', { scrollTrigger:{ trigger:'#about', start:'top 72%', once:true }, opacity:0, y:50, duration:.8, stagger:.1, ease:'power3.out' });
 
-    gsap.from('.about-img-wrap', { scrollTrigger:{ trigger:'#about', start:'top 70%' }, opacity:0, x:-80, scale:.9, duration:1, ease:'power3.out' });
+    gsap.from('.about-img-wrap', { scrollTrigger:{ trigger:'#about', start:'top 72%', once:true }, opacity:0, y:40, scale:.96, duration:1, ease:'power3.out' });
 
-    gsap.from('.about-badge', { scrollTrigger:{ trigger:'#about', start:'top 60%' }, opacity:0, scale:0, duration:.6, delay:.5, ease:'back.out(2)' });
+    gsap.from('.about-badge', { scrollTrigger:{ trigger:'#about', start:'top 60%', once:true }, opacity:0, scale:0, duration:.6, delay:.4, ease:'back.out(2)' });
 
-    gsap.from('.skill-anim', { scrollTrigger:{ trigger:'#skills', start:'top 65%' }, opacity:0, y:80, duration:.9, stagger:.2, ease:'power3.out' });
+    gsap.from('.skill-anim', { scrollTrigger:{ trigger:'#skills', start:'top 68%', once:true }, opacity:0, y:60, duration:.9, stagger:.18, ease:'power3.out' });
 
-    gsap.from('.port-anim', { scrollTrigger:{ trigger:'#portfolio', start:'top 70%' }, opacity:0, y:50, duration:.7, stagger:.1, ease:'power3.out' });
+    gsap.from('.port-anim', { scrollTrigger:{ trigger:'#portfolio', start:'top 72%', once:true }, opacity:0, y:40, duration:.7, stagger:.08, ease:'power3.out' });
 
-
-
+    // Projects — animation مرة واحدة فقط بدون تعارض
     document.querySelectorAll('.project-item').forEach((c, i) => {
+        const col = i % 3;
+        // نضع الحالة الابتدائية مباشرة على عنصر CSS بدل GSAP لتجنب race conditions
+        c.style.opacity = '0';
+        c.style.transform = `translateY(50px) scale(0.92)`;
+        c.style.transition = 'none';
 
-        const dirs = [{x:-100,y:80,r:-4},{x:100,y:60,r:4},{x:0,y:120,r:-2},{x:-80,y:100,r:3},{x:90,y:90,r:-3},{x:-60,y:110,r:2},{x:70,y:70,r:-2},{x:-90,y:80,r:4},{x:80,y:100,r:-3}];
-
-        const d = dirs[i % dirs.length];
-
-        gsap.from(c, { scrollTrigger:{ trigger:c, start:'top 88%', toggleActions:'play none none reverse' }, opacity:0, x:d.x, y:d.y, rotation:d.r, scale:.85, duration:.9, ease:'power3.out' });
-
+        ScrollTrigger.create({
+            trigger: c,
+            start: 'top 92%',
+            once: true,
+            onEnter: () => {
+                // نزيل inline style ونبدأ GSAP
+                c.style.transform = '';
+                c.style.transition = '';
+                gsap.fromTo(c,
+                    { opacity: 0, y: 50, scale: .92 },
+                    {
+                        opacity: 1, y: 0, scale: 1,
+                        duration: .9,
+                        delay: (i % 3) * 0.08,
+                        ease: 'power3.out',
+                        clearProps: 'transform,scale',
+                        onComplete: () => { c.style.opacity = ''; }
+                    }
+                );
+            }
+        });
     });
 
 
@@ -2105,9 +2454,11 @@ fBtns.forEach(b => { b.addEventListener('click', () => {
 
         if (f === 'all' || it.dataset.cat.includes(f)) {
 
-            it.classList.remove('hide'); it.style.position=''; it.style.visibility='';
+            it.classList.remove('hide');
+            it.style.position=''; it.style.visibility='';
+            it.style.opacity=''; it.style.transform=''; // reset inline styles from initial hide
 
-            gsap.fromTo(it, { opacity:0, scale:.85, y:30 }, { opacity:1, scale:1, y:0, duration:.6, ease:'power3.out' });
+            gsap.fromTo(it, { opacity:0, scale:.88, y:30 }, { opacity:1, scale:1, y:0, duration:.6, ease:'power3.out', clearProps:'transform,scale' });
 
         } else {
 
@@ -2370,12 +2721,607 @@ document.querySelectorAll('.btn-primary,.btn-secondary').forEach(b => {
 });
 
 document.querySelectorAll('footer a').forEach(a => {
-
     a.addEventListener('mouseenter', () => gsap.to(a, {scale:1.2,rotation:5,duration:.3,ease:'power2.out'}));
-
     a.addEventListener('mouseleave', () => gsap.to(a, {scale:1,rotation:0,duration:.5,ease:'elastic.out(1,.5)'}));
-
 });
+
+// ================================================================
+// Lenis Smooth Scroll
+// ================================================================
+const lenis = new Lenis({
+    duration: 1.4,
+    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothTouch: false,
+});
+function lenisRaf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update();
+    requestAnimationFrame(lenisRaf);
+}
+requestAnimationFrame(lenisRaf);
+
+// ================================================================
+// Cursor Particle Trail
+// ================================================================
+const trailCount = 18;
+const trailDots = [];
+for (let i = 0; i < trailCount; i++) {
+    const d = document.createElement('div');
+    const size = Math.max(1.5, 6 - i * 0.26);
+    const opacity = Math.max(0.05, 0.9 - i * 0.048);
+    const hue = i < 9 ? '13,124,102' : '197,152,90';
+    d.style.cssText = `position:fixed;width:${size}px;height:${size}px;border-radius:50%;background:rgba(${hue},${opacity});pointer-events:none;z-index:999997;transform:translate(-50%,-50%);mix-blend-mode:multiply;`;
+    document.body.appendChild(d);
+    trailDots.push({ el: d, x: -200, y: -200 });
+}
+let trailMx = -200, trailMy = -200;
+document.addEventListener('mousemove', e => { trailMx = e.clientX; trailMy = e.clientY; });
+gsap.ticker.add(() => {
+    let px = trailMx, py = trailMy;
+    trailDots.forEach((dot, i) => {
+        const spd = 0.25 - i * 0.011;
+        dot.x += (px - dot.x) * spd;
+        dot.y += (py - dot.y) * spd;
+        dot.el.style.left = dot.x + 'px';
+        dot.el.style.top = dot.y + 'px';
+        px = dot.x; py = dot.y;
+    });
+});
+
+// ================================================================
+// Magnetic Buttons
+// ================================================================
+document.querySelectorAll('.btn-primary, .btn-secondary').forEach(el => {
+    el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width/2) * 0.38;
+        const y = (e.clientY - r.top - r.height/2) * 0.38;
+        gsap.to(el, { x, y, duration: 0.4, ease: 'power2.out' });
+    });
+    el.addEventListener('mouseleave', () => {
+        gsap.to(el, { x: 0, y: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)' });
+    });
+});
+
+// ================================================================
+// Floating Tech Tags in Hero
+// ================================================================
+(function spawnTechTags() {
+    const container = document.getElementById('floatingTech');
+    if (!container) return;
+    const tags = [
+        { label: 'React.js', color: '#0D7C66' }, { label: 'Laravel', color: '#C5985A' },
+        { label: 'PHP', color: '#0D7C66' }, { label: 'MySQL', color: '#C5985A' },
+        { label: 'WordPress', color: '#0D7C66' }, { label: 'TailwindCSS', color: '#C5985A' },
+        { label: 'JavaScript', color: '#0D7C66' }, { label: 'REST API', color: '#C5985A' },
+        { label: 'Vue.js', color: '#0D7C66' }, { label: 'Bootstrap', color: '#C5985A' },
+    ];
+    tags.forEach((tag, idx) => {
+        const el = document.createElement('div');
+        el.className = 'tech-float';
+        const dur = 14 + Math.random() * 10;
+        const delay = -(Math.random() * dur);
+        const tx = (Math.random() - 0.5) * 150;
+        el.textContent = tag.label;
+        el.style.cssText = `left:${5 + Math.random() * 85}%;bottom:-60px;color:${tag.color};border-color:${tag.color}30;background:${tag.color}08;--tx:${tx}px;animation-duration:${dur}s;animation-delay:${delay}s;`;
+        container.appendChild(el);
+    });
+})();
+
+// ================================================================
+// Text Scramble Effect on Section Headings
+// ================================================================
+function scrambleText(el, finalText, duration = 900) {
+    const isAr = /[؀-ۿ]/.test(finalText);
+    const pool = isAr
+        ? 'ابتثجحخدذرزسشصضطظعغفقكلمنهويء'
+        : 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$&';
+    let start = null;
+    (function step(ts) {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / duration, 1);
+        const revealed = Math.floor(p * finalText.length);
+        let result = '';
+        for (let i = 0; i < finalText.length; i++) {
+            if (finalText[i] === ' ' || finalText[i] === '\n' || finalText[i] === '<' || finalText[i] === ',') { result += finalText[i]; continue; }
+            result += i < revealed ? finalText[i] : pool[Math.floor(Math.random() * pool.length)];
+        }
+        el.textContent = result;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = finalText;
+    })(0);
+}
+
+document.querySelectorAll('h2[data-i18n]').forEach(h => {
+    ScrollTrigger.create({
+        trigger: h, start: 'top 82%', once: true,
+        onEnter: () => {
+            const orig = h.textContent.trim();
+            scrambleText(h, orig, 1000);
+        }
+    });
+});
+
+// ================================================================
+// Holographic Shine on Skill Cards
+// ================================================================
+document.querySelectorAll('.skill-card').forEach(card => {
+    const shine = document.createElement('div');
+    shine.className = 'holo-shine';
+    card.style.position = 'relative';
+    card.style.overflow = 'hidden';
+    card.appendChild(shine);
+    card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 100;
+        const y = ((e.clientY - r.top) / r.height) * 100;
+        shine.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(13,124,102,.14) 0%, rgba(197,152,90,.08) 40%, transparent 70%)`;
+        shine.style.opacity = '1';
+        gsap.to(card, { rotateX: ((e.clientY - r.top - r.height/2) / r.height) * -10, rotateY: ((e.clientX - r.left - r.width/2) / r.width) * 10, scale: 1.04, duration: 0.4, ease: 'power2.out', transformPerspective: 900 });
+    });
+    card.addEventListener('mouseleave', () => {
+        shine.style.opacity = '0';
+        gsap.to(card, { rotateX: 0, rotateY: 0, scale: 1, duration: 0.7, ease: 'elastic.out(1,.5)' });
+    });
+});
+
+// Neon glow — CSS only on nav logo
+
+// Stats counter — handled by storytelling section below
+
+// ================================================================
+// Advanced parallax depth on hero text
+// ================================================================
+gsap.to('#home .relative.z-10', {
+    scrollTrigger: { trigger: '#home', start: 'top top', end: 'bottom top', scrub: 1 },
+    y: -120, ease: 'none',
+});
+
+// Section entrance — handled by storytelling scroll animations
+
+// ================================================================
+// Project card shimmer border on hover
+// ================================================================
+document.querySelectorAll('.project-card').forEach(c => {
+    c.style.transition = 'border-color .5s, box-shadow .5s, transform .5s';
+    c.addEventListener('mouseenter', () => {
+        gsap.to(c, { boxShadow: '0 0 30px rgba(13,124,102,.2), 0 20px 60px rgba(0,0,0,.08)', duration: .5 });
+    });
+    c.addEventListener('mouseleave', () => {
+        gsap.to(c, { boxShadow: '0 1px 3px rgba(0,0,0,.03)', duration: .5 });
+    });
+});
+
+// ================================================================
+// Intro name glitch burst on appear
+// ================================================================
+setTimeout(() => {
+    wordEls.forEach(w => { w.setAttribute('data-text', w.textContent); w.classList.add('glitch'); });
+    setTimeout(() => { wordEls.forEach(w => w.classList.remove('glitch')); }, 1500);
+}, 1200);
+
+// ================================================================
+// ✦  STORYTELLING — PAGE FLIP EXPERIENCE  ✦
+// ================================================================
+
+// ---- 1. Book spine navigation ----
+const CHAPTERS = [
+    { id:'home',         lbl:'البداية',     lbl_en:'Opening'   },
+    { id:'statsSection', lbl:'الإنجازات',   lbl_en:'Milestones'},
+    { id:'about',        lbl:'قصتي',        lbl_en:'My Story'  },
+    { id:'skills',       lbl:'أدواتي',      lbl_en:'Arsenal'   },
+    { id:'portfolio',    lbl:'أعمالي',      lbl_en:'The Work'  },
+    { id:'contact',      lbl:'تواصل',       lbl_en:'Connect'   },
+];
+
+const spineEl = document.getElementById('bookSpine');
+CHAPTERS.forEach(({ id, lbl }) => {
+    const btn = document.createElement('button');
+    btn.className = 'spine-dot';
+    btn.setAttribute('data-lbl', lbl);
+    btn.setAttribute('aria-label', lbl);
+    btn.addEventListener('click', () => {
+        const el = document.getElementById(id);
+        if (el && lenis) lenis.scrollTo(el, { duration: 1.8, offset: -60 });
+    });
+    spineEl.appendChild(btn);
+});
+
+// ---- 2. Story progress & active chapter ----
+const storyLineEl = document.getElementById('storyLine');
+function updateStoryState() {
+    const scrollY = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const pct = Math.min(100, (scrollY / maxScroll) * 100).toFixed(1);
+    storyLineEl.style.setProperty('--p', pct + '%');
+
+    const trigger = scrollY + window.innerHeight * 0.45;
+    let activeIdx = 0;
+    CHAPTERS.forEach(({ id }, i) => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top + scrollY <= trigger) activeIdx = i;
+    });
+    spineEl.querySelectorAll('.spine-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === activeIdx);
+    });
+    // Update progress bar
+    const pb = document.getElementById('progressBar');
+    if (pb) pb.style.width = pct + '%';
+}
+window.addEventListener('scroll', updateStoryState, { passive: true });
+updateStoryState();
+
+// ---- 3. Chapter watermarks + story-section class ----
+const storySections = document.querySelectorAll('.story-section');
+const sectionQuotes = {
+    about:    { ar: 'الكود الجيد يُخبر قصة،\nالكود العظيم يرويها بصمت', en: 'Good code tells a story,\ngreat code tells it silently' },
+    skills:   { ar: 'أدواتي ليست مجرد تقنيات،\nبل هي لغة أتحدث بها مع الإبداع', en: 'My tools are a language\nI speak with creativity' },
+    portfolio:{ ar: 'كل مشروع هو فصل جديد\nفي رواية طويلة من الإبداع', en: 'Each project is a new chapter\nin a long story of creativity' },
+    contact:  { ar: 'القصة الأجمل هي التي\nنكتبها معاً من الصفر', en: 'The most beautiful story\nis the one we write together' },
+};
+
+storySections.forEach((sec, i) => {
+    const id = sec.id;
+    const num = String(i + 1).padStart(2, '0');
+    // Watermark
+    const wm = document.createElement('div');
+    wm.className = 'ch-watermark';
+    wm.textContent = num;
+    sec.appendChild(wm);
+
+    // Flip-in on scroll — only decorative elements, not the section itself
+    ScrollTrigger.create({
+        trigger: sec,
+        start: 'top 84%',
+        once: true,
+        onEnter: () => {
+            // Only animate the decorative watermark, NOT the section itself
+            gsap.from(wm, {
+                scale: 0.4, opacity: 0, duration: 1, delay: 0.15, ease: 'back.out(2)',
+            });
+            // Subtle chapter flash
+            gsap.fromTo('#chapterFlash',
+                { opacity: 0 },
+                { opacity: 0.05, duration: 0.1, yoyo: true, repeat: 1, ease: 'none' }
+            );
+        }
+    });
+
+    // Parallax wm on scroll
+    gsap.to(wm, {
+        scrollTrigger: { trigger: sec, start: 'top bottom', end: 'bottom top', scrub: 1.5 },
+        y: -80,
+        ease: 'none',
+    });
+});
+
+// ---- 4. Story quote / narrative text before each section ----
+Object.entries(sectionQuotes).forEach(([id, { ar, en }]) => {
+    const sec = document.getElementById(id);
+    if (!sec) return;
+    const isRtl = document.documentElement.dir === 'rtl';
+    const text = isRtl ? ar : en;
+
+    const quoteWrap = document.createElement('div');
+    quoteWrap.className = 'story-quote';
+    quoteWrap.setAttribute('data-ar', ar);
+    quoteWrap.setAttribute('data-en', en);
+    quoteWrap.style.cssText = 'max-width:520px;position:relative;z-index:3;margin:0 auto 1.5rem;padding:0 1.5rem;';
+    quoteWrap.textContent = text;
+
+    // Insert BEFORE the grid container (not inside it — would break grid-cols-2)
+    const inner = sec.querySelector('.max-w-6xl, .max-w-7xl');
+    if (inner) inner.parentNode.insertBefore(quoteWrap, inner);
+
+    // Typewriter reveal on enter
+    ScrollTrigger.create({
+        trigger: quoteWrap,
+        start: 'top 85%',
+        once: true,
+        onEnter: () => {
+            const full = quoteWrap.textContent;
+            quoteWrap.textContent = '';
+            quoteWrap.style.opacity = '1';
+            const cursor = document.createElement('span');
+            cursor.className = 'tw-cursor';
+            quoteWrap.appendChild(cursor);
+            let ci = 0;
+            const iv = setInterval(() => {
+                if (ci < full.length) {
+                    quoteWrap.insertBefore(document.createTextNode(full[ci]), cursor);
+                    ci++;
+                } else {
+                    clearInterval(iv);
+                    setTimeout(() => cursor.remove(), 800);
+                }
+            }, 28);
+        }
+    });
+});
+
+// ---- 5. Hero pinned storytelling text ---- (safe version)
+// letterSpacing only - no transform/opacity on hero-word-inner
+gsap.to('#home h1', {
+    scrollTrigger: { trigger: '#home', start: 'top top', end: 'center top', scrub: 1.5 },
+    scale: 0.97,
+    ease: 'none',
+    transformPerspective: 800,
+});
+
+// ---- 6. Stats — slot-machine style reveal (safe version) ----
+ScrollTrigger.create({
+    trigger: '#statsSection', start: 'top 80%', once: true,
+    onEnter: () => {
+        document.querySelectorAll('.stat-item').forEach((item, i) => {
+            gsap.from(item, {
+                y: 40, opacity: 0,
+                duration: 0.8, delay: i * 0.12,
+                ease: 'back.out(2)',
+            });
+        });
+        // Counters
+        document.querySelectorAll('.counter').forEach(el => {
+            const t = +el.dataset.target;
+            gsap.fromTo({ v: 0 }, { v: t }, {
+                duration: 2.2, ease: 'power3.out',
+                onUpdate: function () { el.textContent = Math.floor(this.targets()[0].v); },
+                onComplete: function () { el.textContent = t; }
+            });
+        });
+    }
+});
+
+// ---- 7. Portfolio — handled by initScrollAnimations (single source of truth) ----
+
+// ---- 8. Horizontal scroll hint on portfolio ----
+const portfolioSection = document.getElementById('portfolio');
+if (portfolioSection) {
+    const hint = document.createElement('div');
+    hint.style.cssText = `text-align:center;color:#C4C0B8;font-family:'Changa',sans-serif;font-size:.72rem;letter-spacing:4px;margin-top:3rem;opacity:.7;`;
+    hint.textContent = '— scroll to explore —';
+    portfolioSection.querySelector('.max-w-7xl').appendChild(hint);
+    ScrollTrigger.create({
+        trigger: hint,
+        start: 'top 90%',
+        once: true,
+        onEnter: () => gsap.from(hint, { opacity: 0, y: 20, duration: 0.8 }),
+    });
+}
+
+// ---- 9. About section — photo reveal (simple, no clipPath conflict) ----
+// clipPath removed: it hides the image permanently if ScrollTrigger misfires
+
+// ---- 10. Skill tags — cascade float-in ----
+document.querySelectorAll('.skill-tag').forEach((tag, i) => {
+    gsap.set(tag, { opacity: 0, y: 20, scale: 0.8 });
+    ScrollTrigger.create({
+        trigger: tag,
+        start: 'top 90%',
+        once: true,
+        onEnter: () => {
+            gsap.to(tag, {
+                opacity: 1, y: 0, scale: 1,
+                duration: 0.6,
+                delay: (i % 7) * 0.06,
+                ease: 'back.out(2)',
+            });
+        }
+    });
+});
+
+// ---- 11. Contact section — dramatic curtain lift ----
+const contactSection = document.getElementById('contact');
+if (contactSection) {
+    const curtain = document.createElement('div');
+    curtain.style.cssText = `position:absolute;inset:0;background:#F8F6F1;z-index:10;transform-origin:top center;pointer-events:none`;
+    contactSection.style.position = 'relative';
+    contactSection.appendChild(curtain);
+    ScrollTrigger.create({
+        trigger: contactSection,
+        start: 'top 75%',
+        once: true,
+        onEnter: () => {
+            gsap.to(curtain, {
+                scaleY: 0,
+                duration: 1.2,
+                ease: 'power4.inOut',
+                transformOrigin: 'top center',
+                onComplete: () => curtain.remove(),
+            });
+        }
+    });
+}
+
+// ---- 12. Update story quotes on language change ----
+const origSetLang = window.setLang;
+if (typeof origSetLang === 'function') {
+    window.setLang = function(code) {
+        origSetLang(code);
+        const isRtl = translations[code]?.dir === 'rtl';
+        document.querySelectorAll('.story-quote[data-ar]').forEach(q => {
+            q.textContent = isRtl ? q.dataset.ar : q.dataset.en;
+        });
+    };
+}
+
+// ================================================================
+// ✦  NOOMO-KILLER AGENCY EFFECTS  ✦
+// ================================================================
+
+// ---- A. Blob Cursor (follows mouse with lag) ----
+const blob = document.getElementById('blobCursor');
+let bx = -999, by = -999, tbx = -999, tby = -999;
+document.addEventListener('mousemove', e => { tbx = e.clientX; tby = e.clientY; });
+gsap.ticker.add(() => {
+    bx += (tbx - bx) * 0.07;
+    by += (tby - by) * 0.07;
+    if (blob) { blob.style.left = bx + 'px'; blob.style.top = by + 'px'; }
+});
+
+// ---- B. Hero Spotlight (radial glow following mouse only in hero) ----
+const heroSection = document.getElementById('home');
+const heroSpot = document.getElementById('heroSpotlight');
+if (heroSection && heroSpot) {
+    heroSection.addEventListener('mousemove', e => {
+        const r = heroSection.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%';
+        const y = ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
+        heroSpot.style.setProperty('--cx', x);
+        heroSpot.style.setProperty('--cy', y);
+    });
+}
+
+// ---- C. Hero Grid dot intersections ----
+(function buildGridDots() {
+    const dotsG = document.getElementById('gridDots');
+    if (!dotsG) return;
+    for (let row = 0; row <= 15; row++) {
+        for (let col = 0; col <= 24; col++) {
+            const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            c.setAttribute('cx', col * 60);
+            c.setAttribute('cy', row * 60);
+            c.setAttribute('r', '1.8');
+            dotsG.appendChild(c);
+        }
+    }
+    // Animate dots pulsing randomly
+    const dots = Array.from(dotsG.querySelectorAll('circle'));
+    function pulseDot() {
+        const d = dots[Math.floor(Math.random() * dots.length)];
+        gsap.fromTo(d, { attr: { r: '1.8', opacity: .25 } }, {
+            attr: { r: '4', opacity: 1 }, fill: Math.random() > .5 ? '#0D7C66' : '#C5985A',
+            duration: .5, yoyo: true, repeat: 1, ease: 'power2.out',
+            onComplete: () => gsap.set(d, { attr: { fill: 'rgba(13,124,102,.25)', r: '1.8' } })
+        });
+        setTimeout(pulseDot, 120 + Math.random() * 300);
+    }
+    pulseDot();
+})();
+
+// ---- D. Hero entrance — original reliable animation ----
+// (Split text removed: caused Arabic space issues + overflow:hidden conflict)
+
+// ---- E. Marquee speed on scroll ----
+ScrollTrigger.create({
+    trigger: 'body', start: 'top top', end: 'bottom bottom',
+    onUpdate: s => {
+        const speed = 1 + s.getVelocity() * 0.0004;
+        document.querySelectorAll('.marquee-inner').forEach(m => {
+            m.style.animationPlayState = 'running';
+            gsap.to(m, { timeScale: Math.min(4, Math.max(0.5, speed)), duration: .3, overwrite: true });
+        });
+    }
+});
+
+// ---- F. Project Card Image Peek on hover ----
+(function setupCardPeek() {
+    const peek = document.createElement('div');
+    peek.className = 'card-peek';
+    peek.innerHTML = '<img src="" alt="">';
+    document.body.appendChild(peek);
+    const peekImg = peek.querySelector('img');
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        const img = card.querySelector('.card-img img');
+        if (!img) return;
+        card.addEventListener('mouseenter', () => {
+            peekImg.src = img.src;
+            peek.classList.add('show');
+        });
+        card.addEventListener('mouseleave', () => peek.classList.remove('show'));
+        card.addEventListener('mousemove', e => {
+            const vy = ((e.clientY / window.innerHeight) - .5) * 30;
+            peek.style.transform = `translateY(calc(-50% + ${vy}px)) scale(1)`;
+        });
+    });
+})();
+
+// ---- G. Magnetic nav links ----
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('mousemove', e => {
+        const r = link.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width/2) * 0.25;
+        const y = (e.clientY - r.top - r.height/2) * 0.25;
+        gsap.to(link, { x, y, duration: .3, ease: 'power2.out' });
+    });
+    link.addEventListener('mouseleave', () => {
+        gsap.to(link, { x: 0, y: 0, duration: .6, ease: 'elastic.out(1,.4)' });
+    });
+});
+
+// ---- H. Hero Grid parallax on scroll ----
+gsap.to('#heroGrid', {
+    scrollTrigger: { trigger: '#home', start: 'top top', end: 'bottom top', scrub: 1 },
+    y: -80,
+    opacity: 0,
+    ease: 'none',
+});
+
+// ---- I. Skill cards — handled by initScrollAnimations ----
+
+// ---- J. Footer parallax ----
+gsap.from('footer', {
+    scrollTrigger: { trigger: 'footer', start: 'top bottom' },
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    ease: 'power3.out',
+});
+
+// ---- K. Scroll velocity-based tilt on hero 3D object ----
+let lastScrollY = 0, scrollVelocity = 0;
+window.addEventListener('scroll', () => {
+    scrollVelocity = window.scrollY - lastScrollY;
+    lastScrollY = window.scrollY;
+    // Extra tilt on fast scroll
+    if (Math.abs(scrollVelocity) > 5 && typeof torusKnot !== 'undefined') {
+        gsap.to(torusKnot.rotation, {
+            z: torusKnot.rotation.z + scrollVelocity * 0.003,
+            duration: .5,
+            ease: 'power2.out',
+        });
+    }
+}, { passive: true });
+
+// ---- L. Section eyebrow numbers ----
+document.querySelectorAll('.story-section').forEach((sec, i) => {
+    const heads = sec.querySelectorAll('h2, .text-center > h2');
+    heads.forEach(h => {
+        if (h.previousElementSibling && h.previousElementSibling.tagName === 'P') {
+            const p = h.previousElementSibling;
+            const eyebrow = document.createElement('div');
+            eyebrow.className = 'agency-eyebrow';
+            eyebrow.innerHTML = `<div class="agency-eyebrow-line"></div><span class="agency-eyebrow-num">${String(i+1).padStart(2,'0')} / 04</span>`;
+            eyebrow.style.color = '#8C8C8C';
+            p.parentNode.insertBefore(eyebrow, p);
+
+            ScrollTrigger.create({
+                trigger: eyebrow, start: 'top 88%', once: true,
+                onEnter: () => gsap.from(eyebrow, { x: -30, opacity: 0, duration: .6, ease: 'power3.out' })
+            });
+        }
+    });
+});
+
+// ---- M. Pulse grid dots on cursor proximity ----
+const heroGridEl = document.getElementById('heroGrid');
+if (heroGridEl) {
+    heroSection && heroSection.addEventListener('mousemove', e => {
+        const r = heroSection.getBoundingClientRect();
+        const mx = e.clientX - r.left;
+        const my = e.clientY - r.top;
+        const dots = heroGridEl.querySelectorAll('circle');
+        dots.forEach(dot => {
+            const dx = parseFloat(dot.getAttribute('cx')) - mx * (heroGridEl.offsetWidth / r.width);
+            const dy = parseFloat(dot.getAttribute('cy')) - my * (heroGridEl.offsetHeight / r.height);
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 120) {
+                const scale = 1 - dist/120;
+                gsap.to(dot, { attr: { r: 1.8 + scale * 5 }, opacity: scale, duration: .3, overwrite: true });
+            }
+        });
+    });
+}
 
 
 
